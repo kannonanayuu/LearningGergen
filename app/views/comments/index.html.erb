@@ -61,7 +61,7 @@
       <li><%= @avg[no] %></li>
       <li><%= @cnt[no] %></li>
       <% no = no + 1 %>
-      <li><%= button_to "評価・採点する", {controller: 'comments', action: 'new'}, {method: :get, params: {id: @ans_id } %></li></ul></ul><% end %>
+      <li><%= button_to "評価・採点する", {controller: 'comments', action: 'new'}, {method: :get, params: {id: @ans_id }} %></li></ul></ul><% end %>
 </div>
 </div>
 
