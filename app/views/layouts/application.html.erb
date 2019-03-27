@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= csrf_meta_tag %>
+    <meta charset="shift-jis">	
+    <title>中小企業診断士２次試験学習支援サービス『学びの庭』</title>
+    <meta name=”description” content=”学びの庭は、中小企業診断士の学習支援を目的としたネット勉強会を提供するサービスです。予備校を利用することなく、私設の勉強会の場所やルールに縛られることなく自由に効果的に２次試験の答案作成が可能になりたい方は是非、ご利用ください。”>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  </head>
+  <body class="bmain">
+   <!-- header用のdiv -->	
+   <header>
+     <h1 lass="headline"><img class="logo" src="/assets/niwa6.png" alt="ロゴ"></h1>
+     <div class="social">
+       <i class="fab fa-facebook-square"></i>
+       <i class="fab fa-twitter-square"></i>
+       <i class="fab fa-instagram"></i>
+     </div>
+   </header>  
+ 
+   <%= render 'layouts/list' %>
+ 
+  </header>
+
+   <!-- main-visual用のdiv -->	
+   <div class = "main-visual">
+     <div class = "main-visual-content">
+       <!-- p and char add -->
+         <p class="main-visual-text">
+	   中小企業診断士<br>
+	   ２次試験学習支援サイト<br>
+	 </p>
+     </div>
+   </div>
+ <!-- main用のdiv -->	
+ <main class = "clearfix">
+
+ <%= yield %>
+
+
+   </div>
+ </main>
+ <!-- footer用のdiv -->	
+ <footer>
+     <img class="logo" src="/assets/rogohikki.png" alt="ロゴ"> 
+ </footer>
+</body>
+</html>
+

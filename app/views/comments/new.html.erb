@@ -1,0 +1,114 @@
+<div class="blog-box">
+<section class = "blog-text">
+<h2 class="blog-headline">平成<%=  + @answer.year %> 事例<%= @answer.jirei %></h2>
+<br>
+<p></p>第1問（配点20点）</p>
+<p>  <%= @answer.ans2 %></p>
+<br>
+<%= form_for @comment,:url => {:action => :create} do |f| %>
+　<h3>評価コメント</h3>
+　<br>  
+  <%= f.text_area :ans1, :size=>"60x10"%>
+  <br>  
+  <br>
+   <h3>判定</h3>
+　<label>
+　　<%= f.radio_button :judge1, 10 %> S </label>
+　　<label><%= f.radio_button :judge1, 8 %> A</label>
+　　<label><%= f.radio_button :judge1, 6 %> B</label>
+　　<label><%= f.radio_button :judge1, 4 %> C</label>
+　　<label><%= f.radio_button :judge1, 2 %> D</label>
+　　<label><%= f.radio_button :judge1, 0 %> E</label>
+　</label> 
+  <br><br>
+  <hr>
+  <br>
+  <p>第2問（配点40点）</p>
+  <p>(設問1)</p>
+  <p>  <%= @answer.ans2 %></p>
+  <br>
+  <br>
+  <h3>評価コメント</h3>
+  <%= f.text_area :ans1, :size=>"60x10"%>
+  <br>
+　<br>
+  <h3>判定</h3>
+　<label>
+　　<%= f.radio_button :judge2, 10 %> S </label>
+　　<label><%= f.radio_button :judge2, 8 %> A</label>
+　　<label><%= f.radio_button :judge2, 6 %> B</label>
+　　<label><%= f.radio_button :judge2, 4 %> C</label>
+　　<label><%= f.radio_button :judge2, 2 %> D</label>
+　　<label><%= f.radio_button :judge2, 0 %> E</label>
+　</label>
+　<br>
+　<br>
+  <hr>
+  <br>
+  <p>(設問2)</p?
+    <p>  <%= @answer.ans3 %></p>
+  <br>
+  <h3>判定</h3>
+　<label>
+　　<%= f.radio_button :judge3, 10 %> S </label>
+　　<label><%= f.radio_button :judge3, 8 %> A</label>
+　　<label><%= f.radio_button :judge3, 6 %> B</label>
+　　<label><%= f.radio_button :judge3, 4 %> C</label>
+　　<label><%= f.radio_button :judge3, 2 %> D</label>
+　　<label><%= f.radio_button :judge3, 0 %> E</label>
+　</label>
+　<br>
+　<br>
+　<h3>評価コメント</h3>
+  <%= f.text_area :ans1, :size=>"60x10"%>
+  <br>  
+  <br>
+  <hr>
+  <br>
+  <p>第3問（配点20点）</p?
+      <p>  <%= @answer.ans4 %></p>
+  <br>
+  <h3>判定</h3>
+　<label>
+　　<%= f.radio_button :judge4, 10 %> S </label>
+　　<label><%= f.radio_button :judge4, 8 %> A</label>
+　　<label><%= f.radio_button :judge4, 6 %> B</label>
+　　<label><%= f.radio_button :judge4, 4 %> C</label>
+　　<label><%= f.radio_button :judge4, 2 %> D</label>
+　　<label><%= f.radio_button :judge4, 0 %> E</label>
+　</label>
+　<br>
+　<br>
+　<h3>評価コメント</h3>
+  <%= f.text_area :ans1, :size=>"60x10"%>
+  <br>
+  <br>
+  <hr>
+  <br>
+  <p>第4問（配点20点）</p>
+    <p>  <%= @answer.ans5 %></p>
+  <br>
+  <h3>判定</h3>
+　<label>
+　　<%= f.radio_button :judge5, 10 %> S </label>
+　　<label><%= f.radio_button :judge5, 8 %> A</label>
+　　<label><%= f.radio_button :judge5, 6 %> B</label>
+　　<label><%= f.radio_button :judge5, 4 %> C</label>
+　　<label><%= f.radio_button :judge5, 2 %> D</label>
+　　<label><%= f.radio_button :judge5, 0 %> E</label>
+　</label>
+　<br>
+　<br>
+  <h3>評価コメント</h3>
+  <%= f.text_area :ans1, :size=>"60x10"%>
+  <br>
+  <br>  
+  <%= f.submit '評価結果を登録する' %>
+
+<%end%>
+</div>
+</section>
+
+
+
+

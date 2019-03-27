@@ -1,0 +1,23 @@
+<% if user_signed_in? %>
+    <nav>
+     <ul class="nav-list">
+       <li class="nav-list-item">
+          <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+        </li>
+       <li class="nav-list-item">プロフィール</li>
+       <li class="nav-list-item">マイページ</li>
+     <ul> 
+  </nav>
+<% else %>
+    <nav>
+     <ul class="nav-list">
+       <li class="nav-list-item">
+         <%= link_to "新規登録", new_user_registration_path %>  
+       </li>
+       <li class="nav-list-item">ログイン</li>
+       <li class="nav-list-item">使い方</li>
+     <ul> 
+  </nav>
+<% end %>
+    
+  

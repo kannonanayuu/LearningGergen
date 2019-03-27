@@ -1,0 +1,33 @@
+<% if @answer.year == 30 %>
+  <% if @answer.jirei == 1 %>
+      <h2>平成３０年　事例１【解答を編集する】</h2>
+      <br>
+      <br>
+      <%= form_for(@answer) do |f| %>
+        <h4>第1問（配点20点）<h4>
+          <%= f.text_area :ans1, :size=>"115x10"%>
+        <br>
+      
+      <h4>第2問（配点40点）<h4>
+      <h4>(設問1)</h4>
+      <%= f.text_area :ans2, :size=>"115x10"%>
+      <br>
+      
+      <h4>(設問2)</h4>
+      <%= f.text_area :ans3, :size=>"115x10"%>
+      <br>
+      
+      <h4>第3問（配点20点）</h4>
+      <%= f.text_area :ans4,:size=>"115x10"%>
+      <br>
+      
+      <h4>第4問（配点20点）</h4>
+      <%= f.text_area :ans5,:size=>"115x10"%>
+      <br>
+      <%= f.submit '登録する' %>    
+    <% end %>
+ <% end %>   
+
+<% end %>
+
+

@@ -1,0 +1,180 @@
+<%  if @id == "301" then %>
+  <h1>平成30年度</h1>
+  <h2>事例1</h2>
+  <iframe src="/assets/301.pdf" width="100%" height="500px"></iframe>
+<%  elsif @id == "302" then %>  
+  <h1>平成30年度</h1>
+  <h2>事例2</h2>
+  <iframe src="/assets/302.pdf" width="100%" height="500px"></iframe> 
+<%  elsif @id == "303" then %>  
+  <h1>平成30年度</h1>
+  <h2>事例3</h2>
+  <iframe src="/assets/303.pdf" width="100%" height="500px"></iframe>   
+<%  elsif @id == "304" then %>  
+  <h1>平成30年度</h1>
+  <h2>事例4</h2>
+  <iframe src="/assets/304.pdf" width="100%" height="500px"></iframe>   
+<%  elsif @id == "291" then %>  
+  <h1>平成29年度</h1>
+  <h2>事例1</h2>
+  <iframe src="/assets/291.pdf" width="100%" height="500px"></iframe>       
+<%  elsif @id == "292" then %>  
+  <h1>平成29年度</h1>
+  <h2>事例2</h2>
+  <iframe src="/assets/292.pdf" width="100%" height="500px"></iframe>       
+<%  elsif @id == "293" then %>  
+  <h1>平成29年度</h1>
+  <h2>事例3</h2>
+  <iframe src="/assets/293.pdf" width="100%" height="500px"></iframe>       
+<%  elsif @id == "293" then %>  
+  <h1>平成29年度</h1>
+  <h2>事例4</h2>
+  <iframe src="/assets/294.pdf" width="100%" height="500px"></iframe>       
+<%  elsif @id == "281" then %>  
+  <h1>平成28年度</h1>
+  <h2>事例1</h2>
+  <iframe src="/assets/281.pdf" width="100%" height="500px"></iframe>       
+<%  elsif @id == "282" then %>  
+  <h1>平成28年度</h1>
+  <h2>事例2</h2>
+  <iframe src="/assets/282.pdf" width="100%" height="500px"></iframe>       
+<%  elsif @id == "283" then %>  
+  <h1>平成28年度</h1>
+  <h2>事例3</h2>
+  <iframe src="/assets/283.pdf" width="100%" height="500px"></iframe>       
+<%  elsif @id == "283" then %>  
+  <h1>平成28年度</h1>
+  <h2>事例3</h2>
+  <iframe src="/assets/283.pdf" width="100%" height="500px"></iframe>       
+<%  elsif @id == "284" then %>  
+  <h1>平成28年度</h1>
+  <h2>事例4</h2>
+  <iframe src="/assets/284.pdf" width="100%" height="500px"></iframe>       
+<%  elsif @id == "271" then %>  
+  <h1>平成27年度</h1>
+  <h2>事例1</h2>
+  <iframe src="/assets/271.pdf" width="100%" height="500px"></iframe>       
+<%  elsif @id == "272" then %>  
+  <h1>平成27年度</h1>
+  <h2>事例2</h2>
+  <iframe src="/assets/272.pdf" width="100%" height="500px"></iframe>        
+<%  elsif @id == "273" then %>  
+  <h1>平成27年度</h1>
+  <h2>事例3</h2>
+  <iframe src="/assets/273.pdf" width="100%" height="500px"></iframe>        
+<%  elsif @id == "274" then %>  
+  <h1>平成27年度</h1>
+  <h2>事例4</h2>
+  <iframe src="/assets/274.pdf" width="100%" height="500px"></iframe>        
+<%  elsif @id == "261" then %>  
+  <h1>平成26年度</h1>
+  <h2>事例1</h2>
+  <iframe src="/assets/261.pdf" width="100%" height="500px"></iframe>        
+<%  elsif @id == "263" then %>  
+  <h1>平成26年度</h1>
+  <h2>事例3</h2>
+  <iframe src="/assets/263.pdf" width="100%" height="500px"></iframe>        
+<%  elsif @id == "264" then %>  
+  <h1>平成26年度</h1>
+  <h2>事例4</h2>
+  <iframe src="/assets/264.pdf" width="100%" height="500px"></iframe>       
+<%  elsif @id == "251" then %>  
+  <h1>平成25年度</h1>
+  <h2>事例1</h2>
+  <iframe src="/assets/251.pdf" width="100%" height="500px"></iframe>      
+<% end %>
+
+<br>
+<br>
+<br>
+
+<!-- form_for部分 -->
+<%= form_for(@answer) do |f| %>
+    <%  if @id == "301" then %>
+      <h4>第1問（配点20点）<h4>
+      <%= f.text_area :ans1, :size=>"115x10"%>
+ 
+      <h4>第2問（配点40点）<h4>
+      <h4>(設問1)</h4>
+      <%= f.text_area :ans2, :size=>"115x10"%>
+ 
+      <h4>(設問2)</h4>
+      <%= f.text_area :ans3, :size=>"115x10"%>
+    
+      <h4>第3問（配点20点）</h4>
+      <%= f.text_area :ans4, :size=>"115x10"%>
+    
+      <h4>第4問（配点20点）</h4>
+      <%= f.text_area :ans5, :size=>"115x10"%>
+      <br>
+    
+       <%= f.submit '回答する' %>
+    <%  elsif @id == "302" then %>    
+      <h4>第1問（配点25点）<h4>
+      <%= f.text_area :ans1, :size=>"115x10"%>
+ 
+      <h4>第2問（配点25点）<h4>
+      <%= f.text_area :ans2, :size=>"115x10"%>
+ 
+      <h4>第3問（配点25点）</h4></h4>
+      <%= f.text_area :ans3, :size=>"115x10"%>
+    
+      <h4>第4問（配点20点）</h4>
+      <%= f.text_area :ans4, :size=>"115x10"%>
+    
+      <%= f.submit '回答する' %>   
+      
+    <%  elsif @id == "303" then %>    
+      <h4>第1問（配点20点）<h4>
+      <%= f.text_area :ans1, :size=>"115x10"%>
+ 
+      <h4>第2問（配点20点）<h4>
+      <%= f.text_area :ans2, :size=>"115x10"%>
+ 
+      <h4>第3問（配点20点）</h4></h4>
+      <%= f.text_area :ans3, :size=>"115x10"%>
+    
+      <h4>第4問（配点20点）</h4>
+      <%= f.text_area :ans4, :size=>"115x10"%>
+      
+      <h4>第5問（配点20点）</h4>
+      
+      <%= f.text_area :ans4, :size=>"115x10"%>
+      <%= f.submit '回答する' %>    
+      
+    <%  elsif @id == "304" then %>    
+      <h4>第1問（配点24点）<h4>
+      <h4>(設問1)</h4>    
+      <%= f.text_area :ans1, :size=>"115x10"%>
+ 
+      <h4>(設問2)</h4>
+      <%= f.text_area :ans2, :size=>"115x10"%>
+       
+      <h4>第2問（配点31点）</h4></h4>
+      <h4>(設問1)</h4> 
+      <%= f.text_area :ans3, :size=>"115x10"%>
+    
+      <h4>(設問2)</h4> 
+      <%= f.text_area :ans4, :size=>"115x10"%>
+      
+      <h4>(設問3)</h4> 
+      <%= f.text_area :ans4, :size=>"115x10"%>
+      <%= f.submit '回答する' %>    
+        
+       <h4>第3問（配点30点）</h4></h4>
+      <h4>(設問1)</h4> 
+      <%= f.text_area :ans5, :size=>"115x10"%> 
+      
+      <h4>(設問2)</h4> 
+      <%= f.text_area :ans6, :size=>"115x10"%>  
+      
+    <%  elsif @id == "291" then %>  
+      
+      
+      
+    
+  <% end %>
+<% end %>
+
+
+
