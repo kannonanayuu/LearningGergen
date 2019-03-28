@@ -38,7 +38,7 @@
 
 <br>
 <div　class="button_side">
- <%= button_to "編集する。", {controller: 'answers', action: 'edit'}, {method: :get, params: {id: @answer,year: @answer.year,jirei: @answer.jirei}} %>   
- <%= button_to '取り消す', answer_path(@answer.id), :method => :delete, :confirm => '本当に取り消しますか？' %>
+	<%= button_to "承認", {controller: 'answers', action: 'index'},{method: :get} %>   
+ <%= button_to "編集", {controller: 'answers', action: 'edit'}, {method: :get, params: {id: @answer,year: @answer.year,jirei: @answer.jirei}} %>   
+ <%= button_to '削除', answer_path(@answer.id), :method => :delete, :confirm => '本当に取り消しますか？' %>
 </div>    
-

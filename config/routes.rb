@@ -35,6 +35,6 @@ Rails.application.routes.draw do
   
   get 'root/top' => 'root#top', as: 'root_top'
   
-  
+ 
 end
 
