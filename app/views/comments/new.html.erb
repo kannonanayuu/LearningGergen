@@ -48,6 +48,11 @@
   <p>(設問2)</p?
     <p>  <%= @answer.ans3 %></p>
   <br>
+　<br>
+　<h3>評価コメント</h3>
+  <%= f.text_area :ans1, :size=>"60x10"%>
+  <br>  
+  <br>
   <h3>判定</h3>
 　<label>
 　　<%= f.radio_button :judge3, 10 %> S </label>
@@ -58,15 +63,14 @@
 　　<label><%= f.radio_button :judge3, 0 %> E</label>
 　</label>
 　<br>
-　<br>
-　<h3>評価コメント</h3>
-  <%= f.text_area :ans1, :size=>"60x10"%>
-  <br>  
-  <br>
   <hr>
   <br>
   <p>第3問（配点20点）</p?
       <p>  <%= @answer.ans4 %></p>
+  <br>
+ 　<h3>評価コメント</h3>
+  <%= f.text_area :ans1, :size=>"60x10"%>
+  <br>
   <br>
   <h3>判定</h3>
 　<label>
@@ -79,14 +83,14 @@
 　</label>
 　<br>
 　<br>
-　<h3>評価コメント</h3>
-  <%= f.text_area :ans1, :size=>"60x10"%>
-  <br>
-  <br>
   <hr>
   <br>
   <p>第4問（配点20点）</p>
     <p>  <%= @answer.ans5 %></p>
+  <br>
+  <br>
+   <%= f.text_area :ans1, :size=>"60x10"%>
+  <br>
   <br>
   <h3>判定</h3>
 　<label>
@@ -100,9 +104,7 @@
 　<br>
 　<br>
   <h3>評価コメント</h3>
-  <%= f.text_area :ans1, :size=>"60x10"%>
-  <br>
-  <br>  
+ <br>  
   <%= f.submit '評価結果を登録する' %>
 
 <%end%>
