@@ -4,7 +4,7 @@
      <%= button_to "新トピック作成", {controller: 'communications', action: 'new'}, {method: :get, params: {id: "301" }} %>
      <div class="blog-box">
        <div class ="blog-item clearfix">
-       <table>
+       <table border="0.5" cellpadding="0" width="500">
         <% @com.each do |post| %>
          <tr>
            <td>  <%= post.title %>  </td>
