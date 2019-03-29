@@ -2,7 +2,7 @@ class AnswersController < ApplicationController
  
  @@select =0
  
-   def index
+  def index
 
       
   end
@@ -11,8 +11,6 @@ class AnswersController < ApplicationController
     # ストロングパラメーターを使用
     ans = Answer.new(answer_params)
     ans.user_id = current_user.id
-
-
 
     if @@select == "301" then
         ans.year = 30

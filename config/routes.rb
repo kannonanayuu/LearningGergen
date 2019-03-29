@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   get 'comments/index'
   get 'comments/new'
   get 'comments/edit'
-  get 'comments/show'
+  get 'comments/show',as: 'show_comment'
   get 'answers/index'
   get 'answers/new'
   get 'answers/edit'
@@ -12,10 +12,7 @@ Rails.application.routes.draw do
   
   get '/top' => 'root#top'
   
-  get 'comments/index'
   get 'comments/update'
-  get 'comments/edit'
-  get 'comments/new'
   get 'comments/create'
   get 'answers/index'
   get 'answers/update'

@@ -3,7 +3,7 @@
 <h2 class="blog-headline">平成<%=  + @answer.year %> 事例<%= @answer.jirei %></h2>
 <br>
 <p></p>第1問（配点20点）</p>
-<p>  <%= @answer.ans2 %></p>
+<p>  <%= @answer.ans1 %></p>
 <br>
 <%= form_for @comment,:url => {:action => :create} do |f| %>
 　<h3>評価コメント</h3>
@@ -29,7 +29,7 @@
   <br>
   <br>
   <h3>評価コメント</h3>
-  <%= f.text_area :ans1, :size=>"60x10"%>
+  <%= f.text_area :ans2, :size=>"60x10"%>
   <br>
 　<br>
   <h3>判定</h3>
@@ -50,7 +50,7 @@
   <br>
 　<br>
 　<h3>評価コメント</h3>
-  <%= f.text_area :ans1, :size=>"60x10"%>
+  <%= f.text_area :ans3, :size=>"60x10"%>
   <br>  
   <br>
   <h3>判定</h3>
@@ -69,7 +69,7 @@
       <p>  <%= @answer.ans4 %></p>
   <br>
  　<h3>評価コメント</h3>
-  <%= f.text_area :ans1, :size=>"60x10"%>
+  <%= f.text_area :ans4, :size=>"60x10"%>
   <br>
   <br>
   <h3>判定</h3>
@@ -89,7 +89,7 @@
     <p>  <%= @answer.ans5 %></p>
   <br>
   <br>
-   <%= f.text_area :ans1, :size=>"60x10"%>
+   <%= f.text_area :ans5, :size=>"60x10"%>
   <br>
   <br>
   <h3>判定</h3>
@@ -105,7 +105,7 @@
 　<br>
   <h3>評価コメント</h3>
  <br>  
-  <%= f.submit '評価結果を登録する' %>
+  <%= f.submit '評価結果を登録する', include_hidden: false %>
 
 <%end%>
 </div>

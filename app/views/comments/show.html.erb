@@ -1,2 +1,44 @@
-<h1>Comments#show</h1>
-<p>Find me in app/views/comments/show.html.erb</p>
+<h2>作成した解答</h2>
+<br>
+<% if @answer.year == 30 %>
+  <% if @answer.jirei == 1 %>
+      <br>
+      <h4>第1問（配点20点）<h4>
+      <p{text-indent:2em;}> <%= @answer.ans1 %></p>
+      <br>
+      <p{text-indent:2em;}> <%= @comment.ans1 %></p>
+      
+      <h4>第2問（配点40点）<h4>
+      <h4>(設問1)</h4>
+      <p><%= @answer.ans2 %></p>
+      <br>
+      
+      <h4>(設問2)</h4>
+      <p><%= @answer.ans2 %></p>
+      <br>
+      
+      <h4>第3問（配点20点）</h4>
+      <p><%= @answer.ans3 %></p>
+      <br>
+      
+      <h4>第4問（配点20点）</h4>
+      <p><%= @answer.ans4 %></p>
+      <br>
+
+  <% elsif @answer.year == 2 %>
+  
+  
+  <% elsif @answer.year == 3 %>  
+  
+  <% elsif @answer.year == 4 %> 
+
+  <% end %>
+
+<% end %>
+
+<br>
+<div　class="button_side">
+	<%= button_to "承認", {controller: 'answers', action: 'index'},{method: :get} %>   
+ <%= button_to "編集", {controller: 'answers', action: 'edit'}, {method: :get, params: {id: @answer,year: @answer.year,jirei: @answer.jirei}} %>   
+ <%= button_to '削除', answer_path(@answer.id), :method => :delete, :confirm => '本当に取り消しますか？' %>
+</div>    
