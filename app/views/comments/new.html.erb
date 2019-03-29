@@ -1,6 +1,6 @@
-<div class="blog-box">
+<div class="blog">
 <section class = "blog-text">
-<h2 class="blog-headline">平成<%=  + @answer.year %> 事例<%= @answer.jirei %></h2>
+<h2 class="blog-headline" >平成<%=  + @answer.year %> 事例<%= @answer.jirei %></h2>
 <br>
 <p></p>第1問（配点20点）</p>
 <p>  <%= @answer.ans1 %></p>
@@ -110,7 +110,16 @@
 <%end%>
 </div>
 </section>
-
+   <div class = "sidebar">
+     <section class="popular">
+        <h2 class="sidebar-headline">サイトメニュー</h2>
+        <div class="sidebar-contents">
+          <p class="popular-text">　・掲示版</p>
+          <p class="popular-text">　・評価一覧</p>
+          <p class="popular-text">　・新規投稿</p>
+         </div>
+      </section>
+   </div>
 
 
 
