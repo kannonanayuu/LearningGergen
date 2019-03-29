@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
 
-  get 'communications/index'
+  
   get 'communications/new'
   
   get 'comments/index'
-   get 'comments/new'
+  get 'comments/new'
   get 'comments/edit'
   get 'comments/show',as: 'show_comment'
   get 'answers/index'
@@ -25,7 +25,7 @@ Rails.application.routes.draw do
   
   get 'communications/new/:id' => 'communications#new'
   post 'communications/create' => 'communications#create'
-  
+  get 'communications/index'=> 'communications#index'
   
   
   resources :answers

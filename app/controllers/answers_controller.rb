@@ -111,10 +111,10 @@ class AnswersController < ApplicationController
     redirect_to answers_index_path
   end
   
-    private
-    def answer_params
-        params.require(:answer).permit(:id, :year, :jirei, :ans1, :ans2, :ans3, :ans4, :ans5, :ans6 )
-    end
+   private
+   def answer_params
+       params.require(:answer).permit(:id, :year, :jirei, :ans1, :ans2, :ans3, :ans4, :ans5, :ans6 )
+   end
   
   
 end

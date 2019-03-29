@@ -4,7 +4,11 @@
      <div class="blog-box">
        <div class ="blog-item clearfix">
          <section class = "blog-text">
-         </section>    
+            <% @com.each do |post| %>
+         　 <%= post.title %>
+         　 <%= post.updated_at %>
+ 　　　　　　　<% end %> 
+          </section>    
        </div>    
      </div>    
  </section>    

@@ -1,14 +1,17 @@
  <section class = "blog">
      <h2 class="blog-headline">トピックの作成</h2>
-     <ui><li><%= button_to "新トピック作成", {controller: 'communications', action: 'new'}, {method: :get, params: {id: "301" }} %></li></ui>
      <div class="blog-box">
-   <%= f.label :ユーザーネーム %><br />
-    <%= f.text_field :name, autofocus: true, autocomplete: "email" %>
- 
-
-
        <div class ="blog-item clearfix">
          <section class = "blog-text">
+            <%= form_for @communications,:url => {:action => :create} do |f| %>
+              <h4>タイトル<h4>
+      　　　　<%= f.text_field :title, :size=>"50x5"%>
+ 　　　　     <br>　
+              <h4>本文<h4>
+      　 　　 <%= f.text_area :comment, :size=>"70x10"%>
+ 　　　　　   <br>
+             <%= f.submit '書き込む' %> 
+           <% end %>       
          </section>    
        </div>    
      </div>    
