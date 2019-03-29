@@ -1,0 +1,25 @@
+ <section class = "blog">
+     <h2 class="blog-headline">トピックの作成</h2>
+     <ui><li><%= button_to "新トピック作成", {controller: 'communications', action: 'new'}, {method: :get, params: {id: "301" }} %></li></ui>
+     <div class="blog-box">
+   <%= f.label :ユーザーネーム %><br />
+    <%= f.text_field :name, autofocus: true, autocomplete: "email" %>
+ 
+
+
+       <div class ="blog-item clearfix">
+         <section class = "blog-text">
+         </section>    
+       </div>    
+     </div>    
+ </section>    
+ <div class = "sidebar">
+    <section class="popular">
+      <h2 class="sidebar-headline">サイトメニュー</h2>
+        <div class="sidebar-contents">
+          <p class="popular-text">　・掲示版</p>
+          <p class="popular-text">　・評価一覧</p>
+          <p class="popular-text">　・新規投稿</p>
+         </div>
+      </section>
+ </div>
