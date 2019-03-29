@@ -1,14 +1,17 @@
  <section class = "blog">
      <h2 class="blog-headline">トピック一覧</h2>
-     <ui><li><%= button_to "新トピック作成", {controller: 'communications', action: 'new'}, {method: :get, params: {id: "301" }} %></li></ui>
+     <br>
+     <%= button_to "新トピック作成", {controller: 'communications', action: 'new'}, {method: :get, params: {id: "301" }} %>
      <div class="blog-box">
        <div class ="blog-item clearfix">
-         <section class = "blog-text">
-            <% @com.each do |post| %>
-         　 <%= post.title %>
-         　 <%= post.created_at.strftime('%Y/%m/%d') %>
- 　　　　　　　<% end %> 
-          </section>    
+       <table>
+        <% @com.each do |post| %>
+         <tr>
+           <td>  <%= post.title %>  </td>
+           <td>  <%= post.created_at.strftime('%Y/%m/%d') %>  </td>
+	 </tr>
+ 　  　　<% end %>
+　　　　</table>
        </div>    
      </div>    
  </section>    
