@@ -6,7 +6,7 @@
          <section class = "blog-text">
             <% @com.each do |post| %>
          　 <%= post.title %>
-         　 <%= post.updated_at %>
+         　 <%= post.created_at.strftime('%Y/%m/%d') %>
  　　　　　　　<% end %> 
           </section>    
        </div>    
