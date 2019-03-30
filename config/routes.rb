@@ -40,7 +40,7 @@ Rails.application.routes.draw do
   root 'root#index'
   
   get 'root/top' => 'root#top', as: 'root_top'
-  
+  get 'root/policy' => 'root#policy', as: 'root_policy'
  
 end
 

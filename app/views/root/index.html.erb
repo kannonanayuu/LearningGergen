@@ -29,8 +29,8 @@
            </section>
            <section class = "blog-text">
 	　　<br>　		   
-	     <%= link_to image_tag('/assets/login.png', { :border => '0', :alt => 'ログイン'}), new_user_session_path %>
-         <%= link_to image_tag('/assets/sinup.png', { :border => '0', :alt => '新規登録'}), new_user_registration_path %>
+	     <%= link_to image_tag('/assets/login.png', { :border => '0', :alt => 'ログイン'}), new_user_session_path ,:size =>'10x10'%>
+         <%= link_to image_tag('/assets/sinup.png', { :border => '0', :alt => '新規登録'}), new_user_registration_path,:size =>'10x10' %>
  　　      
          </section>
 
@@ -41,8 +41,8 @@
      <section class="popular">
         <h2 class="sidebar-headline">サイトメニュー</h2>
         <div class="sidebar-contents">
-          <p class="popular-text">　・サイトポリシー</p>
-          <p class="popular-text">　・イベント</p>
+          <p class="popular-text"><%= link_to 'サイトポリシー', root_policy_path %></p>
+          <p class="popular-text"><%= link_to 'イベント', root_policy_path %></p>
           <p class="popular-text">　・新規投稿</p>
          </div>
         <h2 class="sidebar-headline">その他</h2>
