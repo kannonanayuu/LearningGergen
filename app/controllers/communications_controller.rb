@@ -17,7 +17,14 @@ class CommunicationsController < ApplicationController
     list.user_id = current_user.id
     list.save
     # トップ画面へリダイレクト
-    redirect_to  communications_index_path
+    redirect_to   communications_show_path(list.title)
+  end
+  
+  def show
+     @dlists = Communication.where(params[:title])  
+     @communications = Communication.new
+     @communications.user_id = current_user.id
+     @title = params[:title]
   end
   
   private

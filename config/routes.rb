@@ -26,7 +26,7 @@ Rails.application.routes.draw do
   get 'communications/new/:id' => 'communications#new'
   post 'communications/create' => 'communications#create'
   get 'communications/index'=> 'communications#index'
-  
+  get 'communications/show'=> 'communications#show'
   
   resources :answers
   resources :comments
