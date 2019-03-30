@@ -1,8 +1,7 @@
 class CommunicationsController < ApplicationController
 
   def index
-    @com = Communication.all
- 
+    @com = Communication.select(:title).distinct
   end
 
   def new

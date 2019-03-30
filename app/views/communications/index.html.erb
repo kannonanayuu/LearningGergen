@@ -8,9 +8,8 @@
         <% @com.each do |post| %>
          <tr>
            <td><%= post.id %> </td>  
-           <td><%= link_to post.title ,  communications_show_path %> </td>
-           <td><%= post.created_at.strftime('%Y/%m/%d') %></td>
-	    </tr>
+           <td><%= link_to post.title ,  communications_show_path(post.title) %> </td>
+ 	    </tr>
  　  　　<% end %>
 　　　　</table>
        </div>    
