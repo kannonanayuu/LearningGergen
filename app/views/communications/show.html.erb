@@ -15,11 +15,11 @@
          <section class = "blog-text">
              <% @dlists.each do |f| %>
             　<%= f.user.name %> 
-             　<%= f.created_at.strftime('%Y/%m/%d') %><br>
-             　<br>
-               <%= f.comment %>
-               <br>
-               <hr width="500" size="1" style="border-style:dotted">
+            　<%= f.created_at.strftime('%Y/%m/%d') %><br>
+            　<br>
+              <%= f.comment %>
+              <br>
+              <hr width="500" size="1" style="border-style:dotted">
  　  　     　<% end %>
           </section>    
        </div> 

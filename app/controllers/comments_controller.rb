@@ -34,10 +34,8 @@ class CommentsController < ApplicationController
 
   def show
     @answer = @@aa
-    @comment = Comment.where(answer_id: @@aid).where(user_id:current_user.id ) 
-    byebug
- 
-  end
+    @comment = Comment.where(answer_id: @@aid).where(user_id:current_user.id )
+   end
 
   def edit
 
