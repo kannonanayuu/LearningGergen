@@ -11,7 +11,7 @@
                   　ついて考察することができます。
 	           </p>
 	           <br>
-	           <div><%= button_to 'Start', answers_index_path(id:301) %></div>
+	           <div><%= button_to "Start", {controller: 'answers', action: 'index'}, {method: :get} %></div>
            </section>
        </div>
        <div class ="blog-item clearfix">
@@ -24,7 +24,7 @@
                 　能力のトレーニングができます。
               </p>
 	           <br>
-	           <div><%= button_to 'Start', drills_index_path(id:301) %></div>
+	           <div><%= button_to "Start", {controller: 'drills', action: 'index'}, {method: :get} %></div>
            </section>
        </div>
        <div class ="blog-item clearfix">
@@ -34,7 +34,7 @@
                 ・自由にトピックを設定してメンバーと交流することができます。
                </p>
 	           <br>
-	           <div><%= button_to 'Start', communications_index_path(id:301) %></div>
+	           <div><%= button_to "Start", {controller: 'communications', action: 'index'}, {method: :get} %></div>
         　</section>
        </div>
      </div>  
