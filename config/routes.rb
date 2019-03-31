@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
 
   
+  get 'profiles/index'
+  get 'profiles/new'
+  get 'profiles/show'
+  get 'profiles/edit'
   get 'drills/index'
   get 'drills/edit'
   get 'drills/show'
@@ -39,6 +43,7 @@ Rails.application.routes.draw do
   resources :answers
   resources :comments
   resources :drills
+  resources :profiles
   
   get 'comments/new/:id' => 'comments#new'
   post 'comments/create' => 'comments#create'

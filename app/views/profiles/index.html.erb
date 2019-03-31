@@ -1,0 +1,29 @@
+ <section class = "blog">
+     <h2 class="blog-headline">プロフィール　設定</h2>
+     <br>
+     <%= button_to "作成する", {controller: 'profiles', action: 'new'}, {method: :get } %>
+     <div class="blog-box">
+       <div class ="blog-item clearfix">
+       <table border="0.5" cellpadding="0" width="500">
+        <% @profiles.each do |post| %>
+         <tr>
+           <td><%= post.id %> </td>  
+           <td><%= link_to post.title , {controller: 'communications', action: 'show'}, {method: :get, params: {title: post.title }} %></td>
+ 	    </tr>
+ 　  　　<% end %>
+　　　　</table>
+       </div>    
+     </div>    
+ </section>    
+ <div class = "sidebar">
+    <section class="popular">
+      <h2 class="sidebar-headline">サイトメニュー</h2>
+        <div class="sidebar-contents">
+          <p class="popular-text">　・掲示版</p>
+          <p class="popular-text">　・評価一覧</p>
+          <p class="popular-text">　・新規投稿</p>
+         </div>
+      </section>
+ </div>
+
+
