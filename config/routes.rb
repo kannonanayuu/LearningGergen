@@ -1,20 +1,24 @@
 Rails.application.routes.draw do
 
   
-  get 'exercise/index'
-  get 'exercise/edit'
-  get 'exercise/show'
-  get 'exercise/new'
+  get 'drills/index'
+  get 'drills/edit'
+  get 'drills/show'
+  get 'drills/new'
+  post 'drills/create' => 'drills#create'
+  
   get 'communications/new'
   
   get 'comments/index'
   get 'comments/new'
   get 'comments/edit'
   get 'comments/show',as: 'show_comment'
+  
   get 'answers/index'
   get 'answers/new'
   get 'answers/edit'
   get 'answers/show'
+  
   devise_for :users
   
   get '/top' => 'root#top'
@@ -34,7 +38,7 @@ Rails.application.routes.draw do
   
   resources :answers
   resources :comments
-  
+  resources :drills
   
   get 'comments/new/:id' => 'comments#new'
   post 'comments/create' => 'comments#create'

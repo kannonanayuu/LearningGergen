@@ -1,0 +1,45 @@
+<h2>考察内容</h2>
+<br>
+
+ <h4>■成長戦略<h4>
+  <p{text-indent:2em;}> <%= @dll.strt %></p>
+  <br>
+      
+  <h4>■強み(SWOT分析)<h4>
+  <p{text-indent:2em;}> <%= @dll.s %></p>
+  <br>
+      
+  <h4>■弱み(SWOT分析)<h4>
+  <p{text-indent:2em;}> <%= @dll.w %></p>
+  <br>      
+      
+  <h4>■機会(SWOT分析)<h4>
+  <p{text-indent:2em;}> <%= @dll.o %></p>
+  <br>      
+  
+  <h4>■脅威(SWOT分析)<h4>
+  <p{text-indent:2em;}> <%= @dll.t %></p>
+  <br>   
+
+  <h4>■人事・組織的課題<h4>
+  <p{text-indent:2em;}> <%= @dll.j1 %></p>
+  <br>
+  
+  <h4>■マーケティング戦略と対策(４P)<h4>
+  <p{text-indent:2em;}> <%= @dll.j2 %></p>
+  <br>
+  
+  <h4>■運営管理上の課題と対策<h4>
+  <p{text-indent:2em;}> <%= @dll.j3 %></p>
+  <br>  
+  
+  <h4>■財務上の課題と対策<h4>
+  <p{text-indent:2em;}> <%= @dll.j4 %></p>
+  <br>    
+  
+<br>
+<div　class="button_side">
+ <%= button_to "承認", {controller: 'drills', action: 'index'},{method: :get} %>   
+ <%= button_to "編集", {controller: 'drills', action: 'edit'}, {method: :get, params: {id: @dll.id}} %>   
+ <%= button_to '削除', answer_path(@dll.id), :method => :delete, :confirm => '本当に取り消しますか？' %>
+</div>    

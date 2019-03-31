@@ -1,0 +1,47 @@
+<h2>平成３０年　事例１【解答を編集する】</h2>
+      <br>
+      <br>
+      <%= form_for(@dll) do |f| %>
+        <h4>成長戦略<h4>
+          <%= f.text_area :strt, :size=>"115x10"%>
+        <br>
+      
+      <h4>SWOT分析<h4>
+      <h4>強み</h4>
+      <%= f.text_area :s, :size=>"115x10"%>
+      <br>
+      
+      <h4>弱み</h4>
+      <%= f.text_area :w, :size=>"115x10"%>
+      <br>
+      
+      <h4>機会</h4>
+      <%= f.text_area :o,:size=>"115x10"%>
+      <br>
+      
+      <h4>脅威</h4>
+      <%= f.text_area :t,:size=>"115x10"%>
+      <br>
+      
+      <h4>人事・組織的課題</h4>
+      <%= f.text_area :j1,:size=>"115x10"%>
+      <br>      
+      
+      <h4>マーケティング戦略と対策(４P)</h4>
+      <%= f.text_area :j2,:size=>"115x10"%>
+      <br>        
+
+      <h4>運営管理上の課題と対策</h4>
+      <%= f.text_area :j3,:size=>"115x10"%>
+      <br> 
+      
+      <h4>財務上の課題と対策</h4>
+      <%= f.text_area :j4,:size=>"115x10"%>
+      <br>
+
+      <%= f.submit '登録する' %>    
+
+　　<% end %>
+
+
+

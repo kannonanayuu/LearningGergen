@@ -1,8 +1,7 @@
 <%  if params[:id] == "131" then %> 
   <h1>株式会社釜石電機製作所</h1>
   <iframe src="/assets/131.pdf" width="100%" height="500px"></iframe>
- 
-<%  elsifparams[:id] == "132" then %>  
+<%  elsif params[:id] == "132" then %>  
   <h1>株式会社亀井製作所</h1>
   <iframe src="/assets/132.pdf" width="100%" height="500px"></iframe> 
 <%  elsif params[:id] == "133" then %>  
@@ -53,3 +52,43 @@
 <br>
 <br>
 
+<!-- form_for部分 -->
+<%= form_for @drills,:url => {:action => :create} do |f| %>
+   <h4>成長戦略<h4>
+   <%= f.text_area :strt, :size=>"115x10"%>
+   <br> 
+   <br>    
+   <h4>SWOT分析<h4>
+　　<h4>強み</h4>
+    <%= f.text_area :s, :size=>"115x10"%>
+ 
+    <h4>弱み</h4>
+    <%= f.text_area :w, :size=>"115x10"%>
+    
+    <h4>機会</h4>
+    <%= f.text_area :o, :size=>"115x10"%>
+    
+    <h4>脅威</h4>
+    <%= f.text_area :t, :size=>"115x10"%>
+    <br> 
+    <br>      
+    <h4>人事・組織的課題</h4>
+    <%= f.text_area :j1, :size=>"115x10"%>    
+    <br> 
+    <br> 
+    <h4>マーケティング戦略と対策(４P)</h4>
+    <%= f.text_area :j2, :size=>"115x10"%>       
+    <br> 
+    <br>     
+    <h4>運営管理上の課題と対策</h4>
+    <%= f.text_area :j3, :size=>"115x10"%>           
+    <br> 
+    <br> 
+    <h4>財務上の課題と対策</h4>
+    <%= f.text_area :j4, :size=>"115x10"%>           
+    
+    
+    <br>
+    
+       <%= f.submit '登録' %>
+<% end %>
