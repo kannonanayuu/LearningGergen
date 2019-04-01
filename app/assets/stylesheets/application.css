@@ -294,3 +294,13 @@ u2.foo1 li a {
   display: inline-block;
   margin: 0 10px;
 }
+
+.menu_heda{
+  color: #364e96;/*文字色*/
+  padding: 0.5em 0;/*上下の余白*/
+  border-top: solid 3px #364e96;/*上線*/
+  border-bottom: solid 3px #364e96;/*下線*/
+
+
+}
+
