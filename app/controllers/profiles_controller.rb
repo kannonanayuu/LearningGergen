@@ -2,6 +2,7 @@ class ProfilesController < ApplicationController
 
   def index
     @profiles = Profile.all
+    
   end
 
   def new
@@ -17,12 +18,12 @@ class ProfilesController < ApplicationController
   
   def create
     # ストロングパラメーターを使用
-    ans = Answer.new(answer_params)
+    ans = Profile.new(profile_params)
     ans.user_id = current_user.id
     # DBへ保存する
     ans.save
     # トップ画面へリダイレクト
-    redirect_to   answer_path(ans.id)
+    redirect_to   answer_path(ans.user_id)
       
   end
   
