@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
 
+  get 'communications/index' => 'communications#index'
+  resources :communications
+  get 'communications/show/:title' => 'communications#show',as: 'title_show_communications'
   
   get 'profiles/index'
   get 'profiles/new'
@@ -7,16 +10,16 @@ Rails.application.routes.draw do
   get 'profiles/edit'
   get 'drills/index'
   get 'drills/edit'
+  
   get 'drills/show'
   get 'drills/new'
   post 'drills/create' => 'drills#create'
-  
-  get 'communications/new'
   
   get 'comments/index'
   get 'comments/new'
   get 'comments/edit'
   get 'comments/show',as: 'show_comment'
+  
   
   get 'answers/index'
   get 'answers/new'
@@ -34,11 +37,6 @@ Rails.application.routes.draw do
   get 'answers/edit'
   get 'answers/new'
   get 'answers/create'
-  
-  get 'communications/new/:id' => 'communications#new'
-  post 'communications/create' => 'communications#create'
-  get 'communications/index'=> 'communications#index'
-  get 'communications/show/'=> 'communications#show'
   
   resources :answers
   resources :comments
