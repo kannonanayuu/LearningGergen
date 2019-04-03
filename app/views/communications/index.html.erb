@@ -1,14 +1,14 @@
  <section class = "blog">
      <h2 class="blog-headline">トピック一覧</h2>
      <br>
-     <%= button_to "新トピック作成", {controller: 'communications', action: 'new'}, {method: :get, params: {id: "301" }} %>
+     <%= button_to "新トピック作成", new_title_path %>
      <div class="blog-box">
        <div class ="blog-item clearfix">
        <table border="0.5" cellpadding="0" width="500">
         <% @com.each do |post| %>
          <tr>
            <td><%= post.id %> </td>  
-           <td><%= link_to post.title , itle_show_communications_path,title: post.title %></td>
+     #      <td><%= link_to post.title , itle_show_communications_path,title: post.title %></td>
  	    </tr>
  　  　　<% end %>
 　　　　</table>

@@ -6,7 +6,7 @@ class TitlesController < ApplicationController
   end
 
   def new
-    @titles = title.new
+    @titles = Title.new
     @titles.user_id = current_user.id
 
   end
@@ -17,7 +17,7 @@ class TitlesController < ApplicationController
     list.user_id = current_user.id
     list.save
     # トップ画面へリダイレクト
-    #redirect_to   communications_show_path(list.title)
+    redirect_to  titles_path
   end
   
   def show
@@ -29,7 +29,7 @@ class TitlesController < ApplicationController
   
   private
   def title_params
-    params.require(:title).permit(:id, :user_id, :title, :comment )
+    params.require(:title).permit(:id, :user_id, :title, :contents )
   end
   
   

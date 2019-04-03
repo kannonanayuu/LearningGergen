@@ -1,2 +1,28 @@
-<h1>Title#new</h1>
-<p>Find me in app/views/title/new.html.erb</p>
+ <section class = "blog">
+     <h2 class="blog-headline">トピックの作成</h2>
+     <div class="blog-box">
+       <div class ="blog-item clearfix">
+         <section class = "blog-text">
+            <%= form_for @titles,:url => {:action => :create} do |f| %>
+            <h4>タイトル<h4>
+      　　　<%= f.text_field :title, :size=>"50x5"%>
+ 　　　　   <br>　
+            <h4>本文<h4>
+	　  <%= f.text_area :contents, :size=>"70x10" %>　
+ 　　　　　 <br>
+            <%= f.submit '書き込む' %> 
+            <% end %>       
+         </section>    
+       </div>    
+     </div>    
+ </section>    
+ <div class = "sidebar">
+    <section class="popular">
+      <h2 class="sidebar-headline">サイトメニュー</h2>
+        <div class="sidebar-contents">
+          <p class="popular-text">　・掲示版</p>
+          <p class="popular-text">　・評価一覧</p>
+          <p class="popular-text">　・新規投稿</p>
+         </div>
+      </section>
+ </div>
