@@ -36,7 +36,7 @@
                 ・自由にトピックを設定してメンバーと交流することができます。
                </p>
 	           <br>
-	           <div><%= button_to "Start", {controller: 'communications', action: 'index'}, {method: :get} %></div>
+	           <div><%= button_to "Start", {controller: 'titles', action: 'index'}, {method: :get} %></div>
         　</section>
        </div>
      </div>  
@@ -47,10 +47,10 @@
         <h2 class="sidebar-headline">サイトメニュー</h2>
         <div class="sidebar-contents">
           <p class="popular-text">　<%= link_to 'サイトポリシー', root_policy_path %></p>
-          <p class="popular-text">　<%= link_to '加点計算方法', communications_index_path %></p>
-          <p class="popular-text">　<%= link_to 'ランキング', communications_index_path %></p>         
-         <p class="popular-text">　<%= link_to 'ランキング', communications_index_path %></p>          
-         <p class="popular-text">　<%= link_to 'ランキング', communications_index_path %></p>          
+          <p class="popular-text">　<%= link_to '加点計算方法', root_policy_path %></p>
+          <p class="popular-text">　<%= link_to 'ランキング', root_policy_path %></p>         
+         <p class="popular-text">　<%= link_to 'ランキング', root_policy_path %></p>          
+         <p class="popular-text">　<%= link_to 'ランキング', root_policy_path %></p>          
       </section>
    </div>
 

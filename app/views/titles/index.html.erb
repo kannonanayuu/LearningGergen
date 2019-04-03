@@ -1,0 +1,29 @@
+ <section class = "blog">
+     <h2 class="blog-headline">トピック一覧</h2>
+     <br>
+     <%= button_to "新トピック作成", {controller: 'titles', action: 'new'}, {method: :get, params: {id: "301" }} %>
+     <div class="blog-box">
+       <div class ="blog-item clearfix">
+       <table border="0.5" cellpadding="0" width="500">
+        <% @titles.each do |post| %>
+         <tr>
+           <td><%= post.id %> </td>  
+         #  <td><%= link_to post.title , itle_show_communications_path,title: post.title %></td>
+ 	    </tr>
+ 　  　　<% end %>
+　　　　</table>
+       </div>    
+     </div>    
+ </section>    
+ <div class = "sidebar">
+    <section class="popular">
+      <h2 class="sidebar-headline">サイトメニュー</h2>
+        <div class="sidebar-contents">
+          <p class="popular-text">　・掲示版</p>
+          <p class="popular-text">　・評価一覧</p>
+          <p class="popular-text">　・新規投稿</p>
+         </div>
+      </section>
+ </div>
+
+

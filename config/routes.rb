@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
 
-  get 'communications/index' => 'communications#index'
-  resources :communications
-  get 'communications/show/:title' => 'communications#show',as: 'title_show_communications'
+  resources :titles  do
+    resource :communications 
+  end
   
   get 'profiles/index'
   get 'profiles/new'
