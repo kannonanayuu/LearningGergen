@@ -20,15 +20,15 @@ class CommunicationsController < ApplicationController
   end
   
   def show
-     @dlists = Communication.where(params[:title])
+     
      @communications = Communication.new
-     @communications.user_id = current_user.id
-     @title = params[:title]
+     @titles = Title.find(params[:title_id])
+     
   end
   
   private
   def communication_params
-    params.require(:communication).permit(:id, :user_id, :title, :comment )
+    params.require(:communication).permit(:id, :title_id, :title, :comment )
   end
   
   
