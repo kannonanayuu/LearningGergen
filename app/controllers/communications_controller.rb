@@ -22,7 +22,8 @@ class CommunicationsController < ApplicationController
   def show
      
      @communications = Communication.new
-     @titles = Title.find(params[:title_id])
+     id = params[:title_id]
+     @titles = Title.find(id)
      
   end
   

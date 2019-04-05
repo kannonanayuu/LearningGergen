@@ -1,5 +1,5 @@
  <section class = "blog">
-     <h2 class="blog-headline"><%= @title %></h2>
+     <h2 class="blog-headline"><%= @titles.title %></h2>
      <div class="blog-box">
        <div class ="blog-item clearfix">
          <section class = "blog-text">
@@ -13,15 +13,10 @@
        </div> 
        <div class ="blog-item clearfix">
          <section class = "blog-text">
-             <% @titles.each do |f| %>
-            　<%= f.user.name %> 
-            　<%= f.created_at.strftime('%Y/%m/%d') %><br>
+             <h5> <%= @titles.user.name %> <%= @titles.created_at.strftime('%Y/%m/%d') %> </h5>
             　<br>
-              <%= f.comment %>
-              <br>
-              <hr width="500" size="1" style="border-style:dotted">
- 　  　     　<% end %>
-          </section>    
+             <p><%= @title.comment</p>　
+        </section>    
        </div> 
      </div>    
  </section>    
