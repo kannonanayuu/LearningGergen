@@ -5,9 +5,7 @@
      <div class="blog-box">
        <div class ="blog-item clearfix">
          <% @titles.each do |post| %>
-         
-        <h5 class="title_h3"><%= link_to post.title , title_communications_path(post.id) %></h5>           
- 	    
+         <h5 class="title_h3"><%= link_to post.title , title_communications_path(post.id) %></h5>           
  　  　　<% end %>
       </div>    
      </div>    

@@ -1,5 +1,7 @@
 class CommunicationsController < ApplicationController
-
+  
+  @@id = 0
+  
   def index
     @com = Communication.select(:title).distinct
   end
@@ -12,16 +14,16 @@ class CommunicationsController < ApplicationController
   
   def create
     # ストロングパラメーターを使用
-    list = Communication.new(communication_params)
-    list.user_id = current_user.id
-    list.save
+    @lists = Communication.new(communication_params)
+    @lists.save
     # トップ画面へリダイレクト
-    redirect_to   communications_show_path(list.title)
+    redirect_to  title_communications_path(@@id)
   end
   
   def show
      @communications = Communication.new
      @communications.title_id = params[:title_id]
+     @@id = params[:title_id]
      @titles = Title.find(params[:title_id])
      @lists = Communication.where(title_id: params[:title_id])
      
