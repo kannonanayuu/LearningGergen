@@ -13,10 +13,27 @@
        </div> 
        <div class ="blog-item clearfix">
          <section class = "blog-text">
-             <h5> <%= @titles.user.name %> <%= @titles.created_at.strftime('%Y/%m/%d') %> </h5>
-            　<br>
-             <p><%= @title.comment</p>　
-        </section>    
+            <h5 class="kakomu"> <%= @titles.user.name %> <%= @titles.created_at.strftime('%Y/%m/%d') %> </h5>
+            <br>
+            <p><%= @titles.contents %></p>　
+        </section>  
+        <% @lists.each do |f| %>
+            <section class = "blog-text">
+                <h5 class="kakomu"> <%= @lists.user.name %> <%= @lists.created_at.strftime('%Y/%m/%d') %> </h5>
+                <br>
+                <p><%= @ilsts.comment %></p>　
+            </section>  
+        <% end %>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
        </div> 
      </div>    
  </section>    

@@ -20,10 +20,10 @@ class CommunicationsController < ApplicationController
   end
   
   def show
-     
      @communications = Communication.new
-     id = params[:title_id]
-     @titles = Title.find(id)
+     @communications.title_id = params[:title_id]
+     @titles = Title.find(params[:title_id])
+     @lists = Communication.where(title_id: params[:title_id])
      
   end
   
