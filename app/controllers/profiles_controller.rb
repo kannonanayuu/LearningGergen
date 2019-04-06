@@ -1,8 +1,8 @@
 class ProfilesController < ApplicationController
 
   def index
-    @profiles = Profile.all
-    
+    @profiles = Profile.where(user_id: current_user.id).last
+
   end
 
   def new
@@ -23,7 +23,7 @@ class ProfilesController < ApplicationController
     # DBへ保存する
     ans.save
     # トップ画面へリダイレクト
-    redirect_to   answer_path(ans.user_id)
+    redirect_to  profiles_index_path
       
   end
   
