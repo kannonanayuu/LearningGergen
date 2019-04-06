@@ -317,7 +317,22 @@ u2.foo1 li a {
     
 }
 
+.my_page_title{
+  position: relative;
+  padding: 0.5em;
+  background: #a6d3c8;
+  color: white;  
+}
 
+.my_page_title::before {
+  position: absolute;
+  content: '';
+  top: 100%;
+  left: 0;
+  border: none;
+  border-bottom: solid 15px transparent;
+  border-right: solid 20px rgb(149, 158, 155);
+}
 
 
 

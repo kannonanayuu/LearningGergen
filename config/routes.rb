@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :mines
+  
   resources :titles  do
     resource :communications 
   end
