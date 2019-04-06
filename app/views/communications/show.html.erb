@@ -3,7 +3,7 @@
      <div class="blog-box">
        <div class ="blog-item clearfix">
          <section class = "blog-text">
-            <%= form_for @communications,:url => {:action => :create} do |f| %>
+            <%= form_for [@titles,@communications],:url => {:action => :create} do |f| %>
             <h4>コメントを書く<h4>
       　 　　 <%= f.text_area :comment, :size=>"70x10"%>
  　　　　　   <br>
@@ -16,24 +16,18 @@
             <h5 class="kakomu"> <%= @titles.user.name %> <%= @titles.created_at.strftime('%Y/%m/%d') %> </h5>
             <br>
             <p><%= @titles.contents %></p>　
-        </section>  
+        </section>
+        </div>
         <% @lists.each do |f| %>
+        <div class ="blog-item clearfix">
             <section class = "blog-text">
-                <h5 class="kakomu"> <%= @lists.user.name %> <%= @lists.created_at.strftime('%Y/%m/%d') %> </h5>
+                <h5 class="kakomu"> <%= f.user.name %> <%= f.created_at.strftime('%Y/%m/%d') %> </h5>
                 <br>
-                <p><%= @ilsts.comment %></p>　
-            </section>  
+                <p><%= f.comment %></p>　
+            </section>
+        </div>    
         <% end %>
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+
        </div> 
      </div>    
  </section>    

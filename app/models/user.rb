@@ -8,5 +8,6 @@ class User < ApplicationRecord
      has_many :comments, dependent: :destroy
      has_many :titles  , dependent: :destroy
      has_many :drills  , dependent: :destroy
+     has_many :communications  , dependent: :destroy
 
 end
