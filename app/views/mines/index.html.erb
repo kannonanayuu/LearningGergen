@@ -4,8 +4,17 @@
 <h3 class="menu_heda">過去問</h3>
   <br>
   <% if @answers.present? %>
+    <table border="1">
+    <tr>
+      <th>試験年度</th><th>事例</th><th>順位</th><th>得点</th><th>コメント数</th>
+    </tr>  
     <% @answers.each do |f| %>
+     <tr>
+       <td><%= f.year %></td><td><%= f.jirei %></td><td></td><td></td><td></td>
+     </tr>
     <% end %>
+   </table>
+   <br>
 　<% else %>
       <p>登録された過去問はありません。</p>
       <br>
@@ -14,8 +23,17 @@
 <h3 class="menu_heda">事例問題</h3>
   <br>
   <% if @drills.present? %>
+    <table border="1">
+    <tr>
+      <th>試験年度</th><th>事例</th><th>順位</th><th>得点</th><th>コメント数</th>
+    </tr>  
     <% @drills.each do |f| %>
-    <% end %>    
+     <tr>
+       <td></td><td></td><td></td><td></td><td></td>
+     </tr>
+    <% end %>
+   </table>
+   <br>     
   <% else %>
       <p>登録された事例企業分析はありません。</p>
       <br>    

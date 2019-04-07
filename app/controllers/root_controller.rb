@@ -9,5 +9,9 @@ class RootController < ApplicationController
       
   end
   
+  def useage
+      
+  end  
+  
   
 end

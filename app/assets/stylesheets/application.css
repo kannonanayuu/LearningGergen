@@ -334,6 +334,17 @@ u2.foo1 li a {
   border-right: solid 20px rgb(149, 158, 155);
 }
 
+table {
+  text-align: center;
+  width:600px
+}
 
+
+table th {/*table内のthに対して*/
+}
+
+table td {/*table内のtdに対して*/
+  width:120px
+}
 
 
