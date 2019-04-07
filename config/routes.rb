@@ -6,6 +6,11 @@ Rails.application.routes.draw do
     resource :communications 
   end
   
+  resources :answers  do
+    resource :commensts 
+  end  
+  
+  
   get 'profiles/index'
   get 'profiles/new'
   get 'profiles/show'

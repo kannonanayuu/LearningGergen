@@ -33,8 +33,8 @@ class CommentsController < ApplicationController
   end
 
   def show
-    @answer = @@aa
-    @comment = Comment.where(answer_id: @@aid).where(user_id:current_user.id )
+    @comment = Comment.wehe( params[:answer_id] )
+    
    end
 
   def edit
@@ -52,7 +52,7 @@ class CommentsController < ApplicationController
     jdg.answer_id = @@aid
     jdg.save
     # トップ画面へリダイレクト
-    redirect_to  show_comment_path(jdg.id)
+    redirect_to  answer_commensts_path(jdg.answer_id)
       
       
   end
@@ -62,7 +62,7 @@ class CommentsController < ApplicationController
     @@aid = @answer.id
     @comment = Comment.new
     @comment.answer_id = params[:id]
-    @@aa = @answer
+    @@aa = params[:id]
   
   end
   
