@@ -3,32 +3,66 @@
 <% @comments.each do |f| %>
   <% if(f.answer.year == 30 )then  %>
     <% if(f.answer.jirei == 1)then  %>
+      <br>
+      <h4>第1問（配点20点）<h4>
+      <p{text-indent:2em;}> <%= f.answer.ans1 %></p>
+      <br>
+      <h4>判定</h4>
+      <p{text-indent:2em;}> <%= f.judge1 %></p>      
+      <h4>コメント</h4>      
+      <p{text-indent:2em;}> <%= f.ans1 %></p>        
+      <br>
+      <h4>採点者</h4>      
+      <p{text-indent:2em;}> <%= f.user.name %></p>        
+      <br>      
+      
+      <h4>第2問（配点40点）<h4>
+      <h4>(設問1)</h4>
+      <p{text-indent:2em;}> <%= f.answer.ans2 %></p>
+      <br>
+      
+      <h4>(設問2)</h4>
+      <p{text-indent:2em;}> <%= f.answer.ans3 %></p>
+      <br>
+      
+      <h4>第3問（配点20点）</h4>
+      <p{text-indent:2em;}> <%= f.answer.ans4 %></p>
+      <br>
+      
+      <h4>第4問（配点20点）</h4>
+      <p{text-indent:2em;}> <%= f.answer.ans5 %></p>
+      <br>    
+    
+    
+    
+    
+    
        <p><%= f.answer.ans1 %></p><br>
 
 
        <p><%= f.ans1 %></p><br>
 
-    <% elsif(f.answer.jirei == "2")then  %>
-    <% elsif(f.answer.jirei == "3")then  %>
-    <% elsif(f.answer.jirei == "4")then  %>
+    <% elsif(f.answer.jirei == 2)then  %>
+    <% elsif(f.answer.jirei == 3)then  %>
+    <% elsif(f.answer.jirei == 4)then  %>
     <% end %>
-  <% elsif(f.answer.year == "29")then  %>
-    <% if(f.answer.jirei == "1")then  %>
-    <% elsif(f.answer.jirei == "2")then  %>
-    <% elsif(f.answer.jirei == "3")then  %>
-    <% elsif(f.answer.jirei == "4")then  %>
+  <% elsif(f.answer.year == 29)then  %>
+    <% if(f.answer.jirei == 1)then  %>
+    <% elsif(f.answer.jirei == 2)then  %>
+    <% elsif(f.answer.jirei == 3)then  %>
+    <% elsif(f.answer.jirei == 4)then  %>
     <% end %>
-  <% elsif(f.answer.year == "28")then  %>
-    <% if(f.answer.jirei == "1")then  %>
-    <% elsif(f.answer.jirei == "2")then  %>
-    <% elsif(f.answer.jirei == "3")then  %>
-    <% elsif(f.answer.jirei == "4")then  %>
+  <% elsif(f.answer.year == 28)then  %>
+    <% if(f.answer.jirei == 1)then  %>
+    <% elsif(f.answer.jirei == 2)then  %>
+    <% elsif(f.answer.jirei == 3)then  %>
+    <% elsif(f.answer.jirei == 4)then  %>
     <% end %>
-  <% elsif(f.answer.year == "27")then  %>
-    <% if(f.answer.jirei == "1")then  %>
-    <% elsif(f.answer.jirei == "2")then  %>
-    <% elsif(f.answer.jirei == "3")then  %>
-    <% elsif(f.answer.jirei == "4")then  %>
+  <% elsif(f.answer.year == 27)then  %>
+    <% if(f.answer.jirei == 1)then  %>
+    <% elsif(f.answer.jirei == 2)then  %>
+    <% elsif(f.answer.jirei == 3)then  %>
+    <% elsif(f.answer.jirei == 4)then  %>
     <% end %>
   <% end %>
 
