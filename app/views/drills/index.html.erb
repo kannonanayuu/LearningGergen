@@ -137,12 +137,6 @@
       <li><%= button_to "実施", {controller: 'comments', action: 'index'}, {method: :get, params: {id: "233" }} %></li>
       <li><%= button_to "表示", {controller: 'answers', action: 'new'}, {method: :get, params: {id: "233" }} %></li>
      </ul>       
-     
-     
-     
-     
-     
-     
    </div>    
    </div>    
    </section>    
@@ -150,11 +144,17 @@
      <section class="popular">
         <h2 class="sidebar-headline">サイトメニュー</h2>
         <div class="sidebar-contents">
-          <p class="popular-text">　・掲示版</p>
-          <p class="popular-text">　・評価一覧</p>
-          <p class="popular-text">　・新規投稿</p>
+          <p class="popular-text">　<%= link_to '掲示板', titles_path %></p>            
+          <p class="popular-text">　<%= link_to '評価一覧', titles_path %></p> 
+          <p class="popular-text">　<%= link_to '新規投稿', titles_path %></p>           
          </div>
       </section>
    </div>
+
+
+
+
+
+
 
 

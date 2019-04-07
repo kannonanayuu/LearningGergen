@@ -6,12 +6,13 @@
 <p>  <%= @answer.ans1 %></p>
 <br>
 <%= form_for @comment,:url => {:action => :create} do |f| %>
-　<h3>評価コメント</h3>
+　<h3 class="title_h3_2">評価コメント</h3>
 　<br>  
-  <%= f.text_area :ans1, :size=>"60x10"%>
+  <%= f.text_area :ans1, :size=>"70x10"%>
   <br>  
   <br>
-   <h3>判定</h3>
+  <h3 class="title_h3_2">判定</h3>
+  <br>
 　<label>
 　　<%= f.radio_button :judge1, 10 %> S </label>
 　　<label><%= f.radio_button :judge1, 8 %> A</label>
@@ -28,11 +29,13 @@
   <p>  <%= @answer.ans2 %></p>
   <br>
   <br>
-  <h3>評価コメント</h3>
-  <%= f.text_area :ans2, :size=>"60x10"%>
+  <h3 class="title_h3_2">評価コメント</h3>
+  <br>
+  <%= f.text_area :ans2, :size=>"70x10"%>
   <br>
 　<br>
-  <h3>判定</h3>
+  <h3 class="title_h3_2">判定</h3>
+  <br>
 　<label>
 　　<%= f.radio_button :judge2, 10 %> S </label>
 　　<label><%= f.radio_button :judge2, 8 %> A</label>
@@ -45,15 +48,16 @@
 　<br>
   <hr>
   <br>
-  <p>(設問2)</p?
+  <p>(設問2)</p>
     <p>  <%= @answer.ans3 %></p>
-  <br>
 　<br>
-　<h3>評価コメント</h3>
-  <%= f.text_area :ans3, :size=>"60x10"%>
+　<h3 class="title_h3_2">評価コメント</h3>
+　<br>
+  <%= f.text_area :ans3, :size=>"70x10"%>
   <br>  
   <br>
-  <h3>判定</h3>
+  <h3 class="title_h3_2">判定</h3>
+  <br>
 　<label>
 　　<%= f.radio_button :judge3, 10 %> S </label>
 　　<label><%= f.radio_button :judge3, 8 %> A</label>
@@ -63,16 +67,19 @@
 　　<label><%= f.radio_button :judge3, 0 %> E</label>
 　</label>
 　<br>
+　<br>
   <hr>
   <br>
   <p>第3問（配点20点）</p?
       <p>  <%= @answer.ans4 %></p>
   <br>
- 　<h3>評価コメント</h3>
-  <%= f.text_area :ans4, :size=>"60x10"%>
+  <h3 class="title_h3_2">評価コメント</h3>
+  <br>
+  <%= f.text_area :ans4, :size=>"70x10"%>
   <br>
   <br>
-  <h3>判定</h3>
+  <h3 class="title_h3_2">判定</h3>
+  <br>
 　<label>
 　　<%= f.radio_button :judge4, 10 %> S </label>
 　　<label><%= f.radio_button :judge4, 8 %> A</label>
@@ -89,11 +96,13 @@
     <p>  <%= @answer.ans5 %></p>
   <br>
   <br>
-   <h3>評価コメント</h3>
-   <%= f.text_area :ans5, :size=>"60x10"%>
+  <h3 class="title_h3_2">評価コメント</h3>
+  <br>
+   <%= f.text_area :ans5, :size=>"70x10"%>
   <br>
   <br>
-  <h3>判定</h3>
+  <h3 class="title_h3_2">判定</h3>
+  <br>
 　<label>
 　　<%= f.radio_button :judge5, 10 %> S </label>
 　　<label><%= f.radio_button :judge5, 8 %> A</label>
@@ -115,9 +124,9 @@
      <section class="popular">
         <h2 class="sidebar-headline">サイトメニュー</h2>
         <div class="sidebar-contents">
-          <p class="popular-text">　・掲示版</p>
-          <p class="popular-text">　・評価一覧</p>
-          <p class="popular-text">　・新規投稿</p>
+          <p class="popular-text">　<%= link_to '掲示板', titles_path %></p>            
+          <p class="popular-text">　<%= link_to '評価一覧', titles_path %></p> 
+          <p class="popular-text">　<%= link_to '新規投稿', titles_path %></p>           
          </div>
       </section>
    </div>
