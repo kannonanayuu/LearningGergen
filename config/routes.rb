@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   end
   
   resources :answers  do
-    resource :commensts 
+    resource :comments 
   end  
   
   

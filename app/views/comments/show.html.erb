@@ -1,10 +1,40 @@
-<h2>作成した解答</h2>
+<h2>評価結果詳細</h2>
 <br>
-   <P>@comment.answers.ans1</P>
+<% @comments.each do |f| %>
+  <% if(f.answer.year == 30 )then  %>
+    <% if(f.answer.jirei == 1)then  %>
+       <p><%= f.answer.ans1 %></p><br>
+
+
+       <p><%= f.ans1 %></p><br>
+
+    <% elsif(f.answer.jirei == "2")then  %>
+    <% elsif(f.answer.jirei == "3")then  %>
+    <% elsif(f.answer.jirei == "4")then  %>
+    <% end %>
+  <% elsif(f.answer.year == "29")then  %>
+    <% if(f.answer.jirei == "1")then  %>
+    <% elsif(f.answer.jirei == "2")then  %>
+    <% elsif(f.answer.jirei == "3")then  %>
+    <% elsif(f.answer.jirei == "4")then  %>
+    <% end %>
+  <% elsif(f.answer.year == "28")then  %>
+    <% if(f.answer.jirei == "1")then  %>
+    <% elsif(f.answer.jirei == "2")then  %>
+    <% elsif(f.answer.jirei == "3")then  %>
+    <% elsif(f.answer.jirei == "4")then  %>
+    <% end %>
+  <% elsif(f.answer.year == "27")then  %>
+    <% if(f.answer.jirei == "1")then  %>
+    <% elsif(f.answer.jirei == "2")then  %>
+    <% elsif(f.answer.jirei == "3")then  %>
+    <% elsif(f.answer.jirei == "4")then  %>
+    <% end %>
+  <% end %>
+
+
+
+
+<% end %>
  
 
-<div　class="button_side">
-	<%= button_to "承認", {controller: 'answers', action: 'index'},{method: :get} %>   
- <%= button_to "編集", {controller: 'answers', action: 'edit'}, {method: :get, params: {id: @answer,year: @answer.year,jirei: @answer.jirei}} %>   
- <%= button_to '削除', answer_path(@answer.id), :method => :delete, :confirm => '本当に取り消しますか？' %>
-</div>    
