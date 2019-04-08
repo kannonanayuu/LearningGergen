@@ -1,74 +1,66 @@
-<h2>評価結果詳細</h2>
+<h2><%= @comments.user.name %>さんの評価結果</h2>
 <br>
-<% @comments.each do |f| %>
-  <% if(f.answer.year == 30 )then  %>
-    <% if(f.answer.jirei == 1)then  %>
+  <% if(@comments.answer.year == 30 )then  %>
+    <% if(@comments.answer.jirei == 1)then  %>
       <br>
       <h4>第1問（配点20点）<h4>
-      <p{text-indent:2em;}> <%= f.answer.ans1 %></p>
+      <p class="answer"> <%= @comments.answer.ans1 %></p>
       <br>
-      <h4>判定</h4>
-      <p{text-indent:2em;}> <%= f.judge1 %></p>      
-      <h4>コメント</h4>      
-      <p{text-indent:2em;}> <%= f.ans1 %></p>        
+      <% sum = (@comments.judge1 * 20)/10 %>
+      <h4><%= sum  %>点</h4>      
+      <p{text-indent:2em;}> <%= @comments.ans1 %></p>        
       <br>
-      <h4>採点者</h4>      
-      <p{text-indent:2em;}> <%= f.user.name %></p>        
-      <br>      
-      
       <h4>第2問（配点40点）<h4>
       <h4>(設問1)</h4>
-      <p{text-indent:2em;}> <%= f.answer.ans2 %></p>
+      <% sum = sum + (@comments.judge2 * 20)/10 %>      
+      <p class="answer"> <%= @comments.answer.ans2 %></p>
       <br>
-      
+      <h4><%= (@comments.judge2 * 20)/10 %>点</h4>      
+      <p{text-indent:2em;}> <%= @comments.ans2 %></p>        
+      <br>
       <h4>(設問2)</h4>
-      <p{text-indent:2em;}> <%= f.answer.ans3 %></p>
+      <% sum = sum + (@comments.judge3 * 20)/10 %> 
+      <p class="answer" > <%= @comments.answer.ans3 %></p>
       <br>
-      
+      <h4><%= (@comments.judge3 * 20)/10 %>点</h4>      
+      <p{text-indent:2em;}> <%= @comments.ans3 %></p>        
+      <br>
       <h4>第3問（配点20点）</h4>
-      <p{text-indent:2em;}> <%= f.answer.ans4 %></p>
+      <% sum = sum + (@comments.judge4 * 20)/10 %>         
+      <p class="answer"> <%= @comments.answer.ans4 %></p>
       <br>
-      
+      <h4><%= (@comments.judge4 * 20)/10 %>点</h4>      
+      <p{text-indent:2em;}> <%= @comments.ans4 %></p>        
+      <br>
       <h4>第4問（配点20点）</h4>
-      <p{text-indent:2em;}> <%= f.answer.ans5 %></p>
+      <% sum = sum + (@comments.judge5 * 20)/10 %>       
+      <p class="answer"> <%= @comments.answer.ans5 %></p>
       <br>    
-    
-    
-    
-    
-    
-       <p><%= f.answer.ans1 %></p><br>
-
-
-       <p><%= f.ans1 %></p><br>
-
-    <% elsif(f.answer.jirei == 2)then  %>
-    <% elsif(f.answer.jirei == 3)then  %>
-    <% elsif(f.answer.jirei == 4)then  %>
+      <h4><%= (@comments.judge5 * 20)/10 %>点</h4>      
+      <p{text-indent:2em;}> <%= @comments.ans5 %></p>        
+      <br>
+      <h4>合計：<%= sum %></h4>
+    <% elsif(@comments.answer.jirei == 2)then  %>
+    <% elsif(@comments.answer.jirei == 3)then  %>
+    <% elsif(@comments.answer.jirei == 4)then  %>
     <% end %>
-  <% elsif(f.answer.year == 29)then  %>
-    <% if(f.answer.jirei == 1)then  %>
-    <% elsif(f.answer.jirei == 2)then  %>
-    <% elsif(f.answer.jirei == 3)then  %>
-    <% elsif(f.answer.jirei == 4)then  %>
+  <% elsif(@comments.answer.year == 29)then  %>
+    <% if(@comments.answer.jirei == 1)then  %>
+    <% elsif(@comments.answer.jirei == 2)then  %>
+    <% elsif(@comments.answer.jirei == 3)then  %>
+    <% elsif(@comments.answer.jirei == 4)then  %>
     <% end %>
-  <% elsif(f.answer.year == 28)then  %>
-    <% if(f.answer.jirei == 1)then  %>
-    <% elsif(f.answer.jirei == 2)then  %>
-    <% elsif(f.answer.jirei == 3)then  %>
-    <% elsif(f.answer.jirei == 4)then  %>
+  <% elsif(@comments.answer.year == 28)then  %>
+    <% if(@comments.answer.jirei == 1)then  %>
+    <% elsif(@comments.answer.jirei == 2)then  %>
+    <% elsif(@comments.answer.jirei == 3)then  %>
+    <% elsif(@comments.answer.jirei == 4)then  %>
     <% end %>
-  <% elsif(f.answer.year == 27)then  %>
+  <% elsif(@comments.answer.year == 27)then  %>
     <% if(f.answer.jirei == 1)then  %>
-    <% elsif(f.answer.jirei == 2)then  %>
-    <% elsif(f.answer.jirei == 3)then  %>
-    <% elsif(f.answer.jirei == 4)then  %>
+    <% elsif(@comments.answer.jirei == 2)then  %>
+    <% elsif(@comments.answer.jirei == 3)then  %>
+    <% elsif(@comments.answer.jirei == 4)then  %>
     <% end %>
   <% end %>
-
-
-
-
-<% end %>
- 
 

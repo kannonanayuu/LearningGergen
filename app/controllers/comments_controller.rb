@@ -14,7 +14,7 @@ class CommentsController < ApplicationController
       @ans_id= []
       @answers.each do |ans|
         @cnt[no] = Comment.where(answer_id: ans.id).count(:judge1)
-        @avg[no] = Comment.where(answer_id: ans.id).average(:judge1).round(0)
+        @avg[no] = Comment.where(answer_id: ans.id).average(:judge1)
         @name[no] = User.find(ans.user_id).name
 	    @ans_id[no] = ans.id
         if @avg[no] === nil then
@@ -33,7 +33,7 @@ class CommentsController < ApplicationController
   end
 
   def show
-    @comments = Comment.where(answer_id: params[:answer_id])
+    @comments = Comment.where(answer_id: params[:answer_id]).last
     
    end
 
