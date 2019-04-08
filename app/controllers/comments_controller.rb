@@ -35,10 +35,10 @@ class CommentsController < ApplicationController
   def show
     @comments = Comment.where(answer_id: params[:answer_id]).last
     
-   end
+  end
 
   def edit
-
+    @comments = Comment.where(answer_id: params[:answer_id]).last
   end
 
   def update
