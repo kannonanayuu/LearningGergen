@@ -50,17 +50,17 @@
    　<% no = 1 %>              
    <div class = "foo">
     <ul class = "foo1">
-      <li>登録ID</li>
+      <li>順位</li>
       <li>名前</li>  
       <li>得点</li>
-      <li>コメント数</li>
+      <li>判定</li>
       <li>評価</li></ul><% @answers.each do |f| %><ul>
       <ul class = "foo2">
-      <li><%= no %></li>
-      <li><%= @name[no] %></li>  
-      <li><%= @avg[no] %></li>
-      <li><%= @cnt[no] %></li>
-      <li><%= button_to "評価・採点する", {controller: 'comments', action: 'new'}, {method: :get, params: {id: @ans_id[no] }} %></li></ul></ul> <% no = no + 1 %><% end %>
+      <li><%= f.id %></li>            
+      <li><%= f.user.name %></li>  
+      <li></li>
+      <li></li>
+      <li><%= button_to "詳細表示", {controller: 'comments', action: 'new'}, {method: :get, params: {id: f.id }} %></li></ul></ul><% no = no + 1 %><% end %>
 </div>
 </div>
 

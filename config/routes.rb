@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'ranks/index'
+  get 'ranks/show'
   resources :mines
   
   resources :titles  do

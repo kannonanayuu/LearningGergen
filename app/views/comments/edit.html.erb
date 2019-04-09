@@ -1,45 +1,85 @@
 <% if @comments.answer.year == 30 %>
   <% if @comments.answer.jirei == 1 %>
-      <h2><%= @comments.user.name %>さんの評価結果を編集する</h2>
+    <h2><%= @comments.user.name %>さんの評価結果を編集する</h2>
+    <br>
+    <%= form_for(@comments) do |f| %>
+      <h4>第1問（配点20点）<h4>
+      <p class="answer"> <%= @comments.answer.ans1 %></p>
       <br>
+      <%= f.text_area :ans1, :size=>"115x10"%>
       <br>
-      <%= form_for(@comments) do |f| %>
-        <h4>第1問（配点20点）<h4>
-        <p class="answer"> <%= @comments.answer.ans2 %></p>
-        <br>
-          <p class="answer"> <%= @comments.answer.ans1 %></p>  
-          <br>
-          <%= f.text_area :ans1, :size=>"115x10"%>
-        <br>
-      
+      <label><%= f.radio_button :judge1, 10 %> S</label>
+　　  <label><%= f.radio_button :judge1, 8 %> A</label>
+　　  <label><%= f.radio_button :judge1, 6 %> B</label>
+　　  <label><%= f.radio_button :judge1, 4 %> C</label>
+　　  <label><%= f.radio_button :judge1, 2 %> D</label>
+　　  <label><%= f.radio_button :judge1, 0 %> E</label>
+　    <br>     
+　    <br>  
       <h4>第2問（配点40点）<h4>
       <h4>(設問1)</h4>
       <p class="answer"> <%= @comments.answer.ans3 %></p>
       <br>
-      <%= f.text_area :ans2, :size=>"115x10"%>
-      <br>
-      
-      <h4>(設問2)</h4>
-      <p class="answer"> <%= @comments.answer.ans3 %></p>
-      <br>
-      <%= f.text_area :ans3, :size=>"115x10"%>
-      <br>
-      
-      <h4>第3問（配点20点）</h4>
-      <p class="answer"> <%= @comments.answer.ans4 %></p>
-      <br>
-      <%= f.text_area :ans4,:size=>"115x10"%>
-      <br>
-      
-      <h4>第4問（配点20点）</h4>
-      <p class="answer"> <%= @comments.answer.ans5 %></p>
-      <br>
-      <%= f.text_area :ans5,:size=>"115x10"%>
-      <br>
-      <%= f.submit '登録する' %>    
-    <% end %>
- <% end %>   
+        <%= f.text_area :ans2, :size=>"115x10"%>
+        <br>
+        <label>
+      　  <label><%= f.radio_button :judge2, 10 %> S</label>
+　　      <label><%= f.radio_button :judge2, 8 %> A</label>
+　　      <label><%= f.radio_button :judge2, 6 %> B</label>
+　　      <label><%= f.radio_button :judge2, 4 %> C</label>
+　　      <label><%= f.radio_button :judge2, 2 %> D</label>
+　　      <label><%= f.radio_button :judge2, 0 %> E</label>
+　      </label> 
+　      <br>
+　      <br>　      
+        <h4>(設問2)</h4>
+        <p class="answer"> <%= @comments.answer.ans3 %></p>
+        <br>
+        <%= f.text_area :ans3, :size=>"115x10"%>
+        <br>
+        <label>
+      　  <label><%= f.radio_button :judge3, 10 %> S</label>
+　　      <label><%= f.radio_button :judge3, 8 %> A</label>
+　　      <label><%= f.radio_button :judge3, 6 %> B</label>
+　　      <label><%= f.radio_button :judge3, 4 %> C</label>
+　　      <label><%= f.radio_button :judge3, 2 %> D</label>
+　　      <label><%= f.radio_button :judge3, 0 %> E</label>
+　      </label> 
+　     <br>        
+　     <br>　     
+       <h4>第3問（配点20点）</h4>
+       <p class="answer"> <%= @comments.answer.ans4 %></p>
+       <br>
+       <%= f.text_area :ans4,:size=>"115x10"%>
+       <br>
+          <label>
+      　  <label><%= f.radio_button :judge4, 10 %> S</label>
+　　      <label><%= f.radio_button :judge4, 8 %> A</label>
+　　      <label><%= f.radio_button :judge4, 6 %> B</label>
+　　      <label><%= f.radio_button :judge4, 4 %> C</label>
+　　      <label><%= f.radio_button :judge4, 2 %> D</label>
+　　      <label><%= f.radio_button :judge4, 0 %> E</label>
+　      </label> 
+　     <br>        
+　     <br>　     
+       <h4>第4問（配点20点）</h4>
+       <p class="answer"> <%= @comments.answer.ans5 %></p>
+       <br>
+       <%= f.text_area :ans5,:size=>"115x10"%>
+       <br>
+       <label>
+         <label><%= f.radio_button :judge5, 10 %> S</label>
+　　     <label><%= f.radio_button :judge5, 8 %> A</label>
+　　     <label><%= f.radio_button :judge5, 6 %> B</label>
+　　     <label><%= f.radio_button :judge5, 4 %> C</label>
+　　     <label><%= f.radio_button :judge5, 2 %> D</label>
+　　     <label><%= f.radio_button :judge5, 0 %> E</label>
+　     </label> 
+　     <br>        
+       <%= f.submit '登録する' %>    
 
+    <% end %>  
+  <% end %>   
 <% end %>
 
 

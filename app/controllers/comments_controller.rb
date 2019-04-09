@@ -6,7 +6,7 @@ class CommentsController < ApplicationController
 
   def index
     if params[:id] == "301" then
-      @answers = Answer.where(year: 30).where(jirei: 1)
+      @answers = Answer.where(year: 30).where(jirei: 1).where.not(id: current_user.id)
       no = 1
       @cnt =[]
       @avg =[]
@@ -42,8 +42,12 @@ class CommentsController < ApplicationController
   end
 
   def update
-
+    comment = Comment.where(answer_id: params[:answer_id]).last  
+    comment.update(comment_params)
+    redirect_to top_path
+    
   end
+
 
   def create
      # ストロングパラメーターを使用
