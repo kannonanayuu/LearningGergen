@@ -1,7 +1,7 @@
 <section class = "blog">
 
 <%  if @id == "301" then %>
-  <h2 class="blog-headline">平成３０年　事例１解答一覧</h2>
+  <h2 >平成３０年　ランキング</h2>
 <%  elsif @id == "302" then %>  
    <h2 class="blog-headline">平成３０年　事例２解答一覧</h2>
 <%  elsif @id == "303" then %>  
@@ -54,31 +54,18 @@
       <li>名前</li>  
       <li>得点</li>
       <li>判定</li>
+      <li>登録ID</li>      
       <li>評価</li></ul><% @answers.each do |f| %><ul>
       <ul class = "foo2">
-      <li><%= f.id %></li>            
+      <li><%= no %></li>            
       <li><%= f.user.name %></li>  
+      <li><%= f.comments.id %></li>
       <li></li>
-      <li></li>
+      <li><%= f.id %></li>
       <li><%= button_to "詳細表示", {controller: 'comments', action: 'new'}, {method: :get, params: {id: f.id }} %></li></ul></ul><% no = no + 1 %><% end %>
 </div>
 </div>
 
 </section>    
-
-
-   
-   <div class = "sidebar">
-     <section class="popular">
-        <h2 class="sidebar-headline">サイトメニュー</h2>
-        <div class="sidebar-contents">
-          <p class="popular-text">　・掲示版</p>
-          <p class="popular-text">　・評価一覧</p>
-          <p class="popular-text">　・新規投稿</p>
-         </div>
-      </section>
-   </div>
-
-
 
 
