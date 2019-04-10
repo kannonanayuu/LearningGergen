@@ -55,7 +55,7 @@
       <li>得点</li>
       <li>判定</li>
       <li>登録ID</li> 
-      <li>実施日</li>       
+      <li>投稿日</li>       
       <li>評価</li></ul><% @answers.each do |f| %><ul>
       <ul class = "foo2">
       <li><%= no %></li>            
@@ -63,7 +63,7 @@
       <li></li>
       <li></li>
       <li><%= f.id %></li>
-      <li><%= f.id %></li>      
+      <li><%= f.created_at.strftime('%Y/%m/%d') %></li>      
       <li><%= button_to "詳細表示", {controller: 'comments', action: 'new'}, {method: :get, params: {id: f.id }} %></li></ul></ul><% no = no + 1 %><% end %>
 </div>
 </div>
