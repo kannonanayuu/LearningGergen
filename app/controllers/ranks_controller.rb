@@ -8,5 +8,8 @@ class RanksController < ApplicationController
   end
 
   def show
+    @answers = Answer.where(year: 30).where(jirei: 1).includes(:comments)  
+  
+      
   end
 end

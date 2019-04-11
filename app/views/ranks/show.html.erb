@@ -1,2 +1,17 @@
-<h1>Ranks#show</h1>
-<p>Find me in app/views/ranks/show.html.erb</p>
+<h2>評価結果</h2>
+<br>
+  <%= @answers.each do |f|  %>
+  <% if(f.year == 30 )then  %>
+    <% if(f.jirei == 1)then  %>
+      <br>
+      <h4>第1問（配点20点）<h4>
+      <p class="answer"> <%= f.ans1 %></p>
+      <br>
+       <%= f.comments.each do |ff|  %>
+         <p > ff.ans1</p>
+         <br>
+      <% end %>
+    <% end %>
+　<% end %>
+<% end %>
+  
