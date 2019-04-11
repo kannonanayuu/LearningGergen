@@ -347,6 +347,12 @@ u2.foo1 li a {
   background-color: #a6d3c8;  
 }
 
+.ranking_title{
+ border-bottom: double 5px #FFC778;
+}
+
+
+
 
 table {
   text-align: center;
