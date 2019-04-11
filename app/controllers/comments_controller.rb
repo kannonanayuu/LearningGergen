@@ -34,7 +34,7 @@ class CommentsController < ApplicationController
 
   def show
     @comments = Comment.where(answer_id: params[:answer_id]).last
-    
+  
   end
 
   def edit
@@ -54,6 +54,7 @@ class CommentsController < ApplicationController
     jdg = Comment.new(comment_params)
     jdg.user_id = current_user.id
     jdg.answer_id = @@aid
+    jdg.score = 60 
     jdg.save
     # トップ画面へリダイレクト
     redirect_to  answer_comments_path(jdg.answer_id)

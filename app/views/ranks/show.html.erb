@@ -8,10 +8,11 @@
       <p class="answer"> <%= f.ans1 %></p>
       <br>
       <%= f.comments.each do |ff|  %>
-        <h4><%= (ff.judge1 * 20)/10  %>点</h4>  
+        <h4><%= ff.user.name %>さん <%= (ff.judge1 * 20)/10  %>点</h4>  
         <p> ff.ans1</p>
         <br>
       <% end %>
+      <br><br>
     <h4>第2問（配点40点）<h4>
     <h4>(設問1)</h4> 
       <p class="answer"> <%= f.ans2 %></p>
@@ -20,7 +21,8 @@
         <h4><%= (ff.judge2 * 20)/10  %>点</h4>  
         <p> ff.ans2</p>
         <br>
-      <% end %>      
+      <% end %>
+      <br><br>
     <h4>(設問2)</h4> 
       <p class="answer"> <%= f.ans3 %></p>
       <br>    
@@ -29,6 +31,7 @@
         <p> ff.ans3</p>
         <br>
       <% end %>
+      <br><br>
     <h4>第3問（配点20点）</h4> 
       <p class="answer"> <%= f.ans4 %></p>
       <br>    
@@ -36,7 +39,8 @@
         <h4><%= (ff.judge4 * 20)/10  %>点</h4>  
         <p> ff.ans4</p>
         <br>
-      <% end %>      
+      <% end %>
+      <br><br>
     <h4>第4問（配点20点）</h4> 
       <p class="answer"> <%= f.ans5 %></p>
       <br>    
@@ -45,7 +49,7 @@
         <p> ff.ans5</p>
         <br>
       <% end %>      
-            
+      <br>        
       
       
       
