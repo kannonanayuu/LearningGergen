@@ -7,26 +7,8 @@ class CommentsController < ApplicationController
   def index
     if params[:id] == "301" then
       @answers = Answer.where(year: 30).where(jirei: 1).where.not(id: current_user.id).includes(:comments)
-      no = 1
-      @cnt =[]
-      @avg =[]
-      @name =[]
-      @ans_id= []
-      @answers.each do |ans|
-        @cnt[no] = ans.comments.count
-        @avg[no] = ans.created_at.strftime('%Y/%m/%d')
-        @name[no] = User.find(ans.user_id).name
-	    @ans_id[no] = ans.id
-        if @avg[no] === nil then
-           @avg[no] = 0
-        end
-        
-        no = no + 1
-      end
-      
       @id = params[:id]
-      
-     
+
     end
     
     

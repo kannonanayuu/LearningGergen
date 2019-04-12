@@ -43,9 +43,9 @@
     <h2 class="blog-headline">平成２５年　事例１解答一覧</h2>
 <% end %>
 
-     <div class="blog-box">
-       <div class ="blog-item clearfix">
-         <section class = "blog-text">
+<div class="blog-box">
+   <div class ="blog-item clearfix">
+   <section class = "blog-text">
    　<% no = 1 %>              
    <div class = "foo">
     <ul class = "foo1">
@@ -55,29 +55,24 @@
       <li>投稿日</li>
       <li>採点</li></ul><% @answers.each do |f| %><ul>
       <ul class = "foo2">
-      <li><%= no %></li>
-      <li><%= @name[no] %></li>  
-      <li><%= @cnt[no] %></li>
-      <li><%= @avg[no] %></li>   
-      <li><%= button_to "実行", {controller: 'comments', action: 'new'}, {method: :get, params: {id: @ans_id[no] }} %></li></ul></ul> <% no = no + 1 %><% end %>
+      <li><%= f.id %></li>
+      <li><%= f.user.name %></li>  
+      <li><%= f.comments.count %></li>
+      <li><%= f.created_at.strftime('%Y/%m/%d') %></li>   
+      <li><%= button_to "実行", {controller: 'comments', action: 'new'}, {method: :get, params: {id: f.id }} %></li></ul></ul> <% no = no + 1 %><% end %>
 </div>
 </div>
 
 </section>    
-
-
-   
    <div class = "sidebar">
      <section class="popular">
         <h2 class="sidebar-headline">サイトメニュー</h2>
         <div class="sidebar-contents">
-          <p class="popular-text">　・掲示版</p>
-          <p class="popular-text">　・評価一覧</p>
-          <p class="popular-text">　・新規投稿</p>
+          <p class="popular-text">　<%= link_to '掲示板', titles_path %></p>            
+          <p class="popular-text">　<%= link_to '評価一覧', titles_path %></p> 
+          <p class="popular-text">　<%= link_to '新規投稿', titles_path %></p>           
          </div>
       </section>
    </div>
-
-
 
 
