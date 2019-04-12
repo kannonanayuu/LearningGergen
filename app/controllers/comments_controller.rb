@@ -58,20 +58,24 @@ class CommentsController < ApplicationController
     sum = 0
     if(ans.year == 30)then
         if(ans.jirei == 1)
-          sum = (jdg.judge1 * 20)/10    
-          sum = sum + (jdg.judge2 * 20)/10
-          sum = sum + (jdg.judge3 * 20)/10
-          sum = sum + (jdg.judge4 * 20)/10
-          sum = sum + (jdg.judge5 * 20)/10
-          jdg.score = sum
+          if((jdg.judge1 != nil) and  (jdg.judge2 != nil) and  (jdg.judge3 != nil) and (jdg.judge4 != nil) and  (jdg.judge5 != nil))then
+            sum = (jdg.judge1 * 20)/10    
+            sum = sum + (jdg.judge2 * 20)/10
+            sum = sum + (jdg.judge3 * 20)/10
+            sum = sum + (jdg.judge4 * 20)/10
+            sum = sum + (jdg.judge5 * 20)/10
+            jdg.score = sum
+          end    
         end
     end
     
-    jdg.save
-    # トップ画面へリダイレクト
-    redirect_to  answer_comments_path(jdg.answer_id)
-      
-      
+    if((jdg.judge1 != nil) and  (jdg.judge2 != nil) and  (jdg.judge3 != nil) and  (jdg.judge4 != nil) and  (jdg.judge5 != nil))then
+      jdg.save
+      redirect_to  answer_comments_path(jdg.answer_id)
+    else
+      redirect_to  top_path  
+    end
+    
   end
   
   def new
