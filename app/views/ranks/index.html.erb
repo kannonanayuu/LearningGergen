@@ -60,12 +60,8 @@
       <ul class = "foo2">
       <li><%= no %></li>            
       <li><%= f.user.name %></li>
-      <% score = f.comments.average(:score).round(0) %>
-      <li><%= score %></li>
-      <% if( score >= 60 )then %>
-         <% jdg = "A" %>
-      <% end %>      
-      <li><%= jdg %></li>
+      <li><%= f.score %></li>
+      <li><%= f.judge %></li>
       <li><%= f.id %></li>
       <li><%= f.created_at.strftime('%Y/%m/%d') %></li>      
       <li><%= button_to "詳細表示", {controller: 'ranks', action: 'show'}, {method: :get, params: {id: f.id }} %></li></ul></ul><% no = no + 1 %><% end %>
