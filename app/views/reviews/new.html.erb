@@ -1,2 +1,84 @@
-<h1>Reviews#new</h1>
-<p>Find me in app/views/reviews/new.html.erb</p>
+<div class="blog">
+<section class = "blog-text">
+<h2 class="blog-headline" >事例</h2>
+<br>
+<h4>成長戦略</h4>
+<p class="answer"><%= @answer.strt %></p>
+<%= form_for @comment,:url => {:action => :create} do |f| %>
+　<h4>コメント</h4>
+  <%= f.text_area :strt, :size=>"70x10"%>
+  <br><br>
+  <h4>SWOT分析</h4>
+  <h4>強み</h4>
+  <p class="answer"><%= @answer.s %></p>
+  <br>
+  <h4>コメント</h4>
+  <%= f.text_area :s, :size=>"70x10"%>
+　<br>
+  <br>
+  <h4>弱み</h4>
+  <p class="answer"><%= @answer.w %></p>
+　<br>
+　<h4>コメント</h4>
+  <%= f.text_area :w, :size=>"70x10"%>
+  <br>  
+  <br>
+  <h4>機会</h4>
+  <p class="answer"><%= @answer.o %></p>
+　<br>
+　<h4>コメント</h4>
+  <%= f.text_area :o, :size=>"70x10"%>
+  <br>  
+  <br>  
+  <h4>脅威</h4>
+  <p class="answer"><%= @answer.t %></p>
+　<br>
+　<h4>コメント</h4>
+  <%= f.text_area :t, :size=>"70x10"%>
+  <br>  
+  <br>  
+  <h4>人事・組織戦略</h4>
+  <p class="answer"><%= @answer.j1 %></p>
+　<br>
+　<h4>コメント</h4>
+  <%= f.text_area :j1, :size=>"70x10"%>
+  <br>  
+  <br>  
+  <h4>マーケティング戦略と対策(４P)</h4>
+  <p class="answer"><%= @answer.j2 %></p>
+　<br>
+　<h4>コメント</h4>
+  <%= f.text_area :j2, :size=>"70x10"%>
+  <br>  
+  <br>  
+  <h4>運営管理上の課題と対策</h4>
+  <p class="answer"><%= @answer.j3 %></p>
+　<br>
+　<h4>コメント</h4>
+  <%= f.text_area :j3, :size=>"70x10"%>
+  <br>  
+  <br>      
+  <h4>財務上の課題と対策</h4>
+  <p class="answer"><%= @answer.j4 %></p>
+　<br>
+　<h4>コメント</h4>
+  <%= f.text_area :j4, :size=>"70x10"%>
+  <br>  
+  <br>      
+  <%= f.submit '評価結果を登録する', include_hidden: false %>
+<%end%>
+</div>
+</section>
+   <div class = "sidebar">
+     <section class="popular">
+        <h2 class="sidebar-headline">サイトメニュー</h2>
+        <div class="sidebar-contents">
+          <p class="popular-text">　<%= link_to '掲示板', titles_path %></p>            
+          <p class="popular-text">　<%= link_to '評価一覧', titles_path %></p> 
+          <p class="popular-text">　<%= link_to '新規投稿', titles_path %></p>           
+         </div>
+      </section>
+   </div>
+
+
+

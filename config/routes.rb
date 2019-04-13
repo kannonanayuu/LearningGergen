@@ -20,6 +20,8 @@ Rails.application.routes.draw do
   
   get 'reviews/index'
   get 'reviews/new'
+  get 'reviews/update'
+  get 'reviews/create'
   
   get 'profiles/index'
   get 'profiles/new'
@@ -45,6 +47,7 @@ Rails.application.routes.draw do
   
   get 'comments/update'
   get 'comments/create'
+  
   get 'answers/index'
   get 'answers/update'
   get 'answers/edit'
