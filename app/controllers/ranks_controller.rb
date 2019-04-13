@@ -7,15 +7,20 @@ class RanksController < ApplicationController
       score = 0
       judge = "C"
       ans.each do |f| 
-        score =  f.comments.average(:score).round(0) 
-        if(score >= 60)
-          judge = "A"
-        elsif (score >= 50)
-          judge = "B"
-        elsif (score >= 40)
-          judge = "C"
-        else
-          judge = "D"    
+        if f.comments.average(:score).nil?
+          score = 0
+          judge = "未"
+        else    
+          score =  f.comments.average(:score).round(0)
+          if(score >= 60)
+            judge = "A"
+          elsif (score >= 50)
+            judge = "B"
+          elsif (score >= 40)
+            judge = "C"
+          else
+            judge = "D"    
+          end
         end
         ans.where(id: f.id).update( score: score, judge: judge )
         puts score

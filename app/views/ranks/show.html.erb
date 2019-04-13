@@ -8,7 +8,7 @@
       <br>
       <% f.comments.each do |ff|  %>
         <h4><%= ff.user.name %>さん <%= (ff.judge1 * 20)/10  %>点</h4>  
-        <p class="kakomu"> ff.ans1</p>
+        <p class="kakomu"><%= ff.ans1 %></p>
         <br>
       <% end %>
       <br>
@@ -18,7 +18,7 @@
       <br>    
       <% f.comments.each do |ff|  %>
         <h4><%= ff.user.name %>さん <%= (ff.judge2 * 20)/10  %>点</h4>  
-        <p class="kakomu"> ff.ans2</p>
+        <p class="kakomu"><%= ff.ans2 %></p>
         <br>
       <% end %>
       <br>
@@ -27,7 +27,7 @@
       <br>    
       <% f.comments.each do |ff|  %>
         <h4><%= ff.user.name %>さん <%= (ff.judge3 * 20)/10  %>点</h4>  
-        <p class="kakomu"> ff.ans3</p>
+        <p class="kakomu"><%= ff.ans3 %></p>
         <br>
       <% end %>
       <br>
@@ -36,7 +36,7 @@
       <br>    
       <% f.comments.each do |ff|  %>
         <h4><%= ff.user.name %>さん <%= (ff.judge4 * 20)/10  %>点</h4>  
-        <p class="kakomu"> ff.ans4</p>
+        <p class="kakomu"><%= ff.ans4 %></p>
         <br>
       <% end %>
       <br>
@@ -45,7 +45,7 @@
       <br>   
        <% f.comments.each do |ff|  %>
         <h4><%= ff.user.name %>さん <%= (ff.judge5 * 20)/10  %>点</h4>  
-        <p class="kakomu"> ff.ans5 </p>
+        <p class="kakomu"><%= ff.ans5 %></p>
         <br>
       <% end %>      
       <br>        
