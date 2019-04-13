@@ -22,14 +22,18 @@ class RanksController < ApplicationController
         puts judge
       end        
     end
-
     @answers = Answer.where(year: 30).where(jirei: 1).order(score: "desc")
     
   end
 
   def show
-    @answers = Answer.where(year: 30).where(jirei: 1).includes(:comments)  
+    puts "###########"
+    puts  params[:id]
+    puts "##########"
+    @answers = Answer.where(id: params[:id]).where(year: 30).where(jirei: 1).includes(:comments)  
   
-      
   end
+  
+  
+  
 end

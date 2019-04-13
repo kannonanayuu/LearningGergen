@@ -6,7 +6,7 @@ class CommentsController < ApplicationController
 
   def index
     if params[:id] == "301" then
-      @answers = Answer.where(year: 30).where(jirei: 1).where.not(id: current_user.id).includes(:comments)
+      @answers = Answer.where.not(user_id: current_user.id).where(year: 30).where(jirei: 1).includes(:comments)
       @id = params[:id]
 
     end
