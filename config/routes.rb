@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
 
-  get 'ranks/index'
-  get 'ranks/show'
   resources :mines
   
   resources :titles  do
@@ -12,6 +10,12 @@ Rails.application.routes.draw do
     resource :comments 
   end  
   
+  resources :drills  do
+    resource :reviews 
+  end
+  
+  get 'reviews/index'
+  get 'reviews/new'
   
   get 'profiles/index'
   get 'profiles/new'
@@ -19,10 +23,6 @@ Rails.application.routes.draw do
   get 'profiles/edit'
   get 'drills/index'
   get 'drills/edit'
-  
-  get 'drills/show'
-  get 'drills/new'
-  post 'drills/create' => 'drills#create'
   
   get 'comments/index'
   get 'comments/new'
