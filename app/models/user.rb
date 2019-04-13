@@ -9,5 +9,5 @@ class User < ApplicationRecord
      has_many :titles  , dependent: :destroy
      has_many :drills  , dependent: :destroy
      has_many :communications  , dependent: :destroy
-
+     has_many :reviews , dependent: :destroy
 end
