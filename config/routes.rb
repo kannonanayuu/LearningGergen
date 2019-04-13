@@ -21,7 +21,7 @@ Rails.application.routes.draw do
   get 'reviews/index'
   get 'reviews/new'
   get 'reviews/update'
-  get 'reviews/create'
+  post 'reviews/create'
   
   get 'profiles/index'
   get 'profiles/new'
