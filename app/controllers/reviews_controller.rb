@@ -11,6 +11,8 @@ class ReviewsController < ApplicationController
   end
 
   def show
+    @comments = Review.where(drill_id: params[:drill_id]).last  
+    
   end
 
   def edit
