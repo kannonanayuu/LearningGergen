@@ -20,7 +20,7 @@ class ReviewsController < ApplicationController
 
   def new
     @answer = Drill.find(params[:id])
-    @@aid = @answer.id
+    @@did = @answer.id
     @comment = Review.new
     @comment.drill_id = @answer.id
     @@aa = params[:id]  
