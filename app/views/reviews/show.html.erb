@@ -54,3 +54,10 @@
   <br>
   <p class="kakomu"> <%= @comments.j4 %></p>        
   <br>  
+  <div　class="button_side">
+   <%= button_to "承認", {controller: 'root', action: 'top'},{method: :get} %>   
+   <%= button_to "編集", {controller: 'reviews', action: 'edit'}, {method: :get, params: {id: @comments.drill.id}} %>   
+   <%= button_to '削除', answer_path(@comments.drill.id), :method => :delete, :confirm => '本当に取り消しますか？' %>
+  </div> 
+  
+  
