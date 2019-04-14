@@ -16,6 +16,7 @@ class ReviewsController < ApplicationController
   end
 
   def edit
+    @comments = Review.where(drill_id: params[:drill_id]).last    
   end
 
   def new
@@ -41,6 +42,15 @@ class ReviewsController < ApplicationController
     end
     
   end
+  
+  def update
+    comment = Review.where(drill_id: params[:drill_id]).last  
+    comment.update(review_params)
+    redirect_to top_path
+    
+  end
+
+  
   
   private
   def review_params

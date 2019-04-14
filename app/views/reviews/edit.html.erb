@@ -1,2 +1,40 @@
-<h1>Reviews#edit</h1>
-<p>Find me in app/views/reviews/edit.html.erb</p>
+<h2>分析結果を編集する</h2>
+　<%= form_for @comments,:url => {:action => :update} do |f| %>
+  　<h3>成長戦略</h3>
+  　<p class="answer"> <%= @comments.drill.strt %></p>
+  　<h3>コメント</h3>
+  　<%= f.text_area :strt, :size=>"115x10"%>        
+  　<br>    
+    <h3>SWOT分析</h3>
+    <h3>強み</h3>
+    <p class="answer"> <%= @comments.drill.s %></p>
+    <br>
+    <h3>コメント</h3>
+    <%= f.text_area :s, :size=>"115x10"%>        
+    <br><br> 
+    <h3>弱み</h3>
+    <p class="answer"> <%= @comments.drill.w %></p>
+    <br>
+    <h3>コメント</h3>  
+    <%= f.text_area :w, :size=>"115x10"%>
+    <br>
+    <h3>機会</h3>
+    <p class="answer"> <%= @comments.drill.o %></p>
+    <br>
+    <h3>コメント</h3>  
+    <%= f.text_area :o, :size=>"115x10"%>
+    <br>
+    <h3>脅威</h3>
+    <p class="answer"> <%= @comments.drill.t %></p>
+    <br>
+    <%= f.text_area :t, :size=>"115x10"%>
+    <h3>コメント</h3>  
+    <br>
+    <h3>財務上の課題と対策</h3>
+    <p class="answer"> <%= @comments.drill.j4 %></p>
+    <br>
+    <h3>コメント</h3>
+    <%= f.text_area :j4, :size=>"115x10"%>          
+   <br>  
+  <%= f.submit '更新する' %>    
+<% end %>
