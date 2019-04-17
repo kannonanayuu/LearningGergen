@@ -72,8 +72,104 @@ class AnswersController < ApplicationController
     elsif @@select == "264" then  
         ans.year = 26
         ans.jirei = 4
+    elsif @@select == "251" then  
+        ans.year = 25
+        ans.jirei = 1
+    elsif @@select == "252" then  
+        ans.year = 25
+        ans.jirei = 2
+    elsif @@select == "253" then  
+        ans.year = 25
+        ans.jirei = 3
+    elsif @@select == "254" then  
+        ans.year = 25
+        ans.jirei = 4    
+    elsif @@select == "241" then  
+        ans.year = 24
+        ans.jirei = 1
+    elsif @@select == "242" then  
+        ans.year = 24
+        ans.jirei = 2
+    elsif @@select == "243" then  
+        ans.year = 24
+        ans.jirei = 3
+    elsif @@select == "244" then  
+        ans.year = 24
+        ans.jirei = 4        
+    elsif @@select == "231" then  
+        ans.year = 23
+        ans.jirei = 1
+    elsif @@select == "232" then  
+        ans.year = 23
+        ans.jirei = 2
+    elsif @@select == "233" then  
+        ans.year = 23
+        ans.jirei = 3
+    elsif @@select == "234" then  
+        ans.year = 23
+        ans.jirei = 4        
+    elsif @@select == "221" then  
+        ans.year = 22
+        ans.jirei = 1
+    elsif @@select == "222" then  
+        ans.year = 22
+        ans.jirei = 2
+    elsif @@select == "223" then  
+        ans.year = 22
+        ans.jirei = 3
+    elsif @@select == "224" then  
+        ans.year = 22
+        ans.jirei = 4     
+    elsif @@select == "211" then  
+        ans.year = 21
+        ans.jirei = 1
+    elsif @@select == "212" then  
+        ans.year = 21
+        ans.jirei = 2
+    elsif @@select == "213" then  
+        ans.year = 21
+        ans.jirei = 3
+    elsif @@select == "214" then  
+        ans.year = 21
+        ans.jirei = 4        
+    elsif @@select == "201" then  
+        ans.year = 20
+        ans.jirei = 1
+    elsif @@select == "202" then  
+        ans.year = 20
+        ans.jirei = 2
+    elsif @@select == "203" then  
+        ans.year = 20
+        ans.jirei = 3
+    elsif @@select == "204" then  
+        ans.year = 20
+        ans.jirei = 4        
+    elsif @@select == "191" then  
+        ans.year = 19
+        ans.jirei = 1
+    elsif @@select == "192" then  
+        ans.year = 19
+        ans.jirei = 2
+    elsif @@select == "193" then  
+        ans.year = 19
+        ans.jirei = 3
+    elsif @@select == "194" then  
+        ans.year = 19
+        ans.jirei = 4 
+    elsif @@select == "181" then  
+        ans.year = 18
+        ans.jirei = 1
+    elsif @@select == "182" then  
+        ans.year = 18
+        ans.jirei = 2
+    elsif @@select == "183" then  
+        ans.year = 18
+        ans.jirei = 3
+    elsif @@select == "184" then  
+        ans.year = 18
+        ans.jirei = 4            
     end
-    
+
     # DBへ保存する
     ans.save
     # トップ画面へリダイレクト
