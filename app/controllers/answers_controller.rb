@@ -191,7 +191,8 @@ class AnswersController < ApplicationController
      @answer = Answer.new
      @id = params[:id]
      @@select = @id
-
+     puts "NNNNNNNNNNN"
+     puts @id
   end
 
   def destroy
