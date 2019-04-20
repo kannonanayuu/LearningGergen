@@ -783,7 +783,256 @@
       <h4>第1問（配点40点）<h4>
       <p> <%= @answer.ans1 %></p>
       <br>
+      <h4>第2問（配点20点）<h4>      
+      <h4>(設問1)</h4>
+      <p> <%= @answer.ans2 %></p>
+      <h4>(設問2)</h4>
+      <p> <%= @answer.ans3 %></p>
+      <br>
+      <h4>第3問（配点20点）<h4>
+      <h4>(設問1)</h4>
+      <p><%= @answer.ans4 %></p>
+      <h4>(設問2)</h4>
+      <p><%= @answer.ans5 %></p>
+      <br>
+      <h4>第4問（配点20点）<h4>
+      <h4>(設問1)</h4>    
+      <p><%= @answer.ans6 %></p>  
+      <h4>(設問2)</h4>    
+      <p><%= @answer.ans7 %></p>        
+      <br>
+    <% end %>
+  <% end %>
+  <% if @answer.year == 20 %>
+    <% if @answer.jirei == 1 %>
+      <br>
+      <h4>第1問（配点20点）<h4>
+      <p> <%= @answer.ans1 %></p>
+      <br>
+      <h4>第2問（配点20点）</h4>
+      <p> <%= @answer.ans2 %></p>      
+      <br>
+      <h4>第3問（配点20点）</h4>
+      <p><%= @answer.ans3 %></p>
+      <br>
+      <h4>第4問（配点20点）</h4>
+      <p><%= @answer.ans4 %></p>      
+      <br>
+      <h4>第5問（配点20点）</h4>
+      <p><%= @answer.ans5 %></p>      
+      <br>      
+    <% elsif @answer.jirei == 2 %>
+      <br>
+      <h4>第1問（配点10点）<h4>
+      <p> <%= @answer.ans1 %></p>
+      <br>
+      <h4>第2問（配点20点）</h4>
+      <p> <%= @answer.ans2 %></p>      
+      <br>
+      <h4>第3問（配点20点）</h4>
+      <p><%= @answer.ans3 %></p>
+      <br>
+      <h4>第4問（配点20点）</h4>
+      <h4>(設問1)</h4>
+      <p><%= @answer.ans4 %></p>      
+      <br>
+      <h4>(設問2)</h4>
+      <p><%= @answer.ans5 %></p>      
+      <br>      
+      <h4>第5問（配点30点）</h4>
+      <p><%= @answer.ans6 %></p>      
+      <br>      
+    <% elsif @answer.jirei == 3 %>  
+      <br>
+      <h4>第1問（配点20点）<h4>
+      <p> <%= @answer.ans1 %></p>
+      <br>
+      <h4>第2問（配点30点）<h4>  
+      <h4>(設問1)</h4>
+      <p> <%= @answer.ans2 %></p>
+      <h4>(設問2)</h4>
+      <p> <%= @answer.ans3 %></p>
+      <br>
+      <h4>第3問（配点25点）<h4>
+      <p> <%= @answer.ans4 %></p>
+      <br>
+      <h4>第4問（配点25点）<h4>
+      <p><%= @answer.ans5 %></p>
+      <br>
+    <% elsif @answer.jirei == 4 %> 
+      <br>
+      <h4>第1問（配点30点）<h4>
+      <p> <%= @answer.ans1 %></p>
+      <br>
       <h4>第2問（配点25点）<h4>      
+      <h4>(設問1)</h4>
+      <p> <%= @answer.ans2 %></p>
+      <h4>(設問2)</h4>
+      <p> <%= @answer.ans3 %></p>
+      <br>
+      <h4>第3問（配点25点）<h4>
+      <h4>(設問1)</h4>
+      <p><%= @answer.ans4 %></p>
+      <h4>(設問2)</h4>
+      <p><%= @answer.ans5 %></p>
+      <br>
+      <h4>第4問（配点20点）<h4>
+      <h4>(設問1)</h4>    
+      <p><%= @answer.ans6 %></p>  
+      <h4>(設問2)</h4>    
+      <p><%= @answer.ans7 %></p>        
+      <br>
+    <% end %>
+  <% end %>
+  <% if @answer.year == 19 %>
+    <% if @answer.jirei == 1 %>
+      <br>
+      <h4>第1問（配点10点）<h4>
+      <p> <%= @answer.ans1 %></p>
+      <br>
+      <h4>第2問（配点15点）</h4>
+      <p> <%= @answer.ans2 %></p>      
+      <br>
+      <h4>第3問（配点15点）</h4>
+      <p><%= @answer.ans3 %></p>
+      <br>
+      <h4>第4問（配点45点）</h4>
+      <h4>(設問1)</h4>
+      <p><%= @answer.ans4 %></p>      
+      <h4>(設問2)</h4>
+      <p><%= @answer.ans5 %></p>      
+      <h4>(設問3)</h4>
+      <p><%= @answer.ans6 %></p>      
+      <br>            
+      <h4>第5問（配点15点）</h4>
+      <p><%= @answer.ans7 %></p>      
+      <br>      
+    <% elsif @answer.jirei == 2 %>
+      <br>
+      <h4>第1問（配点20点）<h4>
+      <h4>(設問1)</h4>    
+      <p> <%= @answer.ans1 %></p>
+      <h4>(設問2)</h4>
+      <p> <%= @answer.ans2 %></p>      
+      <br>
+      <h4>第2問（配点30点）</h4>
+      <p><%= @answer.ans3 %></p>
+      <br>
+      <h4>第3問（配点30点）</h4>
+      <h4>(設問1)</h4>
+      <p><%= @answer.ans4 %></p>      
+      <h4>(設問2)</h4>
+      <p><%= @answer.ans5 %></p>      
+      <br>      
+      <h4>第4問（配点20点）</h4>
+      <h4>(設問1)</h4>
+      <p><%= @answer.ans6 %></p>  
+      <h4>(設問2)</h4>
+      <p><%= @answer.ans7 %></p>       
+      <br>      
+    <% elsif @answer.jirei == 3 %>  
+      <br>
+      <h4>第1問（配点20点）<h4>
+      <p> <%= @answer.ans1 %></p>
+      <br>
+      <h4>第2問（配点20点）<h4>  
+      <p> <%= @answer.ans2 %></p>
+      <br>
+      <h4>第3問（配点20点）<h4>
+      <p> <%= @answer.ans3 %></p>
+      <br>
+      <h4>第4問（配点20点）<h4>
+      <p> <%= @answer.ans4 %></p>
+      <br>
+      <h4>第5問（配点20点）<h4>
+      <p><%= @answer.ans5 %></p>
+      <br>
+    <% elsif @answer.jirei == 4 %> 
+      <br>
+      <h4>第1問（配点25点）<h4>
+      <p> <%= @answer.ans1 %></p>
+      <br>
+      <h4>第2問（配点25点）<h4>      
+      <h4>(設問1)</h4>
+      <p> <%= @answer.ans2 %></p>
+      <h4>(設問2)</h4>
+      <p> <%= @answer.ans3 %></p>
+      <br>
+      <h4>第3問（配点25点）<h4>
+      <h4>(設問1)</h4>
+      <p><%= @answer.ans4 %></p>
+      <h4>(設問2)</h4>
+      <p><%= @answer.ans5 %></p>
+      <br>
+      <h4>第4問（配点25点）<h4>
+      <h4>(設問1)</h4>    
+      <p><%= @answer.ans6 %></p>  
+      <h4>(設問2)</h4>    
+      <p><%= @answer.ans7 %></p>        
+      <br>
+    <% end %>
+  <% end %>
+  <% if @answer.year == 18 %>
+    <% if @answer.jirei == 1 %>
+      <br>
+      <h4>第1問（配点30点）<h4>
+      <p> <%= @answer.ans1 %></p>
+      <br>
+      <h4>第2問（配点30点）</h4>
+      <h4>(設問1)</h4>
+      <p> <%= @answer.ans2 %></p>      
+      <h4>(設問2)</h4>
+      <p><%= @answer.ans3 %></p>
+      <br>
+      <h4>第3問（配点30点）</h4>
+      <h4>(設問1)</h4>
+      <p><%= @answer.ans4 %></p>      
+      <h4>(設問2)</h4>
+      <p><%= @answer.ans5 %></p>
+      <br>
+      <h4>第4問（配点10点）</h4>
+      <p><%= @answer.ans6 %></p>      
+      <br>            
+    <% elsif @answer.jirei == 2 %>
+      <br>
+      <h4>第1問（配点20点）<h4>
+      <p> <%= @answer.ans1 %></p>
+      <br>
+      <h4>第2問（配点15点）</h4>
+      <p> <%= @answer.ans2 %></p>      
+      <br>
+      <h4>第3問（配点30点）</h4>
+      <p><%= @answer.ans3 %></p>
+      <br>
+      <h4>第4問（配点15点）</h4>
+      <p><%= @answer.ans4 %></p>
+      <br>
+      <h4>第5問（配点20点）</h4>
+      <p><%= @answer.ans5 %></p>      
+      <br>      
+    <% elsif @answer.jirei == 3 %>  
+      <br>
+      <h4>第1問（配点10点）<h4>
+      <p> <%= @answer.ans1 %></p>
+      <br>
+      <h4>第2問（配点25点）<h4>  
+      <p> <%= @answer.ans2 %></p>
+      <br>
+      <h4>第3問（配点25点）<h4>
+      <p> <%= @answer.ans3 %></p>
+      <br>
+      <h4>第4問（配点20点）<h4>
+      <p> <%= @answer.ans4 %></p>
+      <br>
+      <h4>第5問（配点20点）<h4>
+      <p><%= @answer.ans5 %></p>
+      <br>
+    <% elsif @answer.jirei == 4 %> 
+      <br>
+      <h4>第1問（配点30点）<h4>
+      <p> <%= @answer.ans1 %></p>
+      <br>
+      <h4>第2問（配点20点）<h4>      
       <h4>(設問1)</h4>
       <p> <%= @answer.ans2 %></p>
       <h4>(設問2)</h4>
@@ -796,6 +1045,9 @@
       <p><%= @answer.ans5 %></p>
       <br>
       <h4>第4問（配点15点）<h4>
+      <p><%= @answer.ans7 %></p>        
+      <br>          
+      <h4>第5問（配点15点）<h4>
       <h4>(設問1)</h4>    
       <p><%= @answer.ans6 %></p>  
       <h4>(設問2)</h4>    
