@@ -185,7 +185,7 @@ class RanksController < ApplicationController
     puts "###########"
     puts  params[:id]
     puts "##########"
-    @answers = Answer.where(id: params[:id]).where(year: 30).where(jirei: 1).includes(:comments)  
+    @answers = Answer.where(id: params[:id]).includes(:comments)  
   
   end
   
