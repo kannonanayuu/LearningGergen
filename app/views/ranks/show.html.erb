@@ -1,8 +1,8 @@
 <% @answers.each do |f|  %>
+  <h2><%= f.user.name %>さんの解答への評価</h1>
+  <br>
   <% if(f.year == 30 )then  %>
     <% if(f.jirei == 1)then  %>
-      <h2><%= f.user.name %>さんの解答への評価</h1>
-      <br>
       <h4>第1問（配点20点）<h4>
       <p class="answer"> <%= f.ans1 %></p>
       <br>
@@ -50,12 +50,170 @@
       <% end %>      
       <br>        
     <% end %>
+    <% if(f.jirei == 2)then  %>
+      <h4>第1問（配点25点）<h4>
+      <p class="answer"> <%= f.ans1 %></p>
+      <br>
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge1 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans1 %></p>
+        <br>
+      <% end %>
+      <br>
+    <h4>第2問（配点25点）<h4>
+      <p class="answer"> <%= f.ans2 %></p>
+      <br>    
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge2 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans2 %></p>
+        <br>
+      <% end %>
+      <br>
+    <h4>第3問（配点25点）<h4>
+      <p class="answer"> <%= f.ans3 %></p>
+      <br>    
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge3 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans3 %></p>
+        <br>
+      <% end %>
+      <br>
+    <h4>第4問（配点25点）</h4> 
+      <p class="answer"> <%= f.ans4 %></p>
+      <br>    
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge4 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans4 %></p>
+        <br>
+      <% end %>
+      <br>
+    <% end %>
+    <% if(f.jirei == 3)then  %>
+      <h4>第1問（配点20点）<h4>
+      <p class="answer"> <%= f.ans1 %></p>
+      <br>
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge1 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans1 %></p>
+        <br>
+      <% end %>
+      <br>
+    <h4>第2問（配点20点）<h4>
+      <p class="answer"> <%= f.ans2 %></p>
+      <br>    
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge2 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans2 %></p>
+        <br>
+      <% end %>
+      <br>
+    <h4>第3問（配点20点）<h4>
+      <p class="answer"> <%= f.ans3 %></p>
+      <br>    
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge3 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans3 %></p>
+        <br>
+      <% end %>
+      <br>
+    <h4>第4問（配点20点）</h4> 
+      <p class="answer"> <%= f.ans4 %></p>
+      <br>    
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge4 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans4 %></p>
+        <br>
+      <% end %>
+      <br>
+    <h4>第5問（配点20点）</h4> 
+      <p class="answer"> <%= f.ans5 %></p>
+      <br>   
+       <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge5 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans5 %></p>
+        <br>
+      <% end %>      
+      <br>        
+    <% end %>
+    <% if(f.jirei == 4)then  %>
+      <h4>第1問（配点24点）<h4>
+      <h4>(設問1)</h4> 
+      <p class="answer"> <%= f.ans1 %></p>
+      <br>
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge1 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans1 %></p>
+        <br>
+      <% end %>
+      <br>
+    <h4>(設問2)</h4> 
+      <p class="answer"> <%= f.ans2 %></p>
+      <br>    
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge2 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans2 %></p>
+        <br>
+      <% end %>
+      <br>
+      <h4>第2問（配点31点）<h4>
+      <h4>(設問1)</h4> 
+      <p class="answer"> <%= f.ans3 %></p>
+      <br>    
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge3 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans3 %></p>
+        <br>
+      <% end %>
+      <br>
+      <h4>(設問2)</h4> 
+      <p class="answer"> <%= f.ans4 %></p>
+      <br>    
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge4 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans4 %></p>
+        <br>
+      <% end %>
+      <br>
+      <h4>(設問3)</h4> 
+      <p class="answer"> <%= f.ans5 %></p>
+      <br>   
+       <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge5 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans5 %></p>
+        <br>
+      <% end %>      
+      <h4>第3問（配点30点）<h4>
+      <h4>(設問1)</h4> 
+      <p class="answer"> <%= f.ans6 %></p>
+      <br>   
+       <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge6 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans6 %></p>
+        <br>
+      <% end %>      
+      <h4>(設問2)</h4> 
+      <p class="answer"> <%= f.ans7 %></p>
+      <br>   
+       <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge7 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans7 %></p>
+        <br>
+      <% end %>      
+      <h4>第4問（配点15点）<h4>
+      <h4>(設問1)</h4> 
+      <p class="answer"> <%= f.ans8 %></p>
+      <br>   
+       <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge8 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans8 %></p>
+        <br>
+      <% end %>      
+      <br>        
+    <% end %>
 　<% end %>
-<% end %>
-<% if(f.year == 29 )then  %>
+
+  <% if(f.year == 29 )then  %>
     <% if(f.jirei == 1)then  %>
-      <h2><%= f.user.name %>さんの解答への評価</h1>
-      <br>
       <h4>第1問（配点20点）<h4>
       <p class="answer"> <%= f.ans1 %></p>
       <br>
@@ -65,8 +223,7 @@
         <br>
       <% end %>
       <br>
-    <h4>第2問（配点40点）<h4>
-    <h4>(設問1)</h4> 
+      <h4>第2問（配点20点）<h4>
       <p class="answer"> <%= f.ans2 %></p>
       <br>    
       <% f.comments.each do |ff|  %>
@@ -75,7 +232,7 @@
         <br>
       <% end %>
       <br>
-    <h4>(設問2)</h4> 
+      <h4>第3問（配点20点）<h4>
       <p class="answer"> <%= f.ans3 %></p>
       <br>    
       <% f.comments.each do |ff|  %>
@@ -84,7 +241,7 @@
         <br>
       <% end %>
       <br>
-    <h4>第3問（配点20点）</h4> 
+      <h4>第4問（配点20点）</h4> 
       <p class="answer"> <%= f.ans4 %></p>
       <br>    
       <% f.comments.each do |ff|  %>
@@ -93,7 +250,7 @@
         <br>
       <% end %>
       <br>
-    <h4>第4問（配点20点）</h4> 
+      <h4>第5問（配点20点）</h4> 
       <p class="answer"> <%= f.ans5 %></p>
       <br>   
        <% f.comments.each do |ff|  %>
@@ -103,12 +260,222 @@
       <% end %>      
       <br>        
     <% end %>
+    <% if(f.jirei == 2)then  %>
+      <h4>第1問（配点20点）<h4>
+      <p class="answer"> <%= f.ans1 %></p>
+      <br>
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge1 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans1 %></p>
+        <br>
+      <% end %>
+      <br>
+    <h4>第2問（配点25点）<h4>
+    <h4>(設問1)</h4> 
+      <p class="answer"> <%= f.ans2 %></p>
+      <br>    
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge2 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans2 %></p>
+        <br>
+      <% end %>
+      <br>
+    <h4>第3問（配点30点）<h4>
+      <p class="answer"> <%= f.ans3 %></p>
+      <br>    
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge3 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans3 %></p>
+        <br>
+      <% end %>
+      <br>
+    <h4>第4問（配点25点）</h4> 
+      <p class="answer"> <%= f.ans4 %></p>
+      <br>    
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge4 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans4 %></p>
+        <br>
+      <% end %>
+    <% end %>
+    <% if(f.jirei == 3)then  %>
+      <h4>第1問（配点30点）<h4>
+      <p class="answer"> <%= f.ans1 %></p>
+      <br>
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge1 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans1 %></p>
+        <br>
+      <% end %>
+      <br>
+    <h4>第2問（配点20点）<h4>
+      <p class="answer"> <%= f.ans2 %></p>
+      <br>    
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge2 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans2 %></p>
+        <br>
+      <% end %>
+      <br>
+    <h4>第3問（配点20点）<h4>
+      <p class="answer"> <%= f.ans3 %></p>
+      <br>    
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge3 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans3 %></p>
+        <br>
+      <% end %>
+      <br>
+    <h4>第4問（配点30点）</h4> 
+      <p class="answer"> <%= f.ans4 %></p>
+      <br>    
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge4 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans4 %></p>
+        <br>
+      <% end %>
+    <% end %>
+    <% if(f.jirei == 4)then  %>
+      <h4>第1問（配点25点）<h4>
+      <h4>(設問1)</h4> 
+      <p class="answer"> <%= f.ans1 %></p>
+      <br>
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge1 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans1 %></p>
+        <br>
+      <% end %>
+      <br>
+      <h4>(設問2)</h4> 
+      <p class="answer"> <%= f.ans2 %></p>
+      <br>    
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge2 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans2 %></p>
+        <br>
+      <% end %>
+      <br>
+      <h4>第2問（配点18点）<h4>
+      <h4>(設問1)</h4> 
+      <p class="answer"> <%= f.ans3 %></p>
+      <br>    
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge3 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans3 %></p>
+        <br>
+      <% end %>
+      <br>
+      <h4>(設問2)</h4> 
+      <p class="answer"> <%= f.ans4 %></p>
+      <br>    
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge4 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans4 %></p>
+        <br>
+      <% end %>
+      <br>
+      <h4>(設問3)</h4> 
+      <p class="answer"> <%= f.ans5 %></p>
+      <br>   
+       <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge5 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans5 %></p>
+        <br>
+      <% end %>      
+      <h4>第3問（配点29点）<h4>
+      <h4>(設問1)</h4> 
+      <p class="answer"> <%= f.ans6 %></p>
+      <br>    
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge6 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans6 %></p>
+        <br>
+      <% end %>
+      <h4>(設問2)</h4> 
+      <p class="answer"> <%= f.ans7 %></p>
+      <br>    
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge7 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans7 %></p>
+        <br>
+      <% end %>
+      <h4>第4問（配点28点）<h4>
+      <h4>(設問1)</h4> 
+      <p class="answer"> <%= f.ans8 %></p>
+      <br>    
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge8 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans8 %></p>
+        <br>
+      <% end %>
+      <h4>(設問2)</h4> 
+      <p class="answer"> <%= f.ans9 %></p>
+      <br>    
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge9 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans9 %></p>
+        <br>
+      <% end %>
+      <h4>(設問3)</h4> 
+      <p class="answer"> <%= f.ans10 %></p>
+      <br>    
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge10 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans10 %></p>
+        <br>
+      <% end %>
+    <% end %>
 　<% end %>
-<% end %>
-<% if(f.year == 28 )then  %>
+  <% if(f.year == 28 )then  %>
     <% if(f.jirei == 1)then  %>
-      <h2><%= f.user.name %>さんの解答への評価</h1>
+      <h4>第1問（配点40点）<h4>
+      <h4>(設問1)</h4> 
+      <p class="answer"> <%= f.ans1 %></p>
       <br>
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge1 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans1 %></p>
+        <br>
+      <% end %>
+      <br>
+      <h4>(設問2)</h4> 
+      <p class="answer"> <%= f.ans2 %></p>
+      <br>    
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge2 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans2 %></p>
+        <br>
+      <% end %>
+      <br>
+      <h4>第2問（配点40点）<h4>
+      <h4>(設問1)</h4> 
+      <p class="answer"> <%= f.ans3 %></p>
+      <br>    
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge3 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans3 %></p>
+        <br>
+      <% end %>
+      <br>
+      <h4>(設問2)</h4> 
+      <p class="answer"> <%= f.ans4 %></p>
+      <br>    
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge4 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans4 %></p>
+        <br>
+      <% end %>
+      <br>
+      <h4>第3問（配点20点）</h4> 
+      <p class="answer"> <%= f.ans5 %></p>
+      <br>   
+       <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge5 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans5 %></p>
+        <br>
+      <% end %>      
+    <% end %>
+    <% if(f.jirei == 2)then  %>
       <h4>第1問（配点20点）<h4>
       <p class="answer"> <%= f.ans1 %></p>
       <br>
@@ -118,8 +485,8 @@
         <br>
       <% end %>
       <br>
-    <h4>第2問（配点40点）<h4>
-    <h4>(設問1)</h4> 
+      <h4>第2問（配点30点）<h4>
+      <h4>(設問1)</h4> 
       <p class="answer"> <%= f.ans2 %></p>
       <br>    
       <% f.comments.each do |ff|  %>
@@ -128,7 +495,7 @@
         <br>
       <% end %>
       <br>
-    <h4>(設問2)</h4> 
+      <h4>(設問2)</h4> 
       <p class="answer"> <%= f.ans3 %></p>
       <br>    
       <% f.comments.each do |ff|  %>
@@ -137,7 +504,7 @@
         <br>
       <% end %>
       <br>
-    <h4>第3問（配点20点）</h4> 
+      <h4>第3問（配点20点）</h4> 
       <p class="answer"> <%= f.ans4 %></p>
       <br>    
       <% f.comments.each do |ff|  %>
@@ -146,7 +513,8 @@
         <br>
       <% end %>
       <br>
-    <h4>第4問（配点20点）</h4> 
+      <h4>第4問（配点30点）</h4> 
+      <h4>(設問1)</h4> 
       <p class="answer"> <%= f.ans5 %></p>
       <br>   
        <% f.comments.each do |ff|  %>
@@ -154,13 +522,121 @@
         <p class="kakomu"><%= ff.ans5 %></p>
         <br>
       <% end %>      
-      <br>        
+      <h4>(設問2)</h4> 
+      <p class="answer"> <%= f.ans6 %></p>
+      <br>   
+       <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge6 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans6 %></p>
+        <br>
+      <% end %>      
+    <% end %>
+    <% if(f.jirei == 3)then  %>
+      <h4>第1問（配点20点）<h4>
+      <p class="answer"> <%= f.ans1 %></p>
+      <br>
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge1 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans1 %></p>
+        <br>
+      <% end %>
+      <br>
+      <h4>第2問（配点30点）<h4>
+      <p class="answer"> <%= f.ans2 %></p>
+      <br>    
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge2 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans2 %></p>
+        <br>
+      <% end %>
+      <br>
+      <h4>第3問（配点20点）<h4>
+      <p class="answer"> <%= f.ans3 %></p>
+      <br>    
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge3 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans3 %></p>
+        <br>
+      <% end %>
+      <br>
+      <h4>第4問（配点30点）</h4> 
+      <p class="answer"> <%= f.ans4 %></p>
+      <br>    
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge4 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans4 %></p>
+        <br>
+      <% end %>
+    <% end %>
+    <% if(f.jirei == 4)then  %>
+      <h4>第1問（配点25点）<h4>
+      <h4>(設問1)</h4> 
+      <p class="answer"> <%= f.ans1 %></p>
+      <br>
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge1 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans1 %></p>
+        <br>
+      <% end %>
+      <br>
+      <h4>(設問2)</h4> 
+      <p class="answer"> <%= f.ans2 %></p>
+      <br>    
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge2 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans2 %></p>
+        <br>
+      <% end %>
+      <br>
+      <h4>第2問（配点35点）<h4>
+      <h4>(設問1)</h4> 
+      <p class="answer"> <%= f.ans3 %></p>
+      <br>    
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge3 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans3 %></p>
+        <br>
+      <% end %>
+      <br>
+      <h4>(設問2)</h4> 
+      <p class="answer"> <%= f.ans4 %></p>
+      <br>    
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge4 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans4 %></p>
+        <br>
+      <% end %>
+      <br>
+      <h4>第3問（配点15点）</h4> 
+      <p class="answer"> <%= f.ans5 %></p>
+      <br>   
+       <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge5 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans5 %></p>
+        <br>
+      <% end %>      
+      <h4>第4問（配点25点）</h4> 
+      <h4>(設問1)</h4> 
+      <p class="answer"> <%= f.ans6 %></p>
+      <br>   
+       <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge6 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans6 %></p>
+        <br>
+      <% end %>      
+      <h4>(設問2)</h4> 
+      <p class="answer"> <%= f.ans7 %></p>
+      <br>   
+       <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge7 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans7 %></p>
+        <br>
+      <% end %>      
     <% end %>
 　<% end %>
+　
   <% if(f.year == 27 )then  %>
     <% if(f.jirei == 1)then  %>
-      <h2><%= f.user.name %>さんの解答への評価</h1>
-      <br>
       <h4>第1問（配点20点）<h4>
       <p class="answer"> <%= f.ans1 %></p>
       <br>
@@ -170,8 +646,7 @@
         <br>
       <% end %>
       <br>
-    <h4>第2問（配点40点）<h4>
-    <h4>(設問1)</h4> 
+    <h4>第2問（配点20点）<h4>
       <p class="answer"> <%= f.ans2 %></p>
       <br>    
       <% f.comments.each do |ff|  %>
@@ -180,7 +655,7 @@
         <br>
       <% end %>
       <br>
-    <h4>(設問2)</h4> 
+      <h4>第3問（配点20点）<h4>
       <p class="answer"> <%= f.ans3 %></p>
       <br>    
       <% f.comments.each do |ff|  %>
@@ -189,7 +664,7 @@
         <br>
       <% end %>
       <br>
-    <h4>第3問（配点20点）</h4> 
+      <h4>第4問（配点20点）</h4> 
       <p class="answer"> <%= f.ans4 %></p>
       <br>    
       <% f.comments.each do |ff|  %>
@@ -198,7 +673,7 @@
         <br>
       <% end %>
       <br>
-    <h4>第4問（配点20点）</h4> 
+      <h4>第5問（配点20点）</h4> 
       <p class="answer"> <%= f.ans5 %></p>
       <br>   
        <% f.comments.each do |ff|  %>
@@ -206,13 +681,212 @@
         <p class="kakomu"><%= ff.ans5 %></p>
         <br>
       <% end %>      
-      <br>        
     <% end %>
-　<% end %>
+    <% if(f.jirei == 2)then  %>
+      <h4>第1問（配点40点）<h4>
+      <h4>(設問1)</h4> 
+      <p class="answer"> <%= f.ans1 %></p>
+      <br>
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge1 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans1 %></p>
+        <br>
+      <% end %>
+      <br>
+      <h4>(設問2)</h4> 
+      <p class="answer"> <%= f.ans2 %></p>
+      <br>    
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge2 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans2 %></p>
+        <br>
+      <% end %>
+      <br>
+      <h4>(設問3)</h4> 
+      <p class="answer"> <%= f.ans3 %></p>
+      <br>    
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge3 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans3 %></p>
+        <br>
+      <% end %>
+      <br>
+      <h4>第2問（配点20点）</h4> 
+      <p class="answer"> <%= f.ans4 %></p>
+      <br>    
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge4 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans4 %></p>
+        <br>
+      <% end %>
+      <br>
+      <h4>第3問（配点40点）</h4> 
+      <h4>(設問1)</h4> 
+      <p class="answer"> <%= f.ans5 %></p>
+      <br>   
+       <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge5 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans5 %></p>
+        <br>
+      <% end %>      
+      <h4>(設問2)</h4> 
+      <p class="answer"> <%= f.ans6 %></p>
+      <br>   
+       <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge6 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans6 %></p>
+        <br>
+      <% end %>      
+    <% end %>
+    <% if(f.jirei == 3)then  %>
+      <h4>第1問（配点40点）<h4>
+      <h4>(設問1)</h4> 
+      <p class="answer"> <%= f.ans1 %></p>
+      <br>
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge1 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans1 %></p>
+        <br>
+      <% end %>
+      <br>
+      <h4>(設問2)</h4> 
+      <p class="answer"> <%= f.ans2 %></p>
+      <br>    
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge2 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans2 %></p>
+        <br>
+      <% end %>
+      <br>
+      <h4>(設問3)</h4> 
+      <p class="answer"> <%= f.ans3 %></p>
+      <br>    
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge3 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans3 %></p>
+        <br>
+      <% end %>
+      <br>
+      <h4>第2問（配点20点）</h4> 
+      <p class="answer"> <%= f.ans4 %></p>
+      <br>    
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge4 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans4 %></p>
+        <br>
+      <% end %>
+      <br>
+      <h4>第3問（配点20点）</h4> 
+      <p class="answer"> <%= f.ans5 %></p>
+      <br>   
+       <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge5 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans5 %></p>
+        <br>
+      <% end %>
+      <h4>第4問（配点20点）</h4> 
+      <p class="answer"> <%= f.ans6 %></p>
+      <br>   
+       <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge6 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans6 %></p>
+        <br>
+      <% end %>
+    <% end %>
+    <% if(f.jirei == 4)then  %>
+      <h4>第1問（配点28点）<h4>
+      <h4>(設問1)</h4> 
+      <p class="answer"> <%= f.ans1 %></p>
+      <br>
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge1 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans1 %></p>
+        <br>
+      <% end %>
+      <br>
+      <h4>(設問2)</h4> 
+      <p class="answer"> <%= f.ans2 %></p>
+      <br>    
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge2 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans2 %></p>
+        <br>
+      <% end %>
+      <br>
+      <h4>第2問（配点34点）</h4> 
+      <h4>(設問1)</h4> 
+      <p class="answer"> <%= f.ans3 %></p>
+      <br>    
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge3 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans3 %></p>
+        <br>
+      <% end %>
+      <br>
+      <h4>(設問2)</h4> 
+      <p class="answer"> <%= f.ans4 %></p>
+      <br>    
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge4 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans4 %></p>
+        <br>
+      <% end %>
+      <br>
+      <h4>(設問3)</h4> 
+      <p class="answer"> <%= f.ans5 %></p>
+      <br>   
+       <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge5 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans5 %></p>
+        <br>
+      <% end %>      
+      <h4>第3問（配点26点）</h4> 
+      <h4>(設問1)</h4> 
+      <p class="answer"> <%= f.ans6 %></p>
+      <br>   
+       <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge6 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans6 %></p>
+        <br>
+      <% end %>      
+      <h4>(設問2)</h4> 
+      <p class="answer"> <%= f.ans7 %></p>
+      <br>   
+       <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge7 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans7 %></p>
+        <br>
+      <% end %>      
+      <h4>(設問3)</h4> 
+      <p class="answer"> <%= f.ans8 %></p>
+      <br>   
+       <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge8 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans8 %></p>
+        <br>
+      <% end %>      
+      <h4>第4問（配点12点）</h4> 
+      <h4>(設問1)</h4> 
+      <p class="answer"> <%= f.ans9 %></p>
+      <br>   
+       <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge9 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans9 %></p>
+        <br>
+      <% end %>      
+      <h4>(設問2)</h4> 
+      <p class="answer"> <%= f.ans10 %></p>
+      <br>   
+       <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge10 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans10 %></p>
+        <br>
+      <% end %>      
+    <% end %>
+　<% end %>　
+　
   <% if(f.year == 26 )then  %>
     <% if(f.jirei == 1)then  %>
-      <h2><%= f.user.name %>さんの解答への評価</h1>
-      <br>
       <h4>第1問（配点20点）<h4>
       <p class="answer"> <%= f.ans1 %></p>
       <br>
@@ -222,8 +896,7 @@
         <br>
       <% end %>
       <br>
-    <h4>第2問（配点40点）<h4>
-    <h4>(設問1)</h4> 
+      <h4>第2問（配点20点）<h4>
       <p class="answer"> <%= f.ans2 %></p>
       <br>    
       <% f.comments.each do |ff|  %>
@@ -232,7 +905,7 @@
         <br>
       <% end %>
       <br>
-    <h4>(設問2)</h4> 
+      <h4>第3問（配点20点）<h4>
       <p class="answer"> <%= f.ans3 %></p>
       <br>    
       <% f.comments.each do |ff|  %>
@@ -241,7 +914,7 @@
         <br>
       <% end %>
       <br>
-    <h4>第3問（配点20点）</h4> 
+      <h4>第4問（配点20点）<h4>
       <p class="answer"> <%= f.ans4 %></p>
       <br>    
       <% f.comments.each do |ff|  %>
@@ -250,7 +923,7 @@
         <br>
       <% end %>
       <br>
-    <h4>第4問（配点20点）</h4> 
+      <h4>第5問（配点20点）<h4>
       <p class="answer"> <%= f.ans5 %></p>
       <br>   
        <% f.comments.each do |ff|  %>
@@ -260,11 +933,223 @@
       <% end %>      
       <br>        
     <% end %>
-　<% end %>
+    <% if(f.jirei == 2)then  %>
+      <h4>第1問（配点25点）<h4>
+      <p class="answer"> <%= f.ans1 %></p>
+      <br>
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge1 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans1 %></p>
+        <br>
+      <% end %>
+      <br>
+      <h4>第2問（配点25点）<h4>
+      <p class="answer"> <%= f.ans2 %></p>
+      <br>    
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge2 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans2 %></p>
+        <br>
+      <% end %>
+      <br>
+      <h4>第3問（配点30点）<h4>
+      <h4>(設問1)</h4> 
+      <p class="answer"> <%= f.ans3 %></p>
+      <br>    
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge3 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans3 %></p>
+        <br>
+      <% end %>
+      <br>
+      <h4>(設問2)</h4> 
+      <p class="answer"> <%= f.ans4 %></p>
+      <br>    
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge4 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans4 %></p>
+        <br>
+      <% end %>
+      <br>
+      <h4>第4問（配点20点）</h4> 
+      <p class="answer"> <%= f.ans5 %></p>
+      <br>   
+       <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge5 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans5 %></p>
+        <br>
+      <% end %>      
+    <% end %>
+    <% if(f.jirei == 3)then  %>
+      <h4>第1問（配点10点）<h4>
+      <p class="answer"> <%= f.ans1 %></p>
+      <br>
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge1 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans1 %></p>
+        <br>
+      <% end %>
+      <br>
+      <h4>第2問（配点20点）<h4>
+      <p class="answer"> <%= f.ans2 %></p>
+      <br>    
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge2 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans2 %></p>
+        <br>
+      <% end %>
+      <br>
+      <h4>第3問（配点40点）<h4>
+      <h4>(設問1)</h4> 
+      <p class="answer"> <%= f.ans3 %></p>
+      <br>    
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge3 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans3 %></p>
+        <br>
+      <% end %>
+      <br>
+      <h4>(設問2)</h4> 
+      <p class="answer"> <%= f.ans4 %></p>
+      <br>    
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge4 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans4 %></p>
+        <br>
+      <% end %>
+      <br>
+      <h4>第4問（配点30点）</h4> 
+      <p class="answer"> <%= f.ans5 %></p>
+      <br>   
+       <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge5 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans5 %></p>
+        <br>
+      <% end %>      
+    <% end %>
+    <% if(f.jirei == 4)then  %>
+      <h4>第1問（配点24点）<h4>
+      <p class="answer"> <%= f.ans1 %></p>
+      <br>
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge1 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans1 %></p>
+        <br>
+      <% end %>
+      <br>
+      <h4>第2問（配点30点）<h4>
+      <h4>(設問1)</h4> 
+      <p class="answer"> <%= f.ans2 %></p>
+      <br>    
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge2 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans2 %></p>
+        <br>
+      <% end %>
+      <br>
+      <h4>(設問2)</h4> 
+      <p class="answer"> <%= f.ans3 %></p>
+      <br>    
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge3 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans3 %></p>
+        <br>
+      <% end %>
+      <br>
+      <h4>第3問（配点30点）</h4> 
+      <h4>(設問1)</h4> 
+      <p class="answer"> <%= f.ans4 %></p>
+      <br>    
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge4 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans4 %></p>
+        <br>
+      <% end %>
+      <br>
+      <h4>(設問2)</h4> 
+      <p class="answer"> <%= f.ans5 %></p>
+      <br>   
+       <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge5 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans5 %></p>
+        <br>
+      <% end %>      
+      <h4>(設問3)</h4> 
+      <p class="answer"> <%= f.ans6 %></p>
+      <br>   
+       <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge6 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans6 %></p>
+        <br>
+      <% end %> 
+      <h4>第4問（配点16点）</h4> 
+      <p class="answer"> <%= f.ans7 %></p>
+      <br>   
+       <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge7 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans7 %></p>
+        <br>
+      <% end %>      
+    <% end %>
+　<% end %>　
   <% if(f.year == 25 )then  %>
     <% if(f.jirei == 1)then  %>
-      <h2><%= f.user.name %>さんの解答への評価</h1>
+      <h4>第1問（配点35点）<h4>
+      <h4>(設問1)</h4> 
+      <p class="answer"> <%= f.ans1 %></p>
       <br>
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge1 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans1 %></p>
+        <br>
+      <% end %>
+      <br>
+      <h4>(設問2)</h4> 
+      <p class="answer"> <%= f.ans2 %></p>
+      <br>    
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge2 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans2 %></p>
+        <br>
+      <% end %>
+      <br>
+      <h4>第2問（配点35点）<h4>
+      <h4>(設問1)</h4> 
+      <p class="answer"> <%= f.ans3 %></p>
+      <br>    
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge3 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans3 %></p>
+        <br>
+      <% end %>
+      <br>
+      <h4>(設問2)</h4> 
+      <p class="answer"> <%= f.ans4 %></p>
+      <br>    
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge4 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans4 %></p>
+        <br>
+      <% end %>
+      <br>
+      <h4>第3問（配点15点）</h4> 
+      <p class="answer"> <%= f.ans5 %></p>
+      <br>   
+       <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge5 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans5 %></p>
+        <br>
+      <% end %>      
+      <h4>第4問（配点15点）</h4> 
+      <p class="answer"> <%= f.ans6 %></p>
+      <br>   
+       <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge6 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans6 %></p>
+        <br>
+      <% end %>      
+    <% end %>
+    <% if(f.jirei == 2)then  %>
       <h4>第1問（配点20点）<h4>
       <p class="answer"> <%= f.ans1 %></p>
       <br>
@@ -274,8 +1159,7 @@
         <br>
       <% end %>
       <br>
-    <h4>第2問（配点40点）<h4>
-    <h4>(設問1)</h4> 
+      <h4>第2問（配点20点）<h4>
       <p class="answer"> <%= f.ans2 %></p>
       <br>    
       <% f.comments.each do |ff|  %>
@@ -284,7 +1168,8 @@
         <br>
       <% end %>
       <br>
-    <h4>(設問2)</h4> 
+      <h4>第3問（配点30点）<h4>
+      <h4>(設問1)</h4> 
       <p class="answer"> <%= f.ans3 %></p>
       <br>    
       <% f.comments.each do |ff|  %>
@@ -293,7 +1178,7 @@
         <br>
       <% end %>
       <br>
-    <h4>第3問（配点20点）</h4> 
+      <h4>(設問2)</h4> 
       <p class="answer"> <%= f.ans4 %></p>
       <br>    
       <% f.comments.each do |ff|  %>
@@ -302,7 +1187,8 @@
         <br>
       <% end %>
       <br>
-    <h4>第4問（配点20点）</h4> 
+      <h4>第4問（配点30点）</h4> 
+      <h4>(設問1)</h4> 
       <p class="answer"> <%= f.ans5 %></p>
       <br>   
        <% f.comments.each do |ff|  %>
@@ -310,13 +1196,584 @@
         <p class="kakomu"><%= ff.ans5 %></p>
         <br>
       <% end %>      
-      <br>        
+      <h4>(設問2)</h4> 
+      <p class="answer"> <%= f.ans6 %></p>
+      <br>   
+       <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge6 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans6 %></p>
+        <br>
+      <% end %>      
+    <% end %>
+    <% if(f.jirei == 3)then  %>
+      <h4>第1問（配点30点）<h4>
+      <h4>(設問1)</h4> 
+      <p class="answer"> <%= f.ans1 %></p>
+      <br>
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge1 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans1 %></p>
+        <br>
+      <% end %>
+      <br>
+      <h4>(設問2)</h4> 
+      <p class="answer"> <%= f.ans2 %></p>
+      <br>    
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge2 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans2 %></p>
+        <br>
+      <% end %>
+      <br>
+      <h4>第2問（配点40点）<h4>
+      <h4>(設問1)</h4> 
+      <p class="answer"> <%= f.ans3 %></p>
+      <br>    
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge3 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans3 %></p>
+        <br>
+      <% end %>
+      <br>
+      <h4>(設問2)</h4> 
+      <p class="answer"> <%= f.ans4 %></p>
+      <br>    
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge4 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans4 %></p>
+        <br>
+      <% end %>
+      <br>
+      <h4>第3問（配点30点）</h4> 
+      <p class="answer"> <%= f.ans5 %></p>
+      <br>   
+       <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge5 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans5 %></p>
+        <br>
+      <% end %>      
+    <% end %>
+    <% if(f.jirei == 4)then  %>
+      <h4>第1問（配点25点）<h4>
+      <p class="answer"> <%= f.ans1 %></p>
+      <br>
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge1 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans1 %></p>
+        <br>
+      <% end %>
+      <br>
+      <h4>第2問（配点45点）<h4>
+      <h4>(設問1)</h4> 
+      <p class="answer"> <%= f.ans2 %></p>
+      <br>    
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge2 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans2 %></p>
+        <br>
+      <% end %>
+      <br>
+      <h4>(設問2)</h4> 
+      <p class="answer"> <%= f.ans3 %></p>
+      <br>    
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge3 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans3 %></p>
+        <br>
+      <% end %>
+      <br>
+      <h4>(設問3)</h4> 
+      <p class="answer"> <%= f.ans4 %></p>
+      <br>    
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge4 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans4 %></p>
+        <br>
+      <% end %>
+      <br>
+      <h4>第3問（配点30点）</h4> 
+      <p class="answer"> <%= f.ans5 %></p>
+      <br>   
+       <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge5 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans5 %></p>
+        <br>
+      <% end %>      
     <% end %>
 　<% end %>
+　
   <% if(f.year == 24 )then  %>
     <% if(f.jirei == 1)then  %>
-      <h2><%= f.user.name %>さんの解答への評価</h1>
+      <h4>第1問（配点20点）<h4>
+      <p class="answer"> <%= f.ans1 %></p>
       <br>
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge1 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans1 %></p>
+        <br>
+      <% end %>
+      <br>
+      <h4>第2問（配点20点）<h4>
+      <p class="answer"> <%= f.ans2 %></p>
+      <br>    
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge2 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans2 %></p>
+        <br>
+      <% end %>
+      <br>
+      <h4>第3問（配点20点）<h4>
+      <p class="answer"> <%= f.ans3 %></p>
+      <br>    
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge3 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans3 %></p>
+        <br>
+      <% end %>
+      <br>
+      <h4>第4問（配点20点）</h4> 
+      <p class="answer"> <%= f.ans4 %></p>
+      <br>    
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge4 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans4 %></p>
+        <br>
+      <% end %>
+      <br>
+      <h4>第5問（配点20点）</h4> 
+      <p class="answer"> <%= f.ans5 %></p>
+      <br>   
+       <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge5 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans5 %></p>
+        <br>
+      <% end %>      
+    <% end %>
+    <% if(f.jirei == 2)then  %>
+      <h4>第1問（配点10点）<h4>
+      <p class="answer"> <%= f.ans1 %></p>
+      <br>
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge1 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans1 %></p>
+        <br>
+      <% end %>
+      <br>
+      <h4>第2問（配点30点）<h4>
+      <h4>(設問1)</h4> 
+      <p class="answer"> <%= f.ans2 %></p>
+      <br>    
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge2 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans2 %></p>
+        <br>
+      <% end %>
+      <br>
+      <h4>(設問2)</h4> 
+      <p class="answer"> <%= f.ans3 %></p>
+      <br>    
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge3 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans3 %></p>
+        <br>
+      <% end %>
+      <br>
+      <h4>第3問（配点30点）</h4> 
+      <h4>(設問1)</h4> 
+      <p class="answer"> <%= f.ans4 %></p>
+      <br>    
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge4 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans4 %></p>
+        <br>
+      <% end %>
+      <br>
+      <h4>(設問2)</h4> 
+      <p class="answer"> <%= f.ans5 %></p>
+      <br>   
+       <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge5 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans5 %></p>
+        <br>
+      <% end %>      
+      <h4>第4問（配点30点）</h4> 
+      <p class="answer"> <%= f.ans6 %></p>
+      <br>   
+       <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge6 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans6 %></p>
+        <br>
+      <% end %>      
+    <% end %>
+    <% if(f.jirei == 3)then  %>
+      <h4>第1問（配点10点）<h4>
+      <p class="answer"> <%= f.ans1 %></p>
+      <br>
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge1 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans1 %></p>
+        <br>
+      <% end %>
+      <br>
+    <% end %>  
+    <h4>第2問（配点20点）<h4>
+      <p class="answer"> <%= f.ans2 %></p>
+      <br>    
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge2 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans2 %></p>
+        <br>
+      <% end %>
+      <br>
+    <h4>第3問（配点40点）<h4>
+      <h4>(設問1)</h4> 
+      <p class="answer"> <%= f.ans3 %></p>
+      <br>    
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge3 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans3 %></p>
+        <br>
+      <% end %>
+      <br>
+      <h4>(設問2)</h4> 
+      <p class="answer"> <%= f.ans4 %></p>
+      <br>    
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge4 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans4 %></p>
+        <br>
+      <% end %>
+      <br>
+    <h4>第4問（配点30点）</h4> 
+      <p class="answer"> <%= f.ans5 %></p>
+      <br>   
+       <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge5 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans5 %></p>
+        <br>
+      <% end %>      
+      <% if(f.jirei == 4)then  %>
+      <h4>第1問（配点40点）<h4>
+      <h4>(設問1)</h4> 
+      <p class="answer"> <%= f.ans1 %></p>
+      <br>
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge1 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans1 %></p>
+        <br>
+      <% end %>
+      <br>
+      <h4>(設問2)</h4> 
+      <p class="answer"> <%= f.ans2 %></p>
+      <br>    
+      <% f.comments.each do |ff|  %>
+       <h4><%= ff.user.name %>さん <%= (ff.judge2 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans2 %></p>
+        <br>
+      <% end %>
+      <br>
+      <h4>(設問3)</h4> 
+      <p class="answer"> <%= f.ans3 %></p>
+      <br>    
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge3 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans3 %></p>
+        <br>
+      <% end %>
+      <br>
+      <h4>第2問（配点30点）<h4>
+      <h4>(設問1)</h4> 
+      <p class="answer"> <%= f.ans4 %></p>
+      <br>    
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge4 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans4 %></p>
+        <br>
+      <% end %>
+      <h4>(設問2)</h4> 
+      <p class="answer"> <%= f.ans5 %></p>
+      <br>    
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge5 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans5 %></p>
+        <br>
+      <% end %>
+      <h4>第3問（配点30点）</h4> 
+      <h4>(設問1)</h4> 
+      <p class="answer"> <%= f.ans6 %></p>
+      <br>   
+       <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge6 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans6 %></p>
+        <br>
+      <% end %>      
+       <h4>(設問2)</h4> 
+      <p class="answer"> <%= f.ans7 %></p>
+      <br>   
+       <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge7 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans7 %></p>
+        <br>
+      <% end %>      
+    <% end %>
+　<% end %>　
+　
+　<% if(f.year == 23 )then  %>
+    <% if(f.jirei == 1)then  %>
+      <h4>第1問（配点40点）<h4>
+      <h4>(設問1)</h4> 
+      <p class="answer"> <%= f.ans1 %></p>
+      <br>
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge1 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans1 %></p>
+        <br>
+      <% end %>
+      <br>
+      <h4>(設問2)</h4> 
+      <p class="answer"> <%= f.ans2 %></p>
+      <br>    
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge2 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans2 %></p>
+        <br>
+      <% end %>
+      <br>
+      <h4>第2問（配点20点）<h4>
+      <p class="answer"> <%= f.ans3 %></p>
+      <br>    
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge3 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans3 %></p>
+        <br>
+      <% end %>
+      <br>
+      <h4>第3問（配点20点）</h4> 
+      <p class="answer"> <%= f.ans4 %></p>
+      <br>    
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge4 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans4 %></p>
+        <br>
+      <% end %>
+      <br>
+      <h4>第4問（配点20点）</h4> 
+      <p class="answer"> <%= f.ans5 %></p>
+      <br>   
+       <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge5 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans5 %></p>
+        <br>
+      <% end %>      
+    <% end %>
+    <% if(f.jirei == 2)then  %>
+      <h4>第1問（配点10点）<h4>
+      <p class="answer"> <%= f.ans1 %></p>
+      <br>
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge1 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans1 %></p>
+        <br>
+      <% end %>
+      <br>
+      <h4>第2問（配点25点）<h4>
+      <h4>(設問1)</h4> 
+      <p class="answer"> <%= f.ans2 %></p>
+      <br>    
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge2 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans2 %></p>
+        <br>
+      <% end %>
+      <br>
+      <h4>(設問2)</h4> 
+      <p class="answer"> <%= f.ans3 %></p>
+      <br>    
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge3 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans3 %></p>
+        <br>
+      <% end %>
+      <br>
+      <h4>第3問（配点20点）</h4> 
+      <h4>(設問1)</h4> 
+      <p class="answer"> <%= f.ans4 %></p>
+      <br>    
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge4 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans4 %></p>
+        <br>
+      <% end %>
+      <br>
+      <h4>(設問2)</h4> 
+      <p class="answer"> <%= f.ans5 %></p>
+      <br>   
+       <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge5 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans5 %></p>
+        <br>
+      <% end %>      
+      <h4>第4問（配点20点）</h4> 
+      <p class="answer"> <%= f.ans6 %></p>
+      <br>   
+       <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge6 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans6 %></p>
+        <br>
+      <% end %>      
+    <% end %>
+    <% if(f.jirei == 4)then  %>
+      <h4>第1問（配点35点）<h4>
+      <h4>(設問1)</h4> 
+      <p class="answer"> <%= f.ans1 %></p>
+      <br>
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge1 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans1 %></p>
+        <br>
+      <% end %>
+      <br>
+      <h4>(設問2)</h4> 
+      <p class="answer"> <%= f.ans2 %></p>
+      <br>    
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge2 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans2 %></p>
+        <br>
+      <% end %>
+      <br>
+      <h4>第2問（配点15点）</h4> 
+      <p class="answer"> <%= f.ans3 %></p>
+      <br>    
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge3 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans3 %></p>
+        <br>
+      <% end %>
+      <br>
+      <h4>第3問（配点25点）</h4> 
+      <p class="answer"> <%= f.ans4 %></p>
+      <br>    
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge4 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans4 %></p>
+        <br>
+      <% end %>
+      <br>
+      <h4>第4問（配点25点）</h4> 
+      <p class="answer"> <%= f.ans5 %></p>
+      <br>   
+       <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge5 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans5 %></p>
+        <br>
+      <% end %>      
+    <% end %>
+    <% end %>
+　  <% if(f.year == 22 )then  %>
+      <% if(f.jirei == 1)then  %>
+      <h4>第1問（配点30点）<h4>
+      <h4>(設問1)</h4> 
+      <p class="answer"> <%= f.ans1 %></p>
+      <br>
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge1 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans1 %></p>
+        <br>
+      <% end %>
+      <br>
+      <h4>(設問2)</h4> 
+      <p class="answer"> <%= f.ans2 %></p>
+      <br>    
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge2 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans2 %></p>
+        <br>
+      <% end %>
+      <br>
+      <h4>第2問（配点30点）<h4>
+      <h4>(設問1)</h4> 
+      <p class="answer"> <%= f.ans3 %></p>
+      <br>    
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge3 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans3 %></p>
+        <br>
+      <% end %>
+      <br>
+      <h4>(設問2)</h4> 
+      <p class="answer"> <%= f.ans4 %></p>
+      <br>    
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge4 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans4 %></p>
+        <br>
+      <% end %>
+      <br>
+     <h4>第3問（配点20点）</h4> 
+      <p class="answer"> <%= f.ans5 %></p>
+      <br>   
+       <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge5 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans5 %></p>
+        <br>
+      <% end %>      
+     <h4>第4問（配点20点）</h4> 
+      <p class="answer"> <%= f.ans6 %></p>
+      <br>   
+       <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge6 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans6 %></p>
+        <br>
+      <% end %>      
+    <% end %>
+    <% if(f.jirei == 2)then  %>
+      <h4>第1問（配点10点）<h4>
+      <p class="answer"> <%= f.ans1 %></p>
+      <br>
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge1 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans1 %></p>
+        <br>
+      <% end %>
+      <br>
+      <h4>第2問（配点30点）<h4>
+      <p class="answer"> <%= f.ans2 %></p>
+      <br>    
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge2 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans2 %></p>
+        <br>
+      <% end %>
+      <br>
+      <h4>第3問（配点10点）<h4>
+      <p class="answer"> <%= f.ans3 %></p>
+      <br>    
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge3 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans3 %></p>
+        <br>
+      <% end %>
+      <br>
+      <h4>第4問（配点20点）</h4> 
+      <p class="answer"> <%= f.ans4 %></p>
+      <br>    
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge4 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans4 %></p>
+        <br>
+      <% end %>
+      <br>
+     <h4>第5問（配点30点）</h4> 
+      <p class="answer"> <%= f.ans5 %></p>
+      <br>   
+       <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge5 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans5 %></p>
+        <br>
+      <% end %>      
+    <% end %>
+    <% if(f.jirei == 3)then  %>
       <h4>第1問（配点20点）<h4>
       <p class="answer"> <%= f.ans1 %></p>
       <br>
@@ -360,15 +1817,617 @@
        <% f.comments.each do |ff|  %>
         <h4><%= ff.user.name %>さん <%= (ff.judge5 * 20)/10  %>点</h4>  
         <p class="kakomu"><%= ff.ans5 %></p>
+        <br>
+      <% end %>      
+      <br>        
+    <% end %>
+    <% if(f.jirei == 4)then  %>
+      <h4>第1問（配点40点）<h4>
+      <p class="answer"> <%= f.ans1 %></p>
+      <br>
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge1 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans1 %></p>
+        <br>
+      <% end %>
+      <br>
+    <h4>第2問（配点25点）<h4>
+    <h4>(設問1)</h4> 
+      <p class="answer"> <%= f.ans2 %></p>
+      <br>    
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge2 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans2 %></p>
+        <br>
+      <% end %>
+      <br>
+    <h4>(設問2)</h4> 
+      <p class="answer"> <%= f.ans3 %></p>
+      <br>    
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge3 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans3 %></p>
+        <br>
+      <% end %>
+      <br>
+      <h4>第3問（配点20点）</h4> 
+      <h4>(設問1)</h4> 
+      <p class="answer"> <%= f.ans4 %></p>
+      <br>    
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge4 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans4 %></p>
+        <br>
+      <% end %>
+      <br>
+      <h4>(設問2)</h4> 
+      <p class="answer"> <%= f.ans5 %></p>
+      <br>   
+       <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge5 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans5 %></p>
+        <br>
+      <% end %>      
+      <h4>第4問（配点15点）</h4> 
+      <p class="answer"> <%= f.ans6 %></p>
+      <br>   
+       <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge6 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans6 %></p>
+        <br>
+      <% end %>      
+    <% end %>
+　<% end %>
+　
+　<% if(f.year == 21 )then  %>
+    <% if(f.jirei == 1)then  %>
+      <h4>第1問（配点20点）<h4>
+      <p class="answer"> <%= f.ans1 %></p>
+      <br>
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge1 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans1 %></p>
+        <br>
+      <% end %>
+      <br>
+    <h4>第2問（配点20点）<h4>
+      <p class="answer"> <%= f.ans2 %></p>
+      <br>    
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge2 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans2 %></p>
+        <br>
+      <% end %>
+      <br>
+      <h4>第3問（配点20点）<h4>
+      <p class="answer"> <%= f.ans3 %></p>
+      <br>    
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge3 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans3 %></p>
+        <br>
+      <% end %>
+      <br>
+      <h4>第4問（配点20点）</h4> 
+      <p class="answer"> <%= f.ans4 %></p>
+      <br>    
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge4 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans4 %></p>
+        <br>
+      <% end %>
+      <br>
+      <h4>第5問（配点20点）</h4> 
+      <p class="answer"> <%= f.ans5 %></p>
+      <br>   
+       <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge5 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans5 %></p>
+        <br>
+      <% end %>      
+    <% end %>
+    <% if(f.jirei == 2)then  %>
+      <h4>第1問（配点20点）<h4>
+      <p class="answer"> <%= f.ans1 %></p>
+      <br>
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge1 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans1 %></p>
+        <br>
+      <% end %>
+      <br>
+      <h4>第2問（配点10点）<h4>
+      <p class="answer"> <%= f.ans2 %></p>
+      <br>    
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge2 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans2 %></p>
+        <br>
+      <% end %>
+      <br>
+      <h4>第3問（配点40点）<h4>
+      <h4>(設問1)</h4> 
+      <p class="answer"> <%= f.ans3 %></p>
+      <br>    
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge3 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans3 %></p>
+        <br>
+      <% end %>
+      <br>
+      <h4>(設問2)</h4> 
+      <p class="answer"> <%= f.ans4 %></p>
+      <br>    
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge4 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans4 %></p>
+        <br>
+      <% end %>
+      <br>
+      <h4>第4問（配点30点）</h4> 
+      <p class="answer"> <%= f.ans5 %></p>
+      <br>   
+       <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge5 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans5 %></p>
+        <br>
+      <% end %>      
+    <% end %>
+    <% if(f.jirei == 3)then  %>
+      <h4>第1問（配点10点）<h4>
+      <p class="answer"> <%= f.ans1 %></p>
+      <br>
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge1 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans1 %></p>
+        <br>
+      <% end %>
+      <br>
+      <h4>第2問（配点40点）<h4>
+      <h4>(設問1)</h4> 
+      <p class="answer"> <%= f.ans2 %></p>
+      <br>    
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge2 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans2 %></p>
+        <br>
+      <% end %>
+      <br>
+      <h4>(設問2)</h4> 
+      <p class="answer"> <%= f.ans3 %></p>
+      <br>    
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge3 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans3 %></p>
+        <br>
+      <% end %>
+      <br>
+      <h4>第3問（配点40点）</h4> 
+      <h4>(設問1)</h4> 
+      <p class="answer"> <%= f.ans4 %></p>
+      <br>    
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge4 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans4 %></p>
+        <br>
+      <% end %>
+      <br>
+      <h4>(設問2)</h4> 
+      <p class="answer"> <%= f.ans5 %></p>
+      <br>   
+       <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge5 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans5 %></p>
+        <br>
+      <% end %>      
+      <h4>第4問（配点10点）</h4> 
+      <p class="answer"> <%= f.ans6 %></p>
+      <br>   
+       <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge6 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans6 %></p>
+        <br>
+      <% end %>      
+    <% end %>
+    <% if(f.jirei == 4)then  %>
+      <h4>第1問（配点40点）<h4>
+      <p class="answer"> <%= f.ans1 %></p>
+      <br>
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge1 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans1 %></p>
+        <br>
+      <% end %>
+      <br>
+    <h4>第2問（配点20点）<h4>
+    <h4>(設問1)</h4> 
+      <p class="answer"> <%= f.ans2 %></p>
+      <br>    
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge2 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans2 %></p>
+        <br>
+      <% end %>
+      <br>
+    <h4>(設問2)</h4> 
+      <p class="answer"> <%= f.ans3 %></p>
+      <br>    
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge3 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans3 %></p>
+        <br>
+      <% end %>
+      <br>
+    <h4>第3問（配点20点）</h4> 
+    <h4>(設問1)</h4> 
+      <p class="answer"> <%= f.ans4 %></p>
+      <br>    
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge4 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans4 %></p>
+        <br>
+      <% end %>
+      <br>
+    <h4>(設問2)</h4> 
+      <p class="answer"> <%= f.ans5 %></p>
+      <br>   
+       <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge5 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans5 %></p>
+        <br>
+      <% end %>      
+    <% end %>
+　<% end %>
+　
+　<% if(f.year == 20 )then  %>
+    <% if(f.jirei == 1)then  %>
+      <h4>第1問（配点20点）<h4>
+      <p class="answer"> <%= f.ans1 %></p>
+      <br>
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge1 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans1 %></p>
+        <br>
+      <% end %>
+      <br>
+      <h4>第2問（配点20点）<h4>
+      <p class="answer"> <%= f.ans2 %></p>
+      <br>    
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge2 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans2 %></p>
+        <br>
+      <% end %>
+      <br>
+      <h4>第3問（配点20点）<h4>
+      <p class="answer"> <%= f.ans3 %></p>
+      <br>    
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge3 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans3 %></p>
+        <br>
+      <% end %>
+      <br>
+      <h4>第4問（配点20点）</h4> 
+      <p class="answer"> <%= f.ans4 %></p>
+      <br>    
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge4 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans4 %></p>
+        <br>
+      <% end %>
+      <br>
+      <h4>第5問（配点20点）</h4> 
+      <p class="answer"> <%= f.ans5 %></p>
+      <br>   
+       <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge5 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans5 %></p>
+        <br>
+      <% end %>      
+    <% end %>
+    <% if(f.jirei == 2)then  %>
+      <h4>第1問（配点10点）<h4>
+      <p class="answer"> <%= f.ans1 %></p>
+      <br>
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge1 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans1 %></p>
+        <br>
+      <% end %>
+      <br>
+    <h4>第2問（配点20点）<h4>
+      <p class="answer"> <%= f.ans2 %></p>
+      <br>    
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge2 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans2 %></p>
+        <br>
+      <% end %>
+      <br>
+    <h4>第3問（配点20点）<h4>
+      <p class="answer"> <%= f.ans3 %></p>
+      <br>    
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge3 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans3 %></p>
+        <br>
+      <% end %>
+      <br>
+      <h4>第4問（配点20点）</h4> 
+      <h4>(設問1)</h4> 
+      <p class="answer"> <%= f.ans4 %></p>
+      <br>    
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge4 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans4 %></p>
+        <br>
+      <% end %>
+      <br>
+      <h4>(設問2)</h4> 
+      <p class="answer"> <%= f.ans5 %></p>
+      <br>   
+       <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge5 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans5 %></p>
+        <br>
+      <% end %>      
+      <h4>第5問（配点30点）</h4> 
+        <p class="answer"> <%= f.ans6 %></p>
+        <br>   
+       <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge6 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans6 %></p>
+        <br>
+      <% end %>      
+    <% end %>
+    <% if(f.jirei == 3)then  %>
+      <h4>第1問（配点20点）<h4>
+      <p class="answer"> <%= f.ans1 %></p>
+      <br>
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge1 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans1 %></p>
+        <br>
+      <% end %>
+      <br>
+      <h4>第2問（配点30点）<h4>
+      <h4>(設問1)</h4> 
+      <p class="answer"> <%= f.ans2 %></p>
+      <br>    
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge2 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans2 %></p>
+        <br>
+      <% end %>
+      <br>
+      <h4>(設問2)</h4> 
+      <p class="answer"> <%= f.ans3 %></p>
+      <br>    
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge3 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans3 %></p>
+        <br>
+      <% end %>
+      <br>
+      <h4>第3問（配点25点）</h4> 
+      <p class="answer"> <%= f.ans4 %></p>
+      <br>    
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge4 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans4 %></p>
+        <br>
+      <% end %>
+      <br>
+      <h4>第4問（配点25点）</h4> 
+      <p class="answer"> <%= f.ans5 %></p>
+      <br>   
+       <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge5 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans5 %></p>
+        <br>
+      <% end %>      
+    <% end %>
+    <% if(f.jirei == 4)then  %>
+      <h4>第1問（配点30点）<h4>
+      <p class="answer"> <%= f.ans1 %></p>
+      <br>
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge1 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans1 %></p>
+        <br>
+      <% end %>
+      <br>
+      <h4>第2問（配点25点）<h4>
+      <h4>(設問1)</h4> 
+      <p class="answer"> <%= f.ans2 %></p>
+      <br>    
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge2 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans2 %></p>
+        <br>
+      <% end %>
+      <br>
+      <h4>(設問2)</h4> 
+      <p class="answer"> <%= f.ans3 %></p>
+      <br>    
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge3 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans3 %></p>
+        <br>
+      <% end %>
+      <br>
+      <h4>第3問（配点25点）</h4> 
+      <h4>(設問1)</h4> 
+      <p class="answer"> <%= f.ans4 %></p>
+      <br>    
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge4 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans4 %></p>
+        <br>
+      <% end %>
+      <br>
+      <h4>(設問2)</h4> 
+      <p class="answer"> <%= f.ans5 %></p>
+      <br>   
+       <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge5 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans5 %></p>
+        <br>
+      <% end %>      
+      <h4>第4問（配点20点）</h4> 
+      <h4>(設問1)</h4> 
+      <p class="answer"> <%= f.ans6 %></p>
+      <br>    
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge6 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans6 %></p>
+        <br>
+      <% end %>
+      <br>
+      <h4>(設問2)</h4> 
+      <p class="answer"> <%= f.ans7 %></p>
+      <br>   
+       <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge7 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans7 %></p>
         <br>
       <% end %>      
       <br>        
     <% end %>
 　<% end %>
-  <% if(f.year == 23 )then  %>
+　
+　<% if(f.year == 19 )then  %>
     <% if(f.jirei == 1)then  %>
-      <h2><%= f.user.name %>さんの解答への評価</h1>
+      <h4>第1問（配点10点）<h4>
+      <p class="answer"> <%= f.ans1 %></p>
       <br>
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge1 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans1 %></p>
+        <br>
+      <% end %>
+      <br>
+    <h4>第2問（配点15点）<h4>
+      <p class="answer"> <%= f.ans2 %></p>
+      <br>    
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge2 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans2 %></p>
+        <br>
+      <% end %>
+      <br>
+    <h4>第3問（配点15点）<h4>
+      <p class="answer"> <%= f.ans3 %></p>
+      <br>    
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge3 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans3 %></p>
+        <br>
+      <% end %>
+      <br>
+    <h4>第4問（配点45点）</h4> 
+      <h4>(設問1)</h4> 
+      <p class="answer"> <%= f.ans4 %></p>
+      <br>    
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge4 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans4 %></p>
+        <br>
+      <% end %>
+      <br>
+      <h4>(設問2)</h4> 
+      <p class="answer"> <%= f.ans5 %></p>
+      <br>   
+       <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge5 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans5 %></p>
+        <br>
+      <% end %>      
+      <h4>(設問3)</h4> 
+      <p class="answer"> <%= f.ans6 %></p>
+      <br>   
+       <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge6 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans6 %></p>
+        <br>
+      <% end %>      
+      <h4>第5問（配点15点）</h4> 
+      <p class="answer"> <%= f.ans7 %></p>
+      <br>   
+       <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge7 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans7 %></p>
+        <br>
+      <% end %>      
+    <% end %>
+    <% if(f.jirei == 2)then  %>
+      <h4>第1問（配点20点）<h4>
+      <h4>(設問1)</h4> 
+      <p class="answer"> <%= f.ans1 %></p>
+      <br>
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge1 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans1 %></p>
+        <br>
+      <% end %>
+      <br>
+      <h4>(設問2)</h4> 
+      <p class="answer"> <%= f.ans2 %></p>
+      <br>    
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge2 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans2 %></p>
+        <br>
+      <% end %>
+      <br>
+      <h4>第2問（配点30点）<h4>
+      <p class="answer"> <%= f.ans3 %></p>
+      <br>    
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge3 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans3 %></p>
+        <br>
+      <% end %>
+      <br>
+      <h4>第3問（配点30点）</h4> 
+      <h4>(設問1)</h4> 
+      <p class="answer"> <%= f.ans4 %></p>
+      <br>    
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge4 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans4 %></p>
+        <br>
+      <% end %>
+      <br>
+      <h4>(設問2)</h4> 
+      <p class="answer"> <%= f.ans5 %></p>
+      <br>   
+       <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge5 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans5 %></p>
+        <br>
+      <% end %>      
+      <h4>第4問（配点20点）</h4> 
+      <h4>(設問1)</h4> 
+      <p class="answer"> <%= f.ans6 %></p>
+      <br>    
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge6 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans6 %></p>
+        <br>
+      <% end %>
+      <br>
+      <h4>(設問2)</h4> 
+      <p class="answer"> <%= f.ans7 %></p>
+      <br>   
+       <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge7 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans7 %></p>
+        <br>
+      <% end %>      
+    <% end %>
+    <% if(f.jirei == 3)then  %>
       <h4>第1問（配点20点）<h4>
       <p class="answer"> <%= f.ans1 %></p>
       <br>
@@ -378,8 +2437,7 @@
         <br>
       <% end %>
       <br>
-    <h4>第2問（配点40点）<h4>
-    <h4>(設問1)</h4> 
+      <h4>第2問（配点20点）<h4>
       <p class="answer"> <%= f.ans2 %></p>
       <br>    
       <% f.comments.each do |ff|  %>
@@ -388,7 +2446,7 @@
         <br>
       <% end %>
       <br>
-    <h4>(設問2)</h4> 
+      <h4>第3問（配点20点）<h4>
       <p class="answer"> <%= f.ans3 %></p>
       <br>    
       <% f.comments.each do |ff|  %>
@@ -397,7 +2455,7 @@
         <br>
       <% end %>
       <br>
-    <h4>第3問（配点20点）</h4> 
+      <h4>第4問（配点20点）</h4> 
       <p class="answer"> <%= f.ans4 %></p>
       <br>    
       <% f.comments.each do |ff|  %>
@@ -406,7 +2464,7 @@
         <br>
       <% end %>
       <br>
-    <h4>第4問（配点20点）</h4> 
+    <h4>第5問（配点20点）</h4> 
       <p class="answer"> <%= f.ans5 %></p>
       <br>   
        <% f.comments.each do |ff|  %>
@@ -415,13 +2473,68 @@
         <br>
       <% end %>      
       <br>        
+    <% end %>
+    <% if(f.jirei == 4)then  %>
+      <h4>第1問（配点25点）<h4>
+      <p class="answer"> <%= f.ans1 %></p>
+      <br>
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge1 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans1 %></p>
+        <br>
+      <% end %>
+      <br>
+      <h4>第2問（配点25点）<h4>
+      <h4>(設問1)</h4> 
+      <p class="answer"> <%= f.ans2 %></p>
+      <br>    
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge2 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans2 %></p>
+        <br>
+      <% end %>
+      <br>
+      <h4>(設問2)</h4> 
+      <p class="answer"> <%= f.ans3 %></p>
+      <br>    
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge3 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans3 %></p>
+        <br>
+      <% end %>
+      <br>
+      <h4>第3問（配点25点）</h4> 
+      <p class="answer"> <%= f.ans4 %></p>
+      <br>    
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge4 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans4 %></p>
+        <br>
+      <% end %>
+      <br>
+      <h4>第4問（配点20点）</h4> 
+      <h4>(設問1)</h4> 
+      <p class="answer"> <%= f.ans5 %></p>
+      <br>   
+       <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge5 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans5 %></p>
+        <br>
+      <% end %>      
+      <h4>(設問2)</h4> 
+      <p class="answer"> <%= f.ans6 %></p>
+      <br>   
+       <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge6 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans6 %></p>
+        <br>
+      <% end %>      
     <% end %>
 　<% end %>
-  <% if(f.year == 22 )then  %>
+　　
+　<% if(f.year == 18 )then  %>
     <% if(f.jirei == 1)then  %>
-      <h2><%= f.user.name %>さんの解答への評価</h1>
-      <br>
-      <h4>第1問（配点20点）<h4>
+      <h4>第1問（配点30点）<h4>
       <p class="answer"> <%= f.ans1 %></p>
       <br>
       <% f.comments.each do |ff|  %>
@@ -430,8 +2543,8 @@
         <br>
       <% end %>
       <br>
-    <h4>第2問（配点40点）<h4>
-    <h4>(設問1)</h4> 
+      <h4>第2問（配点30点）<h4>
+      <h4>(設問1)</h4> 
       <p class="answer"> <%= f.ans2 %></p>
       <br>    
       <% f.comments.each do |ff|  %>
@@ -440,7 +2553,7 @@
         <br>
       <% end %>
       <br>
-    <h4>(設問2)</h4> 
+      <h4>(設問2)</h4> 
       <p class="answer"> <%= f.ans3 %></p>
       <br>    
       <% f.comments.each do |ff|  %>
@@ -449,7 +2562,8 @@
         <br>
       <% end %>
       <br>
-    <h4>第3問（配点20点）</h4> 
+      <h4>第3問（配点30点）</h4> 
+      <h4>(設問1)</h4> 
       <p class="answer"> <%= f.ans4 %></p>
       <br>    
       <% f.comments.each do |ff|  %>
@@ -458,7 +2572,109 @@
         <br>
       <% end %>
       <br>
-    <h4>第4問（配点20点）</h4> 
+      <h4>(設問2)</h4> 
+      <p class="answer"> <%= f.ans5 %></p>
+      <br>   
+       <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge5 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans5 %></p>
+        <br>
+      <% end %>      
+      <h4>第4問（配点10点）</h4> 
+      <p class="answer"> <%= f.ans6 %></p>
+      <br>   
+       <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge6 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans6 %></p>
+        <br>
+      <% end %>      
+    <% end %>
+    <% if(f.jirei == 2)then  %>
+      <h4>第1問（配点20点）<h4>
+      <h4>(設問1)</h4> 
+      <p class="answer"> <%= f.ans1 %></p>
+      <br>
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge1 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans1 %></p>
+        <br>
+      <% end %>
+      <br>
+      <h4>第2問（配点15点）<h4>
+      <p class="answer"> <%= f.ans2 %></p>
+      <br>    
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge2 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans2 %></p>
+        <br>
+      <% end %>
+      <br>
+      <h4>第3問（配点30点）<h4>
+      <p class="answer"> <%= f.ans3 %></p>
+      <br>    
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge3 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans3 %></p>
+        <br>
+      <% end %>
+      <br>
+      <h4>第4問（配点15点）</h4> 
+      <h4>(設問1)</h4> 
+      <p class="answer"> <%= f.ans4 %></p>
+      <br>    
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge4 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans4 %></p>
+        <br>
+      <% end %>
+      <br>
+      <h4>第5問（配点20点）</h4> 
+      <p class="answer"> <%= f.ans5 %></p>
+      <br>   
+       <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge5 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans5 %></p>
+        <br>
+      <% end %>      
+    <% end %>
+    <% if(f.jirei == 3)then  %>
+      <h4>第1問（配点10点）<h4>
+      <p class="answer"> <%= f.ans1 %></p>
+      <br>
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge1 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans1 %></p>
+        <br>
+      <% end %>
+      <br>
+      <h4>第2問（配点25点）<h4>
+      <p class="answer"> <%= f.ans2 %></p>
+      <br>    
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge2 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans2 %></p>
+        <br>
+      <% end %>
+      <br>
+      <h4>第3問（配点25点）<h4>
+      <p class="answer"> <%= f.ans3 %></p>
+      <br>    
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge3 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans3 %></p>
+        <br>
+      <% end %>
+      <br>
+      <h4>第4問（配点20点）</h4> 
+      <p class="answer"> <%= f.ans4 %></p>
+      <br>    
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge4 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans4 %></p>
+        <br>
+      <% end %>
+      <br>
+    <h4>第5問（配点20点）</h4> 
       <p class="answer"> <%= f.ans5 %></p>
       <br>   
        <% f.comments.each do |ff|  %>
@@ -467,216 +2683,74 @@
         <br>
       <% end %>      
       <br>        
+    <% end %>
+    <% if(f.jirei == 4)then  %>
+      <h4>第1問（配点30点）<h4>
+      <p class="answer"> <%= f.ans1 %></p>
+      <br>
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge1 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans1 %></p>
+        <br>
+      <% end %>
+      <br>
+      <h4>第2問（配点20点）<h4>
+      <h4>(設問1)</h4> 
+      <p class="answer"> <%= f.ans2 %></p>
+      <br>    
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge2 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans2 %></p>
+        <br>
+      <% end %>
+      <br>
+      <h4>(設問2)</h4> 
+      <p class="answer"> <%= f.ans3 %></p>
+      <br>    
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge3 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans3 %></p>
+        <br>
+      <% end %>
+      <br>
+      <h4>第3問（配点20点）</h4> 
+      <p class="answer"> <%= f.ans4 %></p>
+      <br>    
+      <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge4 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans4 %></p>
+        <br>
+      <% end %>
+      <br>
+      <h4>第4問（配点20点）</h4> 
+      <h4>(設問1)</h4> 
+      <p class="answer"> <%= f.ans5 %></p>
+      <br>   
+       <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge5 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans5 %></p>
+        <br>
+      <% end %>      
+      <h4>(設問2)</h4> 
+      <p class="answer"> <%= f.ans6 %></p>
+      <br>   
+       <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge6 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans6 %></p>
+        <br>
+      <% end %>      
+      <h4>第5問（配点15点）</h4> 
+      <h4>(設問1)</h4> 
+      <p class="answer"> <%= f.ans7 %></p>
+      <br>   
+       <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge7 * 20)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans5 %></p>
+      <% end %>      
     <% end %>
 　<% end %>
-  <% if(f.year == 21 )then  %>
-    <% if(f.jirei == 1)then  %>
-      <h2><%= f.user.name %>さんの解答への評価</h1>
-      <br>
-      <h4>第1問（配点20点）<h4>
-      <p class="answer"> <%= f.ans1 %></p>
-      <br>
-      <% f.comments.each do |ff|  %>
-        <h4><%= ff.user.name %>さん <%= (ff.judge1 * 20)/10  %>点</h4>  
-        <p class="kakomu"><%= ff.ans1 %></p>
-        <br>
-      <% end %>
-      <br>
-    <h4>第2問（配点40点）<h4>
-    <h4>(設問1)</h4> 
-      <p class="answer"> <%= f.ans2 %></p>
-      <br>    
-      <% f.comments.each do |ff|  %>
-        <h4><%= ff.user.name %>さん <%= (ff.judge2 * 20)/10  %>点</h4>  
-        <p class="kakomu"><%= ff.ans2 %></p>
-        <br>
-      <% end %>
-      <br>
-    <h4>(設問2)</h4> 
-      <p class="answer"> <%= f.ans3 %></p>
-      <br>    
-      <% f.comments.each do |ff|  %>
-        <h4><%= ff.user.name %>さん <%= (ff.judge3 * 20)/10  %>点</h4>  
-        <p class="kakomu"><%= ff.ans3 %></p>
-        <br>
-      <% end %>
-      <br>
-    <h4>第3問（配点20点）</h4> 
-      <p class="answer"> <%= f.ans4 %></p>
-      <br>    
-      <% f.comments.each do |ff|  %>
-        <h4><%= ff.user.name %>さん <%= (ff.judge4 * 20)/10  %>点</h4>  
-        <p class="kakomu"><%= ff.ans4 %></p>
-        <br>
-      <% end %>
-      <br>
-    <h4>第4問（配点20点）</h4> 
-      <p class="answer"> <%= f.ans5 %></p>
-      <br>   
-       <% f.comments.each do |ff|  %>
-        <h4><%= ff.user.name %>さん <%= (ff.judge5 * 20)/10  %>点</h4>  
-        <p class="kakomu"><%= ff.ans5 %></p>
-        <br>
-      <% end %>      
-      <br>        
-    <% end %>
-　<% end %>
-  <% if(f.year == 20 )then  %>
-    <% if(f.jirei == 1)then  %>
-      <h2><%= f.user.name %>さんの解答への評価</h1>
-      <br>
-      <h4>第1問（配点20点）<h4>
-      <p class="answer"> <%= f.ans1 %></p>
-      <br>
-      <% f.comments.each do |ff|  %>
-        <h4><%= ff.user.name %>さん <%= (ff.judge1 * 20)/10  %>点</h4>  
-        <p class="kakomu"><%= ff.ans1 %></p>
-        <br>
-      <% end %>
-      <br>
-    <h4>第2問（配点40点）<h4>
-    <h4>(設問1)</h4> 
-      <p class="answer"> <%= f.ans2 %></p>
-      <br>    
-      <% f.comments.each do |ff|  %>
-        <h4><%= ff.user.name %>さん <%= (ff.judge2 * 20)/10  %>点</h4>  
-        <p class="kakomu"><%= ff.ans2 %></p>
-        <br>
-      <% end %>
-      <br>
-    <h4>(設問2)</h4> 
-      <p class="answer"> <%= f.ans3 %></p>
-      <br>    
-      <% f.comments.each do |ff|  %>
-        <h4><%= ff.user.name %>さん <%= (ff.judge3 * 20)/10  %>点</h4>  
-        <p class="kakomu"><%= ff.ans3 %></p>
-        <br>
-      <% end %>
-      <br>
-    <h4>第3問（配点20点）</h4> 
-      <p class="answer"> <%= f.ans4 %></p>
-      <br>    
-      <% f.comments.each do |ff|  %>
-        <h4><%= ff.user.name %>さん <%= (ff.judge4 * 20)/10  %>点</h4>  
-        <p class="kakomu"><%= ff.ans4 %></p>
-        <br>
-      <% end %>
-      <br>
-    <h4>第4問（配点20点）</h4> 
-      <p class="answer"> <%= f.ans5 %></p>
-      <br>   
-       <% f.comments.each do |ff|  %>
-        <h4><%= ff.user.name %>さん <%= (ff.judge5 * 20)/10  %>点</h4>  
-        <p class="kakomu"><%= ff.ans5 %></p>
-        <br>
-      <% end %>      
-      <br>        
-    <% end %>
-　<% end %>
-  <% if(f.year == 19 )then  %>
-    <% if(f.jirei == 1)then  %>
-      <h2><%= f.user.name %>さんの解答への評価</h1>
-      <br>
-      <h4>第1問（配点20点）<h4>
-      <p class="answer"> <%= f.ans1 %></p>
-      <br>
-      <% f.comments.each do |ff|  %>
-        <h4><%= ff.user.name %>さん <%= (ff.judge1 * 20)/10  %>点</h4>  
-        <p class="kakomu"><%= ff.ans1 %></p>
-        <br>
-      <% end %>
-      <br>
-    <h4>第2問（配点40点）<h4>
-    <h4>(設問1)</h4> 
-      <p class="answer"> <%= f.ans2 %></p>
-      <br>    
-      <% f.comments.each do |ff|  %>
-        <h4><%= ff.user.name %>さん <%= (ff.judge2 * 20)/10  %>点</h4>  
-        <p class="kakomu"><%= ff.ans2 %></p>
-        <br>
-      <% end %>
-      <br>
-    <h4>(設問2)</h4> 
-      <p class="answer"> <%= f.ans3 %></p>
-      <br>    
-      <% f.comments.each do |ff|  %>
-        <h4><%= ff.user.name %>さん <%= (ff.judge3 * 20)/10  %>点</h4>  
-        <p class="kakomu"><%= ff.ans3 %></p>
-        <br>
-      <% end %>
-      <br>
-    <h4>第3問（配点20点）</h4> 
-      <p class="answer"> <%= f.ans4 %></p>
-      <br>    
-      <% f.comments.each do |ff|  %>
-        <h4><%= ff.user.name %>さん <%= (ff.judge4 * 20)/10  %>点</h4>  
-        <p class="kakomu"><%= ff.ans4 %></p>
-        <br>
-      <% end %>
-      <br>
-    <h4>第4問（配点20点）</h4> 
-      <p class="answer"> <%= f.ans5 %></p>
-      <br>   
-       <% f.comments.each do |ff|  %>
-        <h4><%= ff.user.name %>さん <%= (ff.judge5 * 20)/10  %>点</h4>  
-        <p class="kakomu"><%= ff.ans5 %></p>
-        <br>
-      <% end %>      
-      <br>        
-    <% end %>
-　<% end %>
-  <% if(f.year == 18 )then  %>
-    <% if(f.jirei == 1)then  %>
-      <h2><%= f.user.name %>さんの解答への評価</h1>
-      <br>
-      <h4>第1問（配点20点）<h4>
-      <p class="answer"> <%= f.ans1 %></p>
-      <br>
-      <% f.comments.each do |ff|  %>
-        <h4><%= ff.user.name %>さん <%= (ff.judge1 * 20)/10  %>点</h4>  
-        <p class="kakomu"><%= ff.ans1 %></p>
-        <br>
-      <% end %>
-      <br>
-    <h4>第2問（配点40点）<h4>
-    <h4>(設問1)</h4> 
-      <p class="answer"> <%= f.ans2 %></p>
-      <br>    
-      <% f.comments.each do |ff|  %>
-        <h4><%= ff.user.name %>さん <%= (ff.judge2 * 20)/10  %>点</h4>  
-        <p class="kakomu"><%= ff.ans2 %></p>
-        <br>
-      <% end %>
-      <br>
-    <h4>(設問2)</h4> 
-      <p class="answer"> <%= f.ans3 %></p>
-      <br>    
-      <% f.comments.each do |ff|  %>
-        <h4><%= ff.user.name %>さん <%= (ff.judge3 * 20)/10  %>点</h4>  
-        <p class="kakomu"><%= ff.ans3 %></p>
-        <br>
-      <% end %>
-      <br>
-    <h4>第3問（配点20点）</h4> 
-      <p class="answer"> <%= f.ans4 %></p>
-      <br>    
-      <% f.comments.each do |ff|  %>
-        <h4><%= ff.user.name %>さん <%= (ff.judge4 * 20)/10  %>点</h4>  
-        <p class="kakomu"><%= ff.ans4 %></p>
-        <br>
-      <% end %>
-      <br>
-    <h4>第4問（配点20点）</h4> 
-      <p class="answer"> <%= f.ans5 %></p>
-      <br>   
-       <% f.comments.each do |ff|  %>
-        <h4><%= ff.user.name %>さん <%= (ff.judge5 * 20)/10  %>点</h4>  
-        <p class="kakomu"><%= ff.ans5 %></p>
-        <br>
-      <% end %>      
-      <br>        
-    <% end %>
-
+<% end %>
 
 
 <%= button_to "トップに戻る。", root_top_path %>
+
