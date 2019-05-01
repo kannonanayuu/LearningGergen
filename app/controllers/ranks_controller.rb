@@ -145,7 +145,19 @@ class RanksController < ApplicationController
     elsif params[:id] == "194" then
       ans = Answer.where(year: 19).where(jirei: 4).includes(:comments) 
       get_score(params[:id],19,4)
-    end
+    elsif params[:id] == "181" then
+      ans = Answer.where(year: 18).where(jirei: 1).includes(:comments)              
+      get_score(params[:id],18,1)
+    elsif params[:id] == "182" then
+      ans = Answer.where(year: 18).where(jirei: 2).includes(:comments)             
+      get_score(params[:id],18,2)
+    elsif params[:id] == "183" then
+      ans = Answer.where(year: 18).where(jirei: 3).includes(:comments)             
+      get_score(params[:id],18,3)
+    elsif params[:id] == "184" then
+      ans = Answer.where(year: 18).where(jirei: 4).includes(:comments) 
+      get_score(params[:id],18,4)
+    end    
   end
   
   def get_score(id,year,jirei)
