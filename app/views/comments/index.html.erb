@@ -1,70 +1,70 @@
+<%= @id %>
 <section class = "blog">
 <%  if @id == "301" then %>
   <h2 class="blog-headline">平成３０年　事例１解答一覧</h2>
+  <%= render 'comments/list' %>
 <%  elsif @id == "302" then %>  
   <h2 class="blog-headline">平成３０年　事例２解答一覧</h2>
+  <%= render 'comments/list' %>
 <%  elsif @id == "303" then %>  
   <h2 class="blog-headline">平成３０年　事例３解答一覧</h2>
+  <%= render 'comments/list' %>
 <%  elsif @id == "304" then %>  
   <h2 class="blog-headline">平成３０年　事例４解答一覧</h2>
+  <%= render 'comments/list' %>
 <%  elsif @id == "291" then %>  
   <h2 class="blog-headline">平成２９年　事例１解答一覧</h2>
+  <%= render 'comments/list' %>
 <%  elsif @id == "292" then %>  
   <h2 class="blog-headline">平成２９年　事例２解答一覧</h2> 
+  <%= render 'comments/list' %>
 <%  elsif @id == "293" then %>  
   <h2 class="blog-headline">平成２９年　事例３解答一覧</h2>   
+  <%= render 'comments/list' %>
 <%  elsif @id == "294" then %>  
   <h2 class="blog-headline">平成２９年　事例４解答一覧</h2> 
+  <%= render 'comments/list' %>
 <%  elsif @id == "281" then %>  
   <h2 class="blog-headline">平成２８年　事例１解答一覧</h2>      
+  <%= render 'comments/list' %>
 <%  elsif @id == "282" then %>  
   <h2 class="blog-headline">平成２８年　事例２解答一覧</h2> 
+  <%= render 'comments/list' %>
 <%  elsif @id == "283" then %>  
   <h2 class="blog-headline">平成２８年　事例３解答一覧</h2>
+  <%= render 'comments/list' %>
 <%  elsif @id == "284" then %>  
   <h2 class="blog-headline">平成２８年　事例４解答一覧</h2>     
+  <%= render 'comments/list' %>
 <%  elsif @id == "271" then %>  
   <h2 class="blog-headline">平成２７年　事例１解答一覧</h2>      
+  <%= render 'comments/list' %>
 <%  elsif @id == "272" then %>  
   <h2 class="blog-headline">平成２７年　事例２解答一覧</h2>   
+  <%= render 'comments/list' %>
 <%  elsif @id == "273" then %>  
   <h2 class="blog-headline">平成２７年　事例３解答一覧</h2>   
+  <%= render 'comments/list' %>
 <%  elsif @id == "274" then %>  
   <h2 class="blog-headline">平成２７年　事例４解答一覧</h2>    
+  <%= render 'comments/list' %>
 <%  elsif @id == "261" then %>  
   <h2 class="blog-headline">平成２６年　事例１解答一覧</h2>     
+  <%= render 'comments/list' %>
 <%  elsif @id == "262" then %>  
   <h2 class="blog-headline">平成２６年　事例２解答一覧</h2>     
+  <%= render 'comments/list' %>
 <%  elsif @id == "263" then %>  
   <h2 class="blog-headline">平成２６年　事例３解答一覧</h2>
+  <%= render 'comments/list' %>
 <%  elsif @id == "264" then %>  
   <h2 class="blog-headline">平成２６年　事例４解答一覧</h2>   
+  <%= render 'comments/list' %>
 <%  elsif @id == "251" then %>  
   <h2 class="blog-headline">平成２５年　事例１解答一覧</h2>
+  <%= render 'comments/list' %>
 <% end %>
 
-<div class="blog-box">
-   <div class ="blog-item clearfix">
-   <section class = "blog-text">
-   　<% no = 1 %>              
-   <div class = "foo">
-    <ul class = "foo1">
-      <li>登録ID</li>
-      <li>名前</li>  
-      <li>コメント数</li>
-      <li>投稿日</li>
-      <% if @answers.nil? %>
-      <% else %>
-        <li>採点</li></ul><% @answers.each do |f| %><ul>
-        <ul class = "foo2">
-        <li><%= f.id %></li>
-        <li><%= f.user.name %></li>  
-        <li><%= f.comments.count %></li>
-        <li><%= f.created_at.strftime('%Y/%m/%d') %></li>   
-        <li><%= button_to "実行", {controller: 'comments', action: 'new'}, {method: :get, params: {id: f.id }} %></li></ul></ul> <% no = no + 1 %><% end %>
-     <% end %>
-   </div>
-</div>
 
 </section>    
    <div class = "sidebar">
@@ -77,5 +77,6 @@
          </div>
       </section>
    </div>
+
 
 
