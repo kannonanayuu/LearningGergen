@@ -210,7 +210,7 @@ class AnswersController < ApplicationController
   
    private
    def answer_params
-       params.require(:answer).permit(:id, :year, :jirei, :ans1, :ans2, :ans3, :ans4, :ans5, :ans6 )
+       params.require(:answer).permit(:id, :year, :jirei, :ans1, :ans2, :ans3, :ans4, :ans5, :ans6, :ans7, :ans8, :ans9, :ans10 )
    end
   
   
