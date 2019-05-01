@@ -1,0 +1,22 @@
+<div class="blog-box">
+   <div class ="blog-item clearfix">
+   <section class = "blog-text">
+   　<% no = 1 %>              
+   <div class = "foo">
+    <ul class = "foo1">
+      <li>登録ID</li>
+      <li>名前</li>  
+      <li>コメント数</li>
+      <li>投稿日</li>
+      <% if @answers.nil? %>
+      <% else %>
+        <li>採点</li></ul><% @answers.each do |f| %><ul>
+        <ul class = "foo2">
+        <li><%= f.id %></li>
+        <li><%= f.user.name %></li>  
+        <li><%= f.comments.count %></li>
+        <li><%= f.created_at.strftime('%Y/%m/%d') %></li>   
+        <li><%= button_to "実行", {controller: 'comments', action: 'new'}, {method: :get, params: {id: f.id }} %></li></ul></ul> <% no = no + 1 %><% end %>
+     <% end %>
+   </div>
+</div>
