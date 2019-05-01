@@ -1,9 +1,6 @@
 <% @answers.each do |f|  %>
   <h2><%= f.user.name %>さんの解答への評価</h1>
   <br>
-  <%= f.year %>
-  <%= f.jirei %>
-  
   <% if(f.year == 30 )then  %>
     <% if(f.jirei == 1)then  %>
       <h4>第1問（配点20点）<h4>
@@ -649,7 +646,7 @@
         <br>
       <% end %>
       <br>
-    <h4>第2問（配点20点）<h4>
+      <h4>第2問（配点20点）<h4>
       <p class="answer"> <%= f.ans2 %></p>
       <br>    
       <% f.comments.each do |ff|  %>
