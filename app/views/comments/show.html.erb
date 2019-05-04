@@ -221,34 +221,26 @@
       <h4><%= sum  %>点</h4>      
       <p{text-indent:2em;}> <%= @comments.ans1 %></p>        
       <br>
-      <h4>第2問（配点40点）<h4>
-      <h4>(設問1)</h4>
-      <% sum = sum + (@comments.judge2 * 20)/10 %>      
+      <h4>第2問（配点25点）<h4>
+      <% sum = sum + (@comments.judge2 * 25)/10 %>      
       <p class="answer"> <%= @comments.answer.ans2 %></p>
       <br>
-      <h4><%= (@comments.judge2 * 20)/10 %>点</h4>      
+      <h4><%= (@comments.judge2 * 25)/10 %>点</h4>      
       <p{text-indent:2em;}> <%= @comments.ans2 %></p>        
       <br>
-      <h4>(設問2)</h4>
-      <% sum = sum + (@comments.judge3 * 20)/10 %> 
+      <h4>第3問（配点30点）</h4>
+      <% sum = sum + (@comments.judge3 * 30)/10 %> 
       <p class="answer" > <%= @comments.answer.ans3 %></p>
       <br>
-      <h4><%= (@comments.judge3 * 20)/10 %>点</h4>      
+      <h4><%= (@comments.judge3 * 30)/10 %>点</h4>      
       <p{text-indent:2em;}> <%= @comments.ans3 %></p>        
       <br>
-      <h4>第3問（配点20点）</h4>
+      <h4>第4問（配点20点）</h4>
       <% sum = sum + (@comments.judge4 * 20)/10 %>         
       <p class="answer"> <%= @comments.answer.ans4 %></p>
       <br>
       <h4><%= (@comments.judge4 * 20)/10 %>点</h4>      
       <p{text-indent:2em;}> <%= @comments.ans4 %></p>        
-      <br>
-      <h4>第4問（配点20点）</h4>
-      <% sum = sum + (@comments.judge5 * 20)/10 %>       
-      <p class="answer"> <%= @comments.answer.ans5 %></p>
-      <br>    
-      <h4><%= (@comments.judge5 * 20)/10 %>点</h4>      
-      <p{text-indent:2em;}> <%= @comments.ans5 %></p>        
       <br>
       <h4>合計：<%= sum %></h4>
      <% elsif(@comments.answer.jirei == 3)then  %>
@@ -301,24 +293,24 @@
       <br>
       <h4>第2問（配点18点）<h4>
       <h4>(設問1)</h4>
-      <% sum = sum + (@comments.judge3 * 9)/10 %> 
+      <% sum = sum + (@comments.judge3 * 6)/10 %> 
       <p class="answer" > <%= @comments.answer.ans3 %></p>
       <br>
-      <h4><%= (@comments.judge3 * 9)/10 %>点</h4>      
+      <h4><%= (@comments.judge3 * 6)/10 %>点</h4>      
       <p{text-indent:2em;}> <%= @comments.ans3 %></p>        
       <br>
       <h4>(設問2)</h4>
-      <% sum = sum + (@comments.judge4 * 9)/10 %>         
+      <% sum = sum + (@comments.judge4 * 6)/10 %>         
       <p class="answer"> <%= @comments.answer.ans4 %></p>
       <br>
-      <h4><%= (@comments.judge4 * 9)/10 %>点</h4>      
+      <h4><%= (@comments.judge4 * 6)/10 %>点</h4>      
       <p{text-indent:2em;}> <%= @comments.ans4 %></p>        
       <br>
       <h4>(設問3)</h4>
-      <% sum = sum + (@comments.judge5 * 9)/10 %>       
+      <% sum = sum + (@comments.judge5 * 6)/10 %>       
       <p class="answer"> <%= @comments.answer.ans5 %></p>
       <br>    
-      <h4><%= (@comments.judge5 * 9)/10 %>点</h4>      
+      <h4><%= (@comments.judge5 * 6)/10 %>点</h4>      
       <p{text-indent:2em;}> <%= @comments.ans5 %></p>        
       <br>    
       <h4>第3問（配点29点）<h4>
@@ -574,22 +566,22 @@
       <h4>(設問1)</h4>
       <p class="answer"> <%= @comments.answer.ans1 %></p>
       <br>
-      <% sum = (@comments.judge1 * 20)/10 %>
+      <% sum = (@comments.judge1 * 10)/10 %>
       <h4><%= sum  %>点</h4>      
       <p{text-indent:2em;}> <%= @comments.ans1 %></p>        
       <br>
       <h4>(設問2)</h4>
-      <% sum = sum + (@comments.judge2 * 20)/10 %>      
+      <% sum = sum + (@comments.judge2 * 15)/10 %>      
       <p class="answer"> <%= @comments.answer.ans2 %></p>
       <br>
-      <h4><%= (@comments.judge2 * 20)/10 %>点</h4>      
+      <h4><%= (@comments.judge2 * 15)/10 %>点</h4>      
       <p{text-indent:2em;}> <%= @comments.ans2 %></p>        
       <br>
       <h4>(設問3)</h4>
-      <% sum = sum + (@comments.judge3 * 20)/10 %> 
+      <% sum = sum + (@comments.judge3 * 15)/10 %> 
       <p class="answer" > <%= @comments.answer.ans3 %></p>
       <br>
-      <h4><%= (@comments.judge3 * 20)/10 %>点</h4>      
+      <h4><%= (@comments.judge3 * 15)/10 %>点</h4>      
       <p{text-indent:2em;}> <%= @comments.ans3 %></p>        
       <br>
       <h4>第2問（配点20点）<h4>
@@ -621,22 +613,22 @@
       <h4>(設問1)</h4>
       <p class="answer"> <%= @comments.answer.ans1 %></p>
       <br>
-      <% sum = (@comments.judge1 * 20)/10 %>
+      <% sum = (@comments.judge1 * 10)/10 %>
       <h4><%= sum  %>点</h4>      
       <p{text-indent:2em;}> <%= @comments.ans1 %></p>        
       <br>
       <h4>(設問2)</h4>
-      <% sum = sum + (@comments.judge2 * 10)/10 %>      
+      <% sum = sum + (@comments.judge2 * 15)/10 %>      
       <p class="answer"> <%= @comments.answer.ans2 %></p>
       <br>
-      <h4><%= (@comments.judge2 * 10)/10 %>点</h4>      
+      <h4><%= (@comments.judge2 * 15)/10 %>点</h4>      
       <p{text-indent:2em;}> <%= @comments.ans2 %></p>        
       <br>
       <h4>(設問3)</h4>
-      <% sum = sum + (@comments.judge3 * 10)/10 %> 
+      <% sum = sum + (@comments.judge3 * 15)/10 %> 
       <p class="answer" > <%= @comments.answer.ans3 %></p>
       <br>
-      <h4><%= (@comments.judge3 * 20)/10 %>点</h4>      
+      <h4><%= (@comments.judge3 * 15)/10 %>点</h4>      
       <p{text-indent:2em;}> <%= @comments.ans3 %></p>        
       <br>
       <h4>第2問（配点20点）<h4>
@@ -668,67 +660,67 @@
       <h4>(設問1)</h4>
       <p class="answer"> <%= @comments.answer.ans1 %></p>
       <br>
-      <% sum = (@comments.judge1 * 10)/10 %>
+      <% sum = (@comments.judge1 * 14)/10 %>
       <h4><%= sum  %>点</h4>      
       <p{text-indent:2em;}> <%= @comments.ans1 %></p>        
       <br>
       <h4>(設問2)</h4>
-      <% sum = sum + (@comments.judge2 * 10)/10 %>      
+      <% sum = sum + (@comments.judge2 * 14)/10 %>      
       <p class="answer"> <%= @comments.answer.ans2 %></p>
       <br>
-      <h4><%= (@comments.judge2 * 10)/10 %>点</h4>      
+      <h4><%= (@comments.judge2 * 14)/10 %>点</h4>      
       <p{text-indent:2em;}> <%= @comments.ans2 %></p>        
-      <br>
-      <h4>(設問3)</h4>
-      <% sum = sum + (@comments.judge3 * 8)/10 %> 
-      <p class="answer" > <%= @comments.answer.ans3 %></p>
-      <br>
-      <h4><%= (@comments.judge3 * 8)/10 %>点</h4>      
-      <p{text-indent:2em;}> <%= @comments.ans3 %></p>        
       <br>
       <h4>第2問（配点34点）<h4>
       <h4>(設問1)</h4>
-      <% sum = sum + (@comments.judge4 * 14)/10 %>         
+      <% sum = sum + (@comments.judge3 * 14)/10 %>         
       <p class="answer"> <%= @comments.answer.ans4 %></p>
       <br>
-      <h4><%= (@comments.judge4 * 14)/10 %>点</h4>      
+      <h4><%= (@comments.judge3 * 14)/10 %>点</h4>      
       <p{text-indent:2em;}> <%= @comments.ans4 %></p>        
       <br>
       <h4>(設問2)</h4>
+      <% sum = sum + (@comments.judge4 * 10)/10 %>       
+      <p class="answer"> <%= @comments.answer.ans4 %></p>
+      <br>    
+      <h4><%= (@comments.judge4 * 10)/10 %>点</h4>      
+      <p{text-indent:2em;}> <%= @comments.ans4 %></p>        
+      <h4>(設問3)</h4>
       <% sum = sum + (@comments.judge5 * 10)/10 %>       
-      <p class="answer"> <%= @comments.answer.ans5 %></p>
+      <p class="answer"> <%= @comments.answer.ans6 %></p>
       <br>    
       <h4><%= (@comments.judge5 * 10)/10 %>点</h4>      
       <p{text-indent:2em;}> <%= @comments.ans5 %></p>        
-      <h4>(設問3)</h4>
-      <% sum = sum + (@comments.judge6 * 10)/10 %>       
-      <p class="answer"> <%= @comments.answer.ans6 %></p>
-      <br>    
-      <h4><%= (@comments.judge6 * 10)/10 %>点</h4>      
-      <p{text-indent:2em;}> <%= @comments.ans6 %></p>        
       <br>
       <h4>第3問（配点26点）<h4>
       <h4>(設問1)</h4>
-      <% sum = sum + (@comments.judge7 * 16)/10 %>         
+      <% sum = sum + (@comments.judge6 * 6)/10 %>         
       <p class="answer"> <%= @comments.answer.ans7 %></p>
       <br>
-      <h4><%= (@comments.judge7 * 16)/10 %>点</h4>      
-      <p{text-indent:2em;}> <%= @comments.ans7 %></p>        
+      <h4><%= (@comments.judge6 * 6)/10 %>点</h4>      
+      <p{text-indent:2em;}> <%= @comments.ans6 %></p>        
       <br>
       <h4>(設問2)</h4>
+      <% sum = sum + (@comments.judge7 * 10)/10 %>       
+      <p class="answer"> <%= @comments.answer.ans7 %></p>
+      <br>    
+      <h4><%= (@comments.judge7 * 10)/10 %>点</h4>      
+      <p{text-indent:2em;}> <%= @comments.ans7 %></p>        
+      <br>
+      <h4>(設問3)</h4>
       <% sum = sum + (@comments.judge8 * 10)/10 %>       
-      <p class="answer"> <%= @comments.answer.ans8 %></p>
+      <p class="answer"> <%= @comments.answer.ans7 %></p>
       <br>    
       <h4><%= (@comments.judge8 * 10)/10 %>点</h4>      
       <p{text-indent:2em;}> <%= @comments.ans8 %></p>        
-      <br>
+      <br>      
       <h4>第4問（配点12点）<h4>
       <h4>(設問1)</h4>
       <% sum = sum + (@comments.judge9 * 6)/10 %>         
       <p class="answer"> <%= @comments.answer.ans9 %></p>
       <br>
       <h4><%= (@comments.judge9 * 6)/10 %>点</h4>      
-      <p{text-indent:2em;}> <%= @comments.ans9 %></p>        
+      <p{text-indent:2em;}> <%= @comments.ans8 %></p>        
       <br>
       <h4>(設問2)</h4>
       <% sum = sum + (@comments.judge10 * 6)/10 %>       
@@ -779,7 +771,7 @@
       <p{text-indent:2em;}> <%= @comments.ans5 %></p>        
       <br>
       <h4>合計：<%= sum %></h4>
-     <% elsif(@comments.answer.jirei == 2)then  %>
+    <% elsif(@comments.answer.jirei == 2)then  %>
        <br>
       <h4>第1問（配点25点）<h4>
       <p class="answer"> <%= @comments.answer.ans1 %></p>
@@ -818,7 +810,7 @@
       <p{text-indent:2em;}> <%= @comments.ans5 %></p>        
       <br>
       <h4>合計：<%= sum %></h4>
-     <% elsif(@comments.answer.jirei == 3)then  %>
+    <% elsif(@comments.answer.jirei == 3)then  %>
       <br>
       <h4>第1問（配点10点）<h4>
       <p class="answer"> <%= @comments.answer.ans1 %></p>
@@ -862,7 +854,7 @@
       <h4>第1問（配点24点）<h4>
       <p class="answer"> <%= @comments.answer.ans1 %></p>
       <br>
-      <% sum = (@comments.judge1 * 20)/10 %>
+      <% sum = (@comments.judge1 * 24)/10 %>
       <h4><%= sum  %>点</h4>      
       <p{text-indent:2em;}> <%= @comments.ans1 %></p>        
       <br>
@@ -1128,12 +1120,12 @@
       <p{text-indent:2em;}> <%= @comments.ans5 %></p>        
       <br>
       <h4>合計：<%= sum %></h4>
-     <% elsif(@comments.answer.jirei == 2)then  %>
+    <% elsif(@comments.answer.jirei == 2)then  %>
       <br>
       <h4>第1問（配点10点）<h4>
       <p class="answer"> <%= @comments.answer.ans1 %></p>
       <br>
-      <% sum = (@comments.judge1 * 20)/10 %>
+      <% sum = (@comments.judge1 * 10)/10 %>
       <h4><%= sum  %>点</h4>      
       <p{text-indent:2em;}> <%= @comments.ans1 %></p>        
       <br>
@@ -1154,17 +1146,17 @@
       <br>
       <h4>第3問（配点30点）</h4>
       <h4>(設問1)</h4>
-      <% sum = sum + (@comments.judge4 * 20)/10 %>         
+      <% sum = sum + (@comments.judge4 * 15)/10 %>         
       <p class="answer"> <%= @comments.answer.ans4 %></p>
       <br>
-      <h4><%= (@comments.judge4 * 20)/10 %>点</h4>      
+      <h4><%= (@comments.judge4 * 15)/10 %>点</h4>      
       <p{text-indent:2em;}> <%= @comments.ans4 %></p>        
       <br>
       <h4>(設問2)</h4>
-      <% sum = sum + (@comments.judge5 * 20)/10 %>       
+      <% sum = sum + (@comments.judge5 * 15)/10 %>       
       <p class="answer"> <%= @comments.answer.ans5 %></p>
       <br>    
-      <h4><%= (@comments.judge5 * 20)/10 %>点</h4>      
+      <h4><%= (@comments.judge5 * 15)/10 %>点</h4>      
       <p{text-indent:2em;}> <%= @comments.ans5 %></p>        
       <br>
       <h4>第4問（配点30点）</h4>
@@ -1175,7 +1167,7 @@
       <p{text-indent:2em;}> <%= @comments.ans6 %></p>        
       <br>
       <h4>合計：<%= sum %></h4>
-     <% elsif(@comments.answer.jirei == 3)then  %>
+    <% elsif(@comments.answer.jirei == 3)then  %>
       <br>
       <h4>第1問（配点10点）<h4>
       <p class="answer"> <%= @comments.answer.ans1 %></p>
