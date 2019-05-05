@@ -215,12 +215,11 @@ class CommentsController < ApplicationController
           end    
         end
         if(ans.jirei == 2)
-          if((jdg.judge1 != nil) and  (jdg.judge2 != nil) and  (jdg.judge3 != nil) and (jdg.judge4 != nil) and  (jdg.judge5 != nil))then
-            sum = (jdg.judge1 * 20)/10    
-            sum = sum + (jdg.judge2 * 20)/10
-            sum = sum + (jdg.judge3 * 20)/10
-            sum = sum + (jdg.judge4 * 20)/10
-            sum = sum + (jdg.judge5 * 20)/10
+          if((jdg.judge1 != nil) and  (jdg.judge2 != nil) and  (jdg.judge3 != nil) and (jdg.judge4 != nil) )then
+            sum = (jdg.judge1 * 25)/10    
+            sum = sum + (jdg.judge2 * 25)/10
+            sum = sum + (jdg.judge3 * 25)/10
+            sum = sum + (jdg.judge4 * 25)/10
             jdg.score = sum
           end    
         end
@@ -235,12 +234,15 @@ class CommentsController < ApplicationController
           end    
         end
         if(ans.jirei == 4)
-          if((jdg.judge1 != nil) and  (jdg.judge2 != nil) and  (jdg.judge3 != nil) and (jdg.judge4 != nil) and  (jdg.judge5 != nil))then
+          if((jdg.judge1 != nil) and  (jdg.judge2 != nil) and  (jdg.judge3 != nil) and (jdg.judge4 != nil) and  (jdg.judge5 != nil) and (jdg.judger6 != nil) and (jdg.judge7 != nil) and  (jdg.judge8 != nil))then
             sum = (jdg.judge1 * 20)/10    
-            sum = sum + (jdg.judge2 * 20)/10
-            sum = sum + (jdg.judge3 * 20)/10
-            sum = sum + (jdg.judge4 * 20)/10
-            sum = sum + (jdg.judge5 * 20)/10
+            sum = sum + (jdg.judge2 * 12)/10
+            sum = sum + (jdg.judge3 * 12)/10
+            sum = sum + (jdg.judge4 * 11)/10
+            sum = sum + (jdg.judge5 * 10)/10
+            sum = sum + (jdg.judge6 * 15)/10
+            sum = sum + (jdg.judge7 * 15)/10
+            sum = sum + (jdg.judge8 * 15)/10
             jdg.score = sum
           end    
         end
@@ -257,32 +259,35 @@ class CommentsController < ApplicationController
           end    
         end
         if(ans.jirei == 2)
-          if((jdg.judge1 != nil) and  (jdg.judge2 != nil) and  (jdg.judge3 != nil) and (jdg.judge4 != nil) and  (jdg.judge5 != nil))then
+          if((jdg.judge1 != nil) and  (jdg.judge2 != nil) and  (jdg.judge3 != nil) and (jdg.judge4 != nil) )then
             sum = (jdg.judge1 * 20)/10    
-            sum = sum + (jdg.judge2 * 20)/10
-            sum = sum + (jdg.judge3 * 20)/10
+            sum = sum + (jdg.judge2 * 25)/10
+            sum = sum + (jdg.judge3 * 30)/10
             sum = sum + (jdg.judge4 * 20)/10
-            sum = sum + (jdg.judge5 * 20)/10
             jdg.score = sum
           end    
         end
         if(ans.jirei == 3)
-          if((jdg.judge1 != nil) and  (jdg.judge2 != nil) and  (jdg.judge3 != nil) and (jdg.judge4 != nil) and  (jdg.judge5 != nil))then
-            sum = (jdg.judge1 * 20)/10    
+          if((jdg.judge1 != nil) and  (jdg.judge2 != nil) and  (jdg.judge3 != nil) and (jdg.judge4 != nil) )then
+            sum = (jdg.judge1 * 30)/10    
             sum = sum + (jdg.judge2 * 20)/10
             sum = sum + (jdg.judge3 * 20)/10
-            sum = sum + (jdg.judge4 * 20)/10
-            sum = sum + (jdg.judge5 * 20)/10
+            sum = sum + (jdg.judge4 * 30)/10
             jdg.score = sum
           end    
         end
         if(ans.jirei == 4)
-          if((jdg.judge1 != nil) and  (jdg.judge2 != nil) and  (jdg.judge3 != nil) and (jdg.judge4 != nil) and  (jdg.judge5 != nil))then
-            sum = (jdg.judge1 * 20)/10    
-            sum = sum + (jdg.judge2 * 20)/10
-            sum = sum + (jdg.judge3 * 20)/10
-            sum = sum + (jdg.judge4 * 20)/10
-            sum = sum + (jdg.judge5 * 20)/10
+          if((jdg.judge1 != nil) and  (jdg.judge2 != nil) and  (jdg.judge3 != nil) and (jdg.judge4 != nil) and  (jdg.judge5 != nil) and (jdg.judge6 != nil) and  (jdg.judge7 != nil) and  (jdg.judge8 != nil) and (jdg.judge9 != nil) and  (jdg.judge10 != nil))then
+            sum = (jdg.judge1 * 15)/10    
+            sum = sum + (jdg.judge2 * 10)/10
+            sum = sum + (jdg.judge3 * 6)/10
+            sum = sum + (jdg.judge4 * 6)/10
+            sum = sum + (jdg.judge5 * 6)/10
+            sum = sum + (jdg.judge6 * 19)/10
+            sum = sum + (jdg.judge7 * 10)/10
+            sum = sum + (jdg.judge8 * 8)/10
+            sum = sum + (jdg.judge9 * 10)/10
+            sum = sum + (jdg.judge10 * 10)/10
             jdg.score = sum
           end    
         end
@@ -301,30 +306,31 @@ class CommentsController < ApplicationController
         if(ans.jirei == 2)
           if((jdg.judge1 != nil) and  (jdg.judge2 != nil) and  (jdg.judge3 != nil) and (jdg.judge4 != nil) and  (jdg.judge5 != nil))then
             sum = (jdg.judge1 * 20)/10    
-            sum = sum + (jdg.judge2 * 20)/10
-            sum = sum + (jdg.judge3 * 20)/10
+            sum = sum + (jdg.judge2 * 15)/10
+            sum = sum + (jdg.judge3 * 15)/10
             sum = sum + (jdg.judge4 * 20)/10
-            sum = sum + (jdg.judge5 * 20)/10
+            sum = sum + (jdg.judge5 * 30)/10
             jdg.score = sum
           end    
         end
         if(ans.jirei == 3)
-          if((jdg.judge1 != nil) and  (jdg.judge2 != nil) and  (jdg.judge3 != nil) and (jdg.judge4 != nil) and  (jdg.judge5 != nil))then
+          if((jdg.judge1 != nil) and  (jdg.judge2 != nil) and  (jdg.judge3 != nil) and (jdg.judge4 != nil) )then
             sum = (jdg.judge1 * 20)/10    
-            sum = sum + (jdg.judge2 * 20)/10
+            sum = sum + (jdg.judge2 * 30)/10
             sum = sum + (jdg.judge3 * 20)/10
-            sum = sum + (jdg.judge4 * 20)/10
-            sum = sum + (jdg.judge5 * 20)/10
+            sum = sum + (jdg.judge4 * 30)/10
             jdg.score = sum
           end    
         end
         if(ans.jirei == 4)
-          if((jdg.judge1 != nil) and  (jdg.judge2 != nil) and  (jdg.judge3 != nil) and (jdg.judge4 != nil) and  (jdg.judge5 != nil))then
-            sum = (jdg.judge1 * 20)/10    
-            sum = sum + (jdg.judge2 * 20)/10
-            sum = sum + (jdg.judge3 * 20)/10
+          if((jdg.judge1 != nil) and  (jdg.judge2 != nil) and  (jdg.judge3 != nil) and (jdg.judge4 != nil) and  (jdg.judge5 != nil) and (jdg.judge6 != nil) and  (jdg.judge7 != nil))then
+            sum = (jdg.judge1 * 15)/10    
+            sum = sum + (jdg.judge2 * 10)/10
+            sum = sum + (jdg.judge3 * 15)/10
             sum = sum + (jdg.judge4 * 20)/10
-            sum = sum + (jdg.judge5 * 20)/10
+            sum = sum + (jdg.judge5 * 15)/10
+            sum = sum + (jdg.judge6 * 15)/10
+            sum = sum + (jdg.judge7 * 10)/10
             jdg.score = sum
           end    
         end
@@ -341,32 +347,39 @@ class CommentsController < ApplicationController
           end    
         end
         if(ans.jirei == 2)
-          if((jdg.judge1 != nil) and  (jdg.judge2 != nil) and  (jdg.judge3 != nil) and (jdg.judge4 != nil) and  (jdg.judge5 != nil))then
-            sum = (jdg.judge1 * 20)/10    
-            sum = sum + (jdg.judge2 * 20)/10
-            sum = sum + (jdg.judge3 * 20)/10
+          if((jdg.judge1 != nil) and  (jdg.judge2 != nil) and  (jdg.judge3 != nil) and (jdg.judge4 != nil) and  (jdg.judge5 != nil) and (jdg.judge6 != nil))then
+            sum = (jdg.judge1 * 10)/10    
+            sum = sum + (jdg.judge2 * 15)/10
+            sum = sum + (jdg.judge3 * 15)/10
             sum = sum + (jdg.judge4 * 20)/10
             sum = sum + (jdg.judge5 * 20)/10
+            sum = sum + (jdg.judge6 * 20)/10
             jdg.score = sum
           end    
         end
         if(ans.jirei == 3)
-          if((jdg.judge1 != nil) and  (jdg.judge2 != nil) and  (jdg.judge3 != nil) and (jdg.judge4 != nil) and  (jdg.judge5 != nil))then
-            sum = (jdg.judge1 * 20)/10    
-            sum = sum + (jdg.judge2 * 20)/10
-            sum = sum + (jdg.judge3 * 20)/10
+          if((jdg.judge1 != nil) and  (jdg.judge2 != nil) and  (jdg.judge3 != nil) and (jdg.judge4 != nil) and  (jdg.judge5 != nil) and (jdg.judge6 != nil))then
+            sum = (jdg.judge1 * 10)/10    
+            sum = sum + (jdg.judge2 * 15)/10
+            sum = sum + (jdg.judge3 * 15)/10
             sum = sum + (jdg.judge4 * 20)/10
             sum = sum + (jdg.judge5 * 20)/10
+            sum = sum + (jdg.judge6 * 20)/10
             jdg.score = sum
           end    
         end
         if(ans.jirei == 4)
-          if((jdg.judge1 != nil) and  (jdg.judge2 != nil) and  (jdg.judge3 != nil) and (jdg.judge4 != nil) and  (jdg.judge5 != nil))then
-            sum = (jdg.judge1 * 20)/10    
-            sum = sum + (jdg.judge2 * 20)/10
-            sum = sum + (jdg.judge3 * 20)/10
-            sum = sum + (jdg.judge4 * 20)/10
-            sum = sum + (jdg.judge5 * 20)/10
+          if((jdg.judge1 != nil) and  (jdg.judge2 != nil) and  (jdg.judge3 != nil) and (jdg.judge4 != nil) and  (jdg.judge5 != nil) and (jdg.judge6 != nil) and  (jdg.judge7 != nil) and  (jdg.judge8 != nil) and (jdg.judge9 != nil) and  (jdg.judge10 != nil))then
+            sum = (jdg.judge1 * 14)/10    
+            sum = sum + (jdg.judge2 * 14)/10
+            sum = sum + (jdg.judge3 * 14)/10
+            sum = sum + (jdg.judge4 * 10)/10
+            sum = sum + (jdg.judge5 * 10)/10
+            sum = sum + (jdg.judge6 * 6)/10
+            sum = sum + (jdg.judge7 * 10)/10
+            sum = sum + (jdg.judge8 * 10)/10
+            sum = sum + (jdg.judge9 * 6)/10
+            sum = sum + (jdg.judge10 * 6)/10
             jdg.score = sum
           end    
         end
@@ -384,73 +397,77 @@ class CommentsController < ApplicationController
         end
         if(ans.jirei == 2)
           if((jdg.judge1 != nil) and  (jdg.judge2 != nil) and  (jdg.judge3 != nil) and (jdg.judge4 != nil) and  (jdg.judge5 != nil))then
-            sum = (jdg.judge1 * 20)/10    
-            sum = sum + (jdg.judge2 * 20)/10
-            sum = sum + (jdg.judge3 * 20)/10
-            sum = sum + (jdg.judge4 * 20)/10
+            sum = (jdg.judge1 * 25)/10    
+            sum = sum + (jdg.judge2 * 25)/10
+            sum = sum + (jdg.judge3 * 15)/10
+            sum = sum + (jdg.judge4 * 15)/10
             sum = sum + (jdg.judge5 * 20)/10
             jdg.score = sum
           end    
         end
         if(ans.jirei == 3)
           if((jdg.judge1 != nil) and  (jdg.judge2 != nil) and  (jdg.judge3 != nil) and (jdg.judge4 != nil) and  (jdg.judge5 != nil))then
-            sum = (jdg.judge1 * 20)/10    
+            sum = (jdg.judge1 * 10)/10    
             sum = sum + (jdg.judge2 * 20)/10
             sum = sum + (jdg.judge3 * 20)/10
             sum = sum + (jdg.judge4 * 20)/10
-            sum = sum + (jdg.judge5 * 20)/10
+            sum = sum + (jdg.judge5 * 30)/10
             jdg.score = sum
           end    
         end
         if(ans.jirei == 4)
-          if((jdg.judge1 != nil) and  (jdg.judge2 != nil) and  (jdg.judge3 != nil) and (jdg.judge4 != nil) and  (jdg.judge5 != nil))then
-            sum = (jdg.judge1 * 20)/10    
-            sum = sum + (jdg.judge2 * 20)/10
-            sum = sum + (jdg.judge3 * 20)/10
-            sum = sum + (jdg.judge4 * 20)/10
-            sum = sum + (jdg.judge5 * 20)/10
+          if((jdg.judge1 != nil) and  (jdg.judge2 != nil) and  (jdg.judge3 != nil) and (jdg.judge4 != nil) and  (jdg.judge5 != nil) and (jdg.judge6 != nil) and  (jdg.judge7 != nil))then
+            sum = (jdg.judge1 * 24)/10    
+            sum = sum + (jdg.judge2 * 15)/10
+            sum = sum + (jdg.judge3 * 15)/10
+            sum = sum + (jdg.judge4 * 10)/10
+            sum = sum + (jdg.judge5 * 10)/10
+            sum = sum + (jdg.judge6 * 10)/10
+            sum = sum + (jdg.judge7 * 16)/10
             jdg.score = sum
           end    
         end
     end
     if(ans.year == 25)then
         if(ans.jirei == 1)
-          if((jdg.judge1 != nil) and  (jdg.judge2 != nil) and  (jdg.judge3 != nil) and (jdg.judge4 != nil) and  (jdg.judge5 != nil))then
-            sum = (jdg.judge1 * 20)/10    
+          if((jdg.judge1 != nil) and  (jdg.judge2 != nil) and  (jdg.judge3 != nil) and (jdg.judge4 != nil) and  (jdg.judge5 != nil) and (jdg.judge6 != nil))then
+            sum = (jdg.judge1 * 15)/10    
             sum = sum + (jdg.judge2 * 20)/10
-            sum = sum + (jdg.judge3 * 20)/10
+            sum = sum + (jdg.judge3 * 15)/10
             sum = sum + (jdg.judge4 * 20)/10
-            sum = sum + (jdg.judge5 * 20)/10
+            sum = sum + (jdg.judge5 * 15)/10
+            sum = sum + (jdg.judge6 * 15)/10
             jdg.score = sum
           end    
         end
         if(ans.jirei == 2)
-          if((jdg.judge1 != nil) and  (jdg.judge2 != nil) and  (jdg.judge3 != nil) and (jdg.judge4 != nil) and  (jdg.judge5 != nil))then
+          if((jdg.judge1 != nil) and  (jdg.judge2 != nil) and  (jdg.judge3 != nil) and (jdg.judge4 != nil) and  (jdg.judge5 != nil) and (jdg.judge6 != nil))then
             sum = (jdg.judge1 * 20)/10    
             sum = sum + (jdg.judge2 * 20)/10
-            sum = sum + (jdg.judge3 * 20)/10
-            sum = sum + (jdg.judge4 * 20)/10
-            sum = sum + (jdg.judge5 * 20)/10
+            sum = sum + (jdg.judge3 * 15)/10
+            sum = sum + (jdg.judge4 * 15)/10
+            sum = sum + (jdg.judge5 * 15)/10
+            sum = sum + (jdg.judge6 * 15)/10
             jdg.score = sum
           end    
         end
         if(ans.jirei == 3)
           if((jdg.judge1 != nil) and  (jdg.judge2 != nil) and  (jdg.judge3 != nil) and (jdg.judge4 != nil) and  (jdg.judge5 != nil))then
-            sum = (jdg.judge1 * 20)/10    
-            sum = sum + (jdg.judge2 * 20)/10
+            sum = (jdg.judge1 * 15)/10    
+            sum = sum + (jdg.judge2 * 15)/10
             sum = sum + (jdg.judge3 * 20)/10
             sum = sum + (jdg.judge4 * 20)/10
-            sum = sum + (jdg.judge5 * 20)/10
+            sum = sum + (jdg.judge5 * 30)/10
             jdg.score = sum
           end    
         end
         if(ans.jirei == 4)
           if((jdg.judge1 != nil) and  (jdg.judge2 != nil) and  (jdg.judge3 != nil) and (jdg.judge4 != nil) and  (jdg.judge5 != nil))then
-            sum = (jdg.judge1 * 20)/10    
-            sum = sum + (jdg.judge2 * 20)/10
-            sum = sum + (jdg.judge3 * 20)/10
-            sum = sum + (jdg.judge4 * 20)/10
-            sum = sum + (jdg.judge5 * 20)/10
+            sum = (jdg.judge1 * 25)/10    
+            sum = sum + (jdg.judge2 * 15)/10
+            sum = sum + (jdg.judge3 * 15)/10
+            sum = sum + (jdg.judge4 * 15)/10
+            sum = sum + (jdg.judge5 * 30)/10
             jdg.score = sum
           end    
         end
@@ -467,32 +484,35 @@ class CommentsController < ApplicationController
           end    
         end
         if(ans.jirei == 2)
-          if((jdg.judge1 != nil) and  (jdg.judge2 != nil) and  (jdg.judge3 != nil) and (jdg.judge4 != nil) and  (jdg.judge5 != nil))then
-            sum = (jdg.judge1 * 20)/10    
-            sum = sum + (jdg.judge2 * 20)/10
-            sum = sum + (jdg.judge3 * 20)/10
-            sum = sum + (jdg.judge4 * 20)/10
-            sum = sum + (jdg.judge5 * 20)/10
+          if((jdg.judge1 != nil) and  (jdg.judge2 != nil) and  (jdg.judge3 != nil) and (jdg.judge4 != nil) and  (jdg.judge5 != nil) and (jdg.judge6 != nil))then
+            sum = (jdg.judge1 * 10)/10    
+            sum = sum + (jdg.judge2 * 15)/10
+            sum = sum + (jdg.judge3 * 15)/10
+            sum = sum + (jdg.judge4 * 15)/10
+            sum = sum + (jdg.judge5 * 15)/10
+            sum = sum + (jdg.judge6 * 30)/10
             jdg.score = sum
           end    
         end
         if(ans.jirei == 3)
           if((jdg.judge1 != nil) and  (jdg.judge2 != nil) and  (jdg.judge3 != nil) and (jdg.judge4 != nil) and  (jdg.judge5 != nil))then
-            sum = (jdg.judge1 * 20)/10    
+            sum = (jdg.judge1 * 10)/10    
             sum = sum + (jdg.judge2 * 20)/10
             sum = sum + (jdg.judge3 * 20)/10
             sum = sum + (jdg.judge4 * 20)/10
-            sum = sum + (jdg.judge5 * 20)/10
+            sum = sum + (jdg.judge5 * 30)/10
             jdg.score = sum
           end    
         end
         if(ans.jirei == 4)
-          if((jdg.judge1 != nil) and  (jdg.judge2 != nil) and  (jdg.judge3 != nil) and (jdg.judge4 != nil) and  (jdg.judge5 != nil))then
+          if((jdg.judge1 != nil) and  (jdg.judge2 != nil) and  (jdg.judge3 != nil) and (jdg.judge4 != nil) and  (jdg.judge5 != nil) and (jdg.judge6 != nil) and  (jdg.judge7 != nil))then
             sum = (jdg.judge1 * 20)/10    
-            sum = sum + (jdg.judge2 * 20)/10
-            sum = sum + (jdg.judge3 * 20)/10
-            sum = sum + (jdg.judge4 * 20)/10
-            sum = sum + (jdg.judge5 * 20)/10
+            sum = sum + (jdg.judge2 * 10)/10
+            sum = sum + (jdg.judge3 * 10)/10
+            sum = sum + (jdg.judge4 * 15)/10
+            sum = sum + (jdg.judge5 * 15)/10
+            sum = sum + (jdg.judge6 * 15)/10
+            sum = sum + (jdg.judge7 * 15)/10
             jdg.score = sum
           end    
         end
@@ -509,12 +529,13 @@ class CommentsController < ApplicationController
           end    
         end
         if(ans.jirei == 2)
-          if((jdg.judge1 != nil) and  (jdg.judge2 != nil) and  (jdg.judge3 != nil) and (jdg.judge4 != nil) and  (jdg.judge5 != nil))then
-            sum = (jdg.judge1 * 20)/10    
-            sum = sum + (jdg.judge2 * 20)/10
-            sum = sum + (jdg.judge3 * 20)/10
-            sum = sum + (jdg.judge4 * 20)/10
-            sum = sum + (jdg.judge5 * 20)/10
+          if((jdg.judge1 != nil) and  (jdg.judge2 != nil) and  (jdg.judge3 != nil) and (jdg.judge4 != nil) and  (jdg.judge5 != nil) and  (jdg.judge6 != nil))then
+            sum = (jdg.judge1 * 10)/10    
+            sum = sum + (jdg.judge2 * 15)/10
+            sum = sum + (jdg.judge3 * 10)/10
+            sum = sum + (jdg.judge4 * 10)/10
+            sum = sum + (jdg.judge5 * 10)/10
+            sum = sum + (jdg.judge6 * 20)/10
             jdg.score = sum
           end    
         end
@@ -530,33 +551,34 @@ class CommentsController < ApplicationController
         end
         if(ans.jirei == 4)
           if((jdg.judge1 != nil) and  (jdg.judge2 != nil) and  (jdg.judge3 != nil) and (jdg.judge4 != nil) and  (jdg.judge5 != nil))then
-            sum = (jdg.judge1 * 20)/10    
+            sum = (jdg.judge1 * 15)/10    
             sum = sum + (jdg.judge2 * 20)/10
-            sum = sum + (jdg.judge3 * 20)/10
-            sum = sum + (jdg.judge4 * 20)/10
-            sum = sum + (jdg.judge5 * 20)/10
+            sum = sum + (jdg.judge3 * 15)/10
+            sum = sum + (jdg.judge4 * 25)/10
+            sum = sum + (jdg.judge5 * 25)/10
             jdg.score = sum
           end    
         end
     end
     if(ans.year == 22)then
         if(ans.jirei == 1)
-          if((jdg.judge1 != nil) and  (jdg.judge2 != nil) and  (jdg.judge3 != nil) and (jdg.judge4 != nil) and  (jdg.judge5 != nil))then
-            sum = (jdg.judge1 * 20)/10    
-            sum = sum + (jdg.judge2 * 20)/10
-            sum = sum + (jdg.judge3 * 20)/10
-            sum = sum + (jdg.judge4 * 20)/10
+          if((jdg.judge1 != nil) and  (jdg.judge2 != nil) and  (jdg.judge3 != nil) and (jdg.judge4 != nil) and  (jdg.judge5 != nil) and (jdg.judge6 != nil))then
+            sum = (jdg.judge1 * 15)/10    
+            sum = sum + (jdg.judge2 * 15)/10
+            sum = sum + (jdg.judge3 * 15)/10
+            sum = sum + (jdg.judge4 * 15)/10
             sum = sum + (jdg.judge5 * 20)/10
+            sum = sum + (jdg.judge6 * 20)/10
             jdg.score = sum
           end    
         end
         if(ans.jirei == 2)
           if((jdg.judge1 != nil) and  (jdg.judge2 != nil) and  (jdg.judge3 != nil) and (jdg.judge4 != nil) and  (jdg.judge5 != nil))then
-            sum = (jdg.judge1 * 20)/10    
-            sum = sum + (jdg.judge2 * 20)/10
+            sum = (jdg.judge1 * 10)/10    
+            sum = sum + (jdg.judge2 * 30)/10
             sum = sum + (jdg.judge3 * 20)/10
-            sum = sum + (jdg.judge4 * 20)/10
-            sum = sum + (jdg.judge5 * 20)/10
+            sum = sum + (jdg.judge4 * 10)/10
+            sum = sum + (jdg.judge5 * 30)/10
             jdg.score = sum
           end    
         end
@@ -571,54 +593,13 @@ class CommentsController < ApplicationController
           end    
         end
         if(ans.jirei == 4)
-          if((jdg.judge1 != nil) and  (jdg.judge2 != nil) and  (jdg.judge3 != nil) and (jdg.judge4 != nil) and  (jdg.judge5 != nil))then
-            sum = (jdg.judge1 * 20)/10    
-            sum = sum + (jdg.judge2 * 20)/10
-            sum = sum + (jdg.judge3 * 20)/10
-            sum = sum + (jdg.judge4 * 20)/10
-            sum = sum + (jdg.judge5 * 20)/10
-            jdg.score = sum
-          end    
-        end
-    end
-    if(ans.year == 22)then
-        if(ans.jirei == 1)
-          if((jdg.judge1 != nil) and  (jdg.judge2 != nil) and  (jdg.judge3 != nil) and (jdg.judge4 != nil) and  (jdg.judge5 != nil))then
-            sum = (jdg.judge1 * 20)/10    
-            sum = sum + (jdg.judge2 * 20)/10
-            sum = sum + (jdg.judge3 * 20)/10
-            sum = sum + (jdg.judge4 * 20)/10
-            sum = sum + (jdg.judge5 * 20)/10
-            jdg.score = sum
-          end    
-        end
-        if(ans.jirei == 2)
-          if((jdg.judge1 != nil) and  (jdg.judge2 != nil) and  (jdg.judge3 != nil) and (jdg.judge4 != nil) and  (jdg.judge5 != nil))then
-            sum = (jdg.judge1 * 20)/10    
-            sum = sum + (jdg.judge2 * 20)/10
-            sum = sum + (jdg.judge3 * 20)/10
-            sum = sum + (jdg.judge4 * 20)/10
-            sum = sum + (jdg.judge5 * 20)/10
-            jdg.score = sum
-          end    
-        end
-        if(ans.jirei == 3)
-          if((jdg.judge1 != nil) and  (jdg.judge2 != nil) and  (jdg.judge3 != nil) and (jdg.judge4 != nil) and  (jdg.judge5 != nil))then
-            sum = (jdg.judge1 * 20)/10    
-            sum = sum + (jdg.judge2 * 20)/10
-            sum = sum + (jdg.judge3 * 20)/10
-            sum = sum + (jdg.judge4 * 20)/10
-            sum = sum + (jdg.judge5 * 20)/10
-            jdg.score = sum
-          end    
-        end
-        if(ans.jirei == 4)
-          if((jdg.judge1 != nil) and  (jdg.judge2 != nil) and  (jdg.judge3 != nil) and (jdg.judge4 != nil) and  (jdg.judge5 != nil))then
-            sum = (jdg.judge1 * 20)/10    
-            sum = sum + (jdg.judge2 * 20)/10
-            sum = sum + (jdg.judge3 * 20)/10
-            sum = sum + (jdg.judge4 * 20)/10
-            sum = sum + (jdg.judge5 * 20)/10
+          if((jdg.judge1 != nil) and  (jdg.judge2 != nil) and  (jdg.judge3 != nil) and (jdg.judge4 != nil) and  (jdg.judge5 != nil) and (jdg.judge6 != nil))then
+            sum = (jdg.judge1 * 40)/10    
+            sum = sum + (jdg.judge2 * 15)/10
+            sum = sum + (jdg.judge3 * 10)/10
+            sum = sum + (jdg.judge4 * 10)/10
+            sum = sum + (jdg.judge5 * 10)/10
+            sum = sum + (jdg.judge6 * 15)/10
             jdg.score = sum
           end    
         end
@@ -637,30 +618,33 @@ class CommentsController < ApplicationController
         if(ans.jirei == 2)
           if((jdg.judge1 != nil) and  (jdg.judge2 != nil) and  (jdg.judge3 != nil) and (jdg.judge4 != nil) and  (jdg.judge5 != nil))then
             sum = (jdg.judge1 * 20)/10    
-            sum = sum + (jdg.judge2 * 20)/10
+            sum = sum + (jdg.judge2 * 10)/10
             sum = sum + (jdg.judge3 * 20)/10
             sum = sum + (jdg.judge4 * 20)/10
-            sum = sum + (jdg.judge5 * 20)/10
+            sum = sum + (jdg.judge5 * 30)/10
             jdg.score = sum
           end    
         end
         if(ans.jirei == 3)
-          if((jdg.judge1 != nil) and  (jdg.judge2 != nil) and  (jdg.judge3 != nil) and (jdg.judge4 != nil) and  (jdg.judge5 != nil))then
-            sum = (jdg.judge1 * 20)/10    
+          if((jdg.judge1 != nil) and  (jdg.judge2 != nil) and  (jdg.judge3 != nil) and (jdg.judge4 != nil) and  (jdg.judge5 != nil) and (jdg.judge6 != nil))then
+            sum = (jdg.judge1 * 10)/10    
             sum = sum + (jdg.judge2 * 20)/10
             sum = sum + (jdg.judge3 * 20)/10
             sum = sum + (jdg.judge4 * 20)/10
             sum = sum + (jdg.judge5 * 20)/10
+            sum = sum + (jdg.judge6 * 10)/10
             jdg.score = sum
           end    
         end
         if(ans.jirei == 4)
-          if((jdg.judge1 != nil) and  (jdg.judge2 != nil) and  (jdg.judge3 != nil) and (jdg.judge4 != nil) and  (jdg.judge5 != nil))then
-            sum = (jdg.judge1 * 20)/10    
-            sum = sum + (jdg.judge2 * 20)/10
-            sum = sum + (jdg.judge3 * 20)/10
-            sum = sum + (jdg.judge4 * 20)/10
-            sum = sum + (jdg.judge5 * 20)/10
+          if((jdg.judge1 != nil) and  (jdg.judge2 != nil) and  (jdg.judge3 != nil) and (jdg.judge4 != nil) and  (jdg.judge5 != nil) and (jdg.judge6 != nil) and  (jdg.judge7 != nil))then
+            sum = (jdg.judge1 * 40)/10    
+            sum = sum + (jdg.judge2 * 10)/10
+            sum = sum + (jdg.judge3 * 10)/10
+            sum = sum + (jdg.judge4 * 10)/10
+            sum = sum + (jdg.judge5 * 10)/10
+            sum = sum + (jdg.judge6 * 10)/10
+            sum = sum + (jdg.judge7 * 10)/10
             jdg.score = sum
           end    
         end
@@ -677,54 +661,62 @@ class CommentsController < ApplicationController
           end    
         end
         if(ans.jirei == 2)
-          if((jdg.judge1 != nil) and  (jdg.judge2 != nil) and  (jdg.judge3 != nil) and (jdg.judge4 != nil) and  (jdg.judge5 != nil))then
-            sum = (jdg.judge1 * 20)/10    
+          if((jdg.judge1 != nil) and (jdg.judge2 != nil) and (jdg.judge3 != nil) and (jdg.judge4 != nil) and (jdg.judge5 != nil) and (jdg.judge6 != nil))then
+            sum = (jdg.judge1 * 10)/10    
             sum = sum + (jdg.judge2 * 20)/10
             sum = sum + (jdg.judge3 * 20)/10
-            sum = sum + (jdg.judge4 * 20)/10
-            sum = sum + (jdg.judge5 * 20)/10
+            sum = sum + (jdg.judge4 * 10)/10
+            sum = sum + (jdg.judge5 * 10)/10
+            sum = sum + (jdg.judge6 * 30)/10
             jdg.score = sum
           end    
         end
         if(ans.jirei == 3)
           if((jdg.judge1 != nil) and  (jdg.judge2 != nil) and  (jdg.judge3 != nil) and (jdg.judge4 != nil) and  (jdg.judge5 != nil))then
             sum = (jdg.judge1 * 20)/10    
-            sum = sum + (jdg.judge2 * 20)/10
-            sum = sum + (jdg.judge3 * 20)/10
-            sum = sum + (jdg.judge4 * 20)/10
-            sum = sum + (jdg.judge5 * 20)/10
+            sum = sum + (jdg.judge2 * 15)/10
+            sum = sum + (jdg.judge3 * 15)/10
+            sum = sum + (jdg.judge4 * 25)/10
+            sum = sum + (jdg.judge5 * 25)/10
             jdg.score = sum
           end    
         end
         if(ans.jirei == 4)
-          if((jdg.judge1 != nil) and  (jdg.judge2 != nil) and  (jdg.judge3 != nil) and (jdg.judge4 != nil) and  (jdg.judge5 != nil))then
-            sum = (jdg.judge1 * 20)/10    
-            sum = sum + (jdg.judge2 * 20)/10
-            sum = sum + (jdg.judge3 * 20)/10
-            sum = sum + (jdg.judge4 * 20)/10
-            sum = sum + (jdg.judge5 * 20)/10
+          if((jdg.judge1 != nil) and  (jdg.judge2 != nil) and  (jdg.judge3 != nil) and (jdg.judge4 != nil) and  (jdg.judge5 != nil) and  (jdg.judge6 != nil) and (jdg.judge7 != nil) and  (jdg.judge8 != nil))then
+            sum = (jdg.judge1 * 30)/10    
+            sum = sum + (jdg.judge2 * 15)/10
+            sum = sum + (jdg.judge3 * 15)/10
+            sum = sum + (jdg.judge4 * 15)/10
+            sum = sum + (jdg.judge5 * 10)/10
+            sum = sum + (jdg.judge6 * 10)/10
+            sum = sum + (jdg.judge7 * 10)/10
+            sum = sum + (jdg.judge8 * 10)/10
             jdg.score = sum
           end    
         end
     end
     if(ans.year == 19)then
         if(ans.jirei == 1)
-          if((jdg.judge1 != nil) and  (jdg.judge2 != nil) and  (jdg.judge3 != nil) and (jdg.judge4 != nil) and  (jdg.judge5 != nil))then
-            sum = (jdg.judge1 * 20)/10    
-            sum = sum + (jdg.judge2 * 20)/10
-            sum = sum + (jdg.judge3 * 20)/10
-            sum = sum + (jdg.judge4 * 20)/10
-            sum = sum + (jdg.judge5 * 20)/10
+          if((jdg.judge1 != nil) and  (jdg.judge2 != nil) and  (jdg.judge3 != nil) and (jdg.judge4 != nil) and  (jdg.judge5 != nil) and (jdg.judge6 != nil) and  (jdg.judge7 != nil))then
+            sum = (jdg.judge1 * 10)/10    
+            sum = sum + (jdg.judge2 * 15)/10
+            sum = sum + (jdg.judge3 * 15)/10
+            sum = sum + (jdg.judge4 * 15)/10
+            sum = sum + (jdg.judge5 * 15)/10
+            sum = sum + (jdg.judge6 * 15)/10
+            sum = sum + (jdg.judge7 * 15)/10
             jdg.score = sum
           end    
         end
         if(ans.jirei == 2)
-          if((jdg.judge1 != nil) and  (jdg.judge2 != nil) and  (jdg.judge3 != nil) and (jdg.judge4 != nil) and  (jdg.judge5 != nil))then
-            sum = (jdg.judge1 * 20)/10    
-            sum = sum + (jdg.judge2 * 20)/10
-            sum = sum + (jdg.judge3 * 20)/10
-            sum = sum + (jdg.judge4 * 20)/10
-            sum = sum + (jdg.judge5 * 20)/10
+          if((jdg.judge1 != nil) and  (jdg.judge2 != nil) and  (jdg.judge3 != nil) and (jdg.judge4 != nil) and  (jdg.judge5 != nil) and (jdg.judge6 != nil) and  (jdg.judge7 != nil))then
+            sum = (jdg.judge1 * 10)/10    
+            sum = sum + (jdg.judge2 * 10)/10
+            sum = sum + (jdg.judge3 * 30)/10
+            sum = sum + (jdg.judge4 * 15)/10
+            sum = sum + (jdg.judge5 * 15)/10
+            sum = sum + (jdg.judge6 * 10)/10
+            sum = sum + (jdg.judge7 * 10)/10
             jdg.score = sum
           end    
         end
@@ -739,54 +731,60 @@ class CommentsController < ApplicationController
           end    
         end
         if(ans.jirei == 4)
-          if((jdg.judge1 != nil) and  (jdg.judge2 != nil) and  (jdg.judge3 != nil) and (jdg.judge4 != nil) and  (jdg.judge5 != nil))then
-            sum = (jdg.judge1 * 20)/10    
-            sum = sum + (jdg.judge2 * 20)/10
-            sum = sum + (jdg.judge3 * 20)/10
-            sum = sum + (jdg.judge4 * 20)/10
-            sum = sum + (jdg.judge5 * 20)/10
+          if((jdg.judge1 != nil) and  (jdg.judge2 != nil) and  (jdg.judge3 != nil) and (jdg.judge4 != nil) and  (jdg.judge5 != nil) and (jdg.judge6 != nil) and (jdg.judge7 != nil))then
+            sum = (jdg.judge1 * 25)/10    
+            sum = sum + (jdg.judge2 * 15)/10
+            sum = sum + (jdg.judge3 * 10)/10
+            sum = sum + (jdg.judge4 * 15)/10
+            sum = sum + (jdg.judge5 * 10)/10
+            sum = sum + (jdg.judge6 * 15)/10
+            sum = sum + (jdg.judge7 * 10)/10
             jdg.score = sum
           end    
         end
     end
     if(ans.year == 18)then
         if(ans.jirei == 1)
-          if((jdg.judge1 != nil) and  (jdg.judge2 != nil) and  (jdg.judge3 != nil) and (jdg.judge4 != nil) and  (jdg.judge5 != nil))then
-            sum = (jdg.judge1 * 20)/10    
-            sum = sum + (jdg.judge2 * 20)/10
-            sum = sum + (jdg.judge3 * 20)/10
-            sum = sum + (jdg.judge4 * 20)/10
-            sum = sum + (jdg.judge5 * 20)/10
+          if((jdg.judge1 != nil) and  (jdg.judge2 != nil) and  (jdg.judge3 != nil) and (jdg.judge4 != nil) and  (jdg.judge5 != nil) and (jdg.judge6 != nil))then
+            sum = (jdg.judge1 * 30)/10    
+            sum = sum + (jdg.judge2 * 15)/10
+            sum = sum + (jdg.judge3 * 15)/10
+            sum = sum + (jdg.judge4 * 15)/10
+            sum = sum + (jdg.judge5 * 15)/10
+            sum = sum + (jdg.judge6 * 10)/10
             jdg.score = sum
           end    
         end
         if(ans.jirei == 2)
           if((jdg.judge1 != nil) and  (jdg.judge2 != nil) and  (jdg.judge3 != nil) and (jdg.judge4 != nil) and  (jdg.judge5 != nil))then
             sum = (jdg.judge1 * 20)/10    
-            sum = sum + (jdg.judge2 * 20)/10
-            sum = sum + (jdg.judge3 * 20)/10
-            sum = sum + (jdg.judge4 * 20)/10
+            sum = sum + (jdg.judge2 * 15)/10
+            sum = sum + (jdg.judge3 * 30)/10
+            sum = sum + (jdg.judge4 * 15)/10
             sum = sum + (jdg.judge5 * 20)/10
             jdg.score = sum
           end    
         end
         if(ans.jirei == 3)
           if((jdg.judge1 != nil) and  (jdg.judge2 != nil) and  (jdg.judge3 != nil) and (jdg.judge4 != nil) and  (jdg.judge5 != nil))then
-            sum = (jdg.judge1 * 20)/10    
-            sum = sum + (jdg.judge2 * 20)/10
-            sum = sum + (jdg.judge3 * 20)/10
+            sum = (jdg.judge1 * 10)/10    
+            sum = sum + (jdg.judge2 * 25)/10
+            sum = sum + (jdg.judge3 * 25)/10
             sum = sum + (jdg.judge4 * 20)/10
             sum = sum + (jdg.judge5 * 20)/10
             jdg.score = sum
           end    
         end
         if(ans.jirei == 4)
-          if((jdg.judge1 != nil) and  (jdg.judge2 != nil) and  (jdg.judge3 != nil) and (jdg.judge4 != nil) and  (jdg.judge5 != nil))then
-            sum = (jdg.judge1 * 20)/10    
-            sum = sum + (jdg.judge2 * 20)/10
-            sum = sum + (jdg.judge3 * 20)/10
+          if((jdg.judge1 != nil) and  (jdg.judge2 != nil) and  (jdg.judge3 != nil) and (jdg.judge4 != nil) and  (jdg.judge5 != nil) and (jdg.judge6 != nil) and (jdg.judge7 != nil) and (jdg.judge8 != nil))then
+            sum = (jdg.judge1 * 30)/10    
+            sum = sum + (jdg.judge2 * 10)/10
+            sum = sum + (jdg.judge3 * 10)/10
             sum = sum + (jdg.judge4 * 20)/10
-            sum = sum + (jdg.judge5 * 20)/10
+            sum = sum + (jdg.judge5 * 5)/10
+            sum = sum + (jdg.judge6 * 10)/10
+            sum = sum + (jdg.judge7 * 5)/10
+            sum = sum + (jdg.judge8 * 10)/10
             jdg.score = sum
           end    
         end
@@ -819,6 +817,7 @@ class CommentsController < ApplicationController
   
   
 end
+
 
 
 
