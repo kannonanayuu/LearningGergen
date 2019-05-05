@@ -953,7 +953,7 @@
       <p{text-indent:2em;}> <%= @comments.ans6 %></p>        
       <br>
       <h4>合計：<%= sum %></h4>
-     <% elsif(@comments.answer.jirei == 2)then  %>
+    <% elsif(@comments.answer.jirei == 2)then  %>
        <br>
       <h4>第1問（配点20点）<h4>
       <p class="answer"> <%= @comments.answer.ans1 %></p>
@@ -1000,7 +1000,7 @@
       <p{text-indent:2em;}> <%= @comments.ans6 %></p>        
       <br>
       <h4>合計：<%= sum %></h4>
-     <% elsif(@comments.answer.jirei == 3)then  %>
+    <% elsif(@comments.answer.jirei == 3)then  %>
       <br>
       <h4>第1問（配点30点）<h4>
       <h4>(設問1)</h4>
@@ -1025,7 +1025,7 @@
       <h4><%= (@comments.judge3 * 20)/10 %>点</h4>      
       <p{text-indent:2em;}> <%= @comments.ans3 %></p>        
       <br>
-      <h4>(設問1)</h4>
+      <h4>(設問2)</h4>
       <% sum = sum + (@comments.judge4 * 20)/10 %>         
       <p class="answer"> <%= @comments.answer.ans4 %></p>
       <br>
