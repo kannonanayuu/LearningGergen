@@ -2374,7 +2374,7 @@
         <br>
       <% end %>
       <br>
-    <h4>第2問（配点15点）<h4>
+      <h4>第2問（配点15点）<h4>
       <p class="answer"> <%= f.ans2 %></p>
       <br>    
       <% f.comments.each do |ff|  %>
@@ -2383,7 +2383,7 @@
         <br>
       <% end %>
       <br>
-    <h4>第3問（配点15点）<h4>
+      <h4>第3問（配点15点）<h4>
       <p class="answer"> <%= f.ans3 %></p>
       <br>    
       <% f.comments.each do |ff|  %>
@@ -2392,7 +2392,7 @@
         <br>
       <% end %>
       <br>
-    <h4>第4問（配点45点）</h4> 
+      <h4>第4問（配点45点）</h4> 
       <h4>(設問1)</h4> 
       <p class="answer"> <%= f.ans4 %></p>
       <br>    
@@ -2578,12 +2578,12 @@
         <br>
       <% end %>
       <br>
-      <h4>第4問（配点20点）</h4> 
+      <h4>第4問（配点25点）</h4> 
       <h4>(設問1)</h4> 
       <p class="answer"> <%= f.ans5 %></p>
       <br>   
        <% f.comments.each do |ff|  %>
-        <h4><%= ff.user.name %>さん <%= (ff.judge5 * 10)/10  %>点</h4>  
+        <h4><%= ff.user.name %>さん <%= (ff.judge5 * 15)/10  %>点</h4>  
         <p class="kakomu"><%= ff.ans5 %></p>
         <br>
       <% end %>      
