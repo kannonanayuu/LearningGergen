@@ -2569,30 +2569,39 @@
         <br>
       <% end %>
       <br>
-      <h4>第3問（配点25点）</h4> 
+      <h4>第3問（配点25点）</h4>
+      <h4>(設問1)</h4> 
       <p class="answer"> <%= f.ans4 %></p>
       <br>    
       <% f.comments.each do |ff|  %>
-        <h4><%= ff.user.name %>さん <%= (ff.judge4 * 25)/10  %>点</h4>  
+        <h4><%= ff.user.name %>さん <%= (ff.judge4 * 15)/10  %>点</h4>  
         <p class="kakomu"><%= ff.ans4 %></p>
         <br>
       <% end %>
-      <br>
-      <h4>第4問（配点25点）</h4> 
-      <h4>(設問1)</h4> 
+      <h4>(設問2)</h4> 
       <p class="answer"> <%= f.ans5 %></p>
       <br>   
        <% f.comments.each do |ff|  %>
-        <h4><%= ff.user.name %>さん <%= (ff.judge5 * 15)/10  %>点</h4>  
+        <h4><%= ff.user.name %>さん <%= (ff.judge5 * 10)/10  %>点</h4>  
         <p class="kakomu"><%= ff.ans5 %></p>
         <br>
-      <% end %>      
-      <h4>(設問2)</h4> 
+      <% end %>        
+      <br>
+      <h4>第4問（配点25点）</h4> 
+      <h4>(設問1)</h4> 
       <p class="answer"> <%= f.ans6 %></p>
       <br>   
        <% f.comments.each do |ff|  %>
-        <h4><%= ff.user.name %>さん <%= (ff.judge6 * 10)/10  %>点</h4>  
+        <h4><%= ff.user.name %>さん <%= (ff.judge6 * 15)/10  %>点</h4>  
         <p class="kakomu"><%= ff.ans6 %></p>
+        <br>
+      <% end %>      
+      <h4>(設問2)</h4> 
+      <p class="answer"> <%= f.ans7 %></p>
+      <br>   
+       <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge7 * 10)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans7 %></p>
         <br>
       <% end %>      
     <% end %>
