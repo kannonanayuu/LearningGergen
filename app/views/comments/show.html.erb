@@ -1343,14 +1343,14 @@
       <p{text-indent:2em;}> <%= @comments.ans5 %></p>        
       <br>
       <h4>第4問（配点20点）</h4>
-      <% sum = sum + (@comments.judge5 * 20)/10 %>       
+      <% sum = sum + (@comments.judge6 * 20)/10 %>       
       <p class="answer"> <%= @comments.answer.ans5 %></p>
       <br>    
-      <h4><%= (@comments.judge5 * 20)/10 %>点</h4>      
-      <p{text-indent:2em;}> <%= @comments.ans5 %></p>        
+      <h4><%= (@comments.judge6 * 20)/10 %>点</h4>      
+      <p{text-indent:2em;}> <%= @comments.ans6 %></p>        
       <br>
       <h4>合計：<%= sum %></h4>
-     <% elsif(@comments.answer.jirei == 3)then  %>
+    <% elsif(@comments.answer.jirei == 3)then  %>
       <br>
       <h4>第1問（配点20点）<h4>
       <p class="answer"> <%= @comments.answer.ans1 %></p>
