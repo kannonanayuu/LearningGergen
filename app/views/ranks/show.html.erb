@@ -2796,12 +2796,12 @@
         <br>
       <% end %>
       <br>
-      <h4>第4問（配点20点）</h4> 
+      <h4>第4問（配点15点）</h4> 
       <h4>(設問1)</h4> 
       <p class="answer"> <%= f.ans5 %></p>
       <br>   
        <% f.comments.each do |ff|  %>
-        <h4><%= ff.user.name %>さん <%= (ff.judge5 * 10)/10  %>点</h4>  
+        <h4><%= ff.user.name %>さん <%= (ff.judge5 * 5)/10  %>点</h4>  
         <p class="kakomu"><%= ff.ans5 %></p>
         <br>
       <% end %>      
@@ -2818,9 +2818,16 @@
       <p class="answer"> <%= f.ans7 %></p>
       <br>   
        <% f.comments.each do |ff|  %>
-        <h4><%= ff.user.name %>さん <%= (ff.judge7 * 15)/10  %>点</h4>  
+        <h4><%= ff.user.name %>さん <%= (ff.judge7 * 5)/10  %>点</h4>  
         <p class="kakomu"><%= ff.ans5 %></p>
       <% end %>      
+      <h4>(設問2)</h4> 
+      <p class="answer"> <%= f.ans8 %></p>
+      <br>   
+       <% f.comments.each do |ff|  %>
+        <h4><%= ff.user.name %>さん <%= (ff.judge8 * 10)/10  %>点</h4>  
+        <p class="kakomu"><%= ff.ans8 %></p>
+      <% end %>            
     <% end %>
 　<% end %>
 <% end %>
