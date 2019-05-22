@@ -1,13 +1,12 @@
 class DrillsController < ApplicationController
  
   def index
-    
     @drills = Drill.all  
       
   end
 
   def edit
-      
+    @dll = Drill.find(params[:id])  
   end
 
   def update

@@ -5,14 +5,14 @@
   <br>
   <% if @answers.present? %>
   
-    <table border="1" style="font-size: 11pt;">
+    <table border="1" style="font-size: 12pt;">
     <tr>
-      <th>試験年度</th><th>事例</th><th>登録日</th><th>順位</th><th>判定</th><th>得点</th><th>コメント数</th>
+      <th>試験年度</th><th>事例</th><th>登録日</th><th>判定</th><th>得点</th><th>コメント数</th>
     </tr>  
     <% @answers.each do |f| %>
     <% cnt = f.comments.count %>
      <tr>
-       <td><%= f.year %></td><td><%= f.jirei %></td><td><%= f.created_at.strftime('%Y/%m/%d') %></td><td> </td><td><%= f.judge %> </td><td><%= f.score %></td><td><%= f.comments.count %></td>
+       <td><%= f.year %></td><td><%= f.jirei %></td><td><%= f.created_at.strftime('%Y/%m/%d') %></td><td><%= f.judge %> </td><td><%= f.score %></td><td><%= f.comments.count %></td>
      </tr>
     <% end %>
    </table>
