@@ -14,6 +14,10 @@ Rails.application.routes.draw do
     resource :reviews 
   end
   
+  get 'goods/index'
+  get 'goods/new'
+  get 'goods/show'
+  
   get 'ranks/index'
   get 'ranks/new'
   get 'ranks/show'

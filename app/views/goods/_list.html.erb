@@ -6,18 +6,16 @@
     <ul class = "foo1">
       <li>順位</li>
       <li>名前</li>  
-      <li>得点</li>
-      <li>判定</li>
-      <li>登録ID</li> 
       <li>投稿日</li>       
-      <li>評価</li></ul><% @ans.each do |f| %><ul>
+      <li>いいね！</li>
+      <li>異義あり！</li>
+      <li>表示</li></ul><% @ans.each do |f| %><ul>
       <ul class = "foo2">
       <li><%= no %></li>            
       <li><%= f.user.name %></li>
-      <li><%= f.score %></li>
-      <li><%= f.judge %></li>
-      <li><%= f.id %></li>
+      <li><%= f.goods %></li>
+      <li><%= f.opposite %></li>
       <li><%= f.created_at.strftime('%Y/%m/%d') %></li>      
-      <li><%= button_to "詳細表示", {controller: 'ranks', action: 'show'}, {method: :get, params: {id: f.id }} %></li></ul></ul><% no = no + 1 %><% end %>
+      <li><%= button_to "詳細表示", {controller: 'goods', action: 'show'}, {method: :get, params: {id: f.id }} %></li></ul></ul><% no = no + 1 %><% end %>
 </div>
 </div>

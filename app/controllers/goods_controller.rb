@@ -4,13 +4,13 @@ class GoodsController < ApplicationController
    
    def index
     if params[:id] == "131" then
-      ans = Drill.where(id: 1).includes(:reviews)
+      @ans = Drill.where(id: 1).includes(:reviews)
       @id =params[:id]
     elsif params[:id] == "132" then
-      ans = Drill.where(id: 2).includes(:reviews) 
+      @ans = Drill.where(id: 2).includes(:reviews) 
       @id =params[:id]
     elsif params[:id] == "133" then
-      ans = Drill.where(id: 3).includes(:reviews)
+      @ans = Drill.where(id: 3).includes(:reviews)
       @id =params[:id]
     elsif params[:id] == "141" then
       ans = Drill.where(id: 4).includes(:reviews)
@@ -57,7 +57,12 @@ class GoodsController < ApplicationController
     elsif params[:id] == "233" then
       @ans = Drill.where(id: 18).includes(:reviews) 
       @id =params[:id]
-    end    
+    end  
+    puts "%%%%%%%%%%"
+    puts @ans
+    puts @id
+    puts "%%%%%%%%%%"
+    
   end
   
   def get_score(id,year,jirei)
