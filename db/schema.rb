@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_25_100538) do
+ActiveRecord::Schema.define(version: 2019_05_25_124547) do
 
   create_table "answers", force: :cascade do |t|
     t.integer "year"
@@ -113,6 +113,22 @@ ActiveRecord::Schema.define(version: 2019_05_25_100538) do
     t.integer "drill_id"
     t.integer "good"
     t.integer "bad"
+    t.integer "good2"
+    t.integer "bad2"
+    t.integer "good3"
+    t.integer "bad3"
+    t.integer "good4"
+    t.integer "bad4"
+    t.integer "good5"
+    t.integer "bad5"
+    t.integer "good6"
+    t.integer "bad6"
+    t.integer "good7"
+    t.integer "bad7"
+    t.integer "good8"
+    t.integer "bad8"
+    t.integer "good9"
+    t.integer "bad9"
   end
 
   create_table "titles", force: :cascade do |t|
