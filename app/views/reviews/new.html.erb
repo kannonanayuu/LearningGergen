@@ -7,8 +7,8 @@
 <%= form_for @comment,:url => {:action => :create} do |f| %>
   <br>
   <label>  
-    <label><%= f.radio_button :s, 10 %> いいね！ </label>
-　  <label><%= f.radio_button :s, 8 %> 異議あり！</label>
+    <label><%= f.radio_button :good, 1 %> いいね！ </label>
+　  <label><%= f.radio_button :bad, 1 %> 異議あり！</label>
 　</label> 
 　<br>　
 　<h4>コメント</h4>
@@ -19,8 +19,8 @@
   <p class="answer"><%= @answer.s %></p>
   <br>
   <label>  
-    <label><%= f.radio_button :s, 10 %> いいね！ </label>
-　  <label><%= f.radio_button :s, 8 %> 異議あり！</label>
+    <label><%= f.radio_button :good, 1 %> いいね！ </label>
+　  <label><%= f.radio_button :bad, 1 %> 異議あり！</label>
 　</label> 
 　<br>　
   <h4>コメント</h4>
@@ -31,8 +31,8 @@
   <p class="answer"><%= @answer.w %></p>
   <br>
   <label>  
-    <label><%= f.radio_button :s, 10 %> いいね！ </label>
-　  <label><%= f.radio_button :s, 8 %> 異議あり！</label>
+    <label><%= f.radio_button :good, 1 %> いいね！ </label>
+　  <label><%= f.radio_button :bad, 1 %> 異議あり！</label>
 　</label> 
 　<br>　
 　<h4>コメント</h4>
@@ -43,8 +43,8 @@
   <p class="answer"><%= @answer.o %></p>
   <br>
   <label>  
-    <label><%= f.radio_button :s, 10 %> いいね！ </label>
-　  <label><%= f.radio_button :s, 8 %> 異議あり！</label>
+    <label><%= f.radio_button :good, 1 %> いいね！ </label>
+　  <label><%= f.radio_button :bad, 8 %> 異議あり！</label>
 　</label> 
 　<br>　
 　<h4>コメント</h4>
@@ -53,17 +53,21 @@
   <br>  
   <h4>脅威</h4>
   <p class="answer"><%= @answer.t %></p>
+  <br>
+  <label>  
+    <label><%= f.radio_button :good, 1 %> いいね！ </label>
+　  <label><%= f.radio_button :bad, 1 %> 異議あり！</label>
+　</label>
 　<br>
 　<h4>コメント</h4>
   <%= f.text_area :t, :size=>"70x10"%>
-  <br>  
   <br>  
   <h4>人事・組織戦略</h4>
   <p class="answer"><%= @answer.j1 %></p>
   <br>
   <label>  
-    <label><%= f.radio_button :s, 10 %> いいね！ </label>
-　  <label><%= f.radio_button :s, 8 %> 異議あり！</label>
+    <label><%= f.radio_button :good, 1 %> いいね！ </label>
+　  <label><%= f.radio_button :bad, 1 %> 異議あり！</label>
 　</label> 
 　<br>　
 　<h4>コメント</h4>
@@ -74,8 +78,8 @@
   <p class="answer"><%= @answer.j2 %></p>
   <br>
   <label>  
-    <label><%= f.radio_button :s, 10 %> いいね！ </label>
-　  <label><%= f.radio_button :s, 8 %> 異議あり！</label>
+    <label><%= f.radio_button :good, 1 %> いいね！ </label>
+　  <label><%= f.radio_button :bad, 1 %> 異議あり！</label>
 　</label> 
 　<br>　
 　<h4>コメント</h4>
@@ -86,8 +90,8 @@
   <p class="answer"><%= @answer.j3 %></p>
   <br>
   <label>  
-    <label><%= f.radio_button :s, 10 %> いいね！ </label>
-　  <label><%= f.radio_button :s, 8 %> 異議あり！</label>
+    <label><%= f.radio_button :good, 1 %> いいね！ </label>
+　  <label><%= f.radio_button :bad, 1 %> 異議あり！</label>
 　</label> 
 　<br>　
 　<h4>コメント</h4>
@@ -98,8 +102,8 @@
   <p class="answer"><%= @answer.j4 %></p>
   <br>
   <label>  
-    <label><%= f.radio_button :s, 10 %> いいね！ </label>
-　  <label><%= f.radio_button :s, 8 %> 異議あり！</label>
+    <label><%= f.radio_button :good, 1 %> いいね！ </label>
+　  <label><%= f.radio_button :bad, 1 %> 異議あり！</label>
 　</label> 
 　<br>　
 　<h4>コメント</h4>

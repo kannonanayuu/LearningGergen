@@ -3,55 +3,111 @@
   <h4>成長戦略<h4>
   <p class="answer"> <%= @comments.drill.strt %></p>
   <br>
+  <% title = "いいね！" %>
+  <% if @comments.good == 1 %>
+    <% title = "いいね！" %>
+  <% elsif @comments.bad == 1 %>
+    <% title = "異義あり！" %>
+  <% end %>
+  <%= title %>
   <p class="kakomu"> <%= @comments.strt %></p>        
   <br>
   <h4>SWOT分析<h4>
   <h4>強み<h4>
   <p class="answer"> <%= @comments.drill.s %></p>
   <br>
-  <h4>コメント<h4>
+  <% title = "いいね！" %>
+  <% if @comments.good == 1 %>
+    <% title = "いいね！" %>
+  <% elsif @comments.bad == 1 %>
+    <% title = "異義あり！" %>
+  <% end %>
+  <%= title %>
   <p class="kakomu"> <%= @comments.s %></p>        
   <br> 
   <h4>弱み<h4>
   <p class="answer"> <%= @comments.drill.w %></p>
   <br>
-  <h4>コメント<h4>  
+  <% title = "いいね！" %>
+  <% if @comments.good == 1 %>
+    <% title = "いいね！" %>
+  <% elsif @comments.bad == 1 %>
+    <% title = "異義あり！" %>
+  <% end %>
+  <%= title %>  
   <p class="kakomu"> <%= @comments.w %></p>        
   <br>  
   <h4>機会<h4>
   <p class="answer"> <%= @comments.drill.o %></p>
   <br>
-  <h4>コメント<h4>  
+  <% title = "いいね！" %>
+  <% if @comments.good == 1 %>
+    <% title = "いいね！" %>
+  <% elsif @comments.bad == 1 %>
+    <% title = "異義あり！" %>
+  <% end %>
+  <%= title %>  
   <p class="kakomu"> <%= @comments.o %></p>        
   <br>    
   <h4>脅威<h4>
   <p class="answer"> <%= @comments.drill.t %></p>
   <br>
-  <h4>コメント<h4>  
+  <% title = "いいね！" %>
+  <% if @comments.good == 1 %>
+    <% title = "いいね！" %>
+  <% elsif @comments.bad == 1 %>
+    <% title = "異義あり！" %>
+  <% end %>
+  <%= title %>  
   <p class="kakomu"> <%= @comments.t %></p>        
   <br>    
   <h4>人事・組織戦略<h4>
   <p class="answer"> <%= @comments.drill.j1 %></p>
   <br>
-  <h4>コメント<h4>  
+  <% title = "いいね！" %>
+  <% if @comments.good == 1 %>
+    <% title = "いいね！" %>
+  <% elsif @comments.bad == 1 %>
+    <% title = "異義あり！" %>
+  <% end %>
+  <%= title %>  
   <p class="kakomu"> <%= @comments.j1 %></p>        
   <br>  
   <h4>マーケティング戦略と対策(４P)<h4>
   <p class="answer"> <%= @comments.drill.j2 %></p>
   <br>
-  <h4>コメント<h4>  
+  <% title = "いいね！" %>
+  <% if @comments.good == 1 %>
+    <% title = "いいね！" %>
+  <% elsif @comments.bad == 1 %>
+    <% title = "異義あり！" %>
+  <% end %>
+  <%= title %>  
   <p class="kakomu"> <%= @comments.j2 %></p>        
   <br>  
   <h4>運営管理上の課題と対策<h4>
   <p class="answer"> <%= @comments.drill.j3 %></p>
   <br>
-  <h4>コメント<h4>  
+  <% title = "いいね！" %>
+  <% if @comments.good == 1 %>
+    <% title = "いいね！" %>
+  <% elsif @comments.bad == 1 %>
+    <% title = "異義あり！" %>
+  <% end %>
+  <%= title %>  
   <p class="kakomu"> <%= @comments.j3 %></p>        
   <br>
-  <h4>コメント<h4>  
+
   <h4>財務上の課題と対策<h4>
   <p class="answer"> <%= @comments.drill.j4 %></p>
   <br>
+  <% title = "いいね！" %>
+  <% if @comments.good == 1 %>
+    <% title = "いいね！" %>
+  <% elsif @comments.bad == 1 %>
+    <% title = "異義あり！" %>
+  <% end %>
+  <%= title %>    <br>
   <p class="kakomu"> <%= @comments.j4 %></p>        
   <br>  
   <div　class="button_side">
