@@ -1,101 +1,71 @@
 class GoodsController < ApplicationController
     
-   @id =""
-   
    def index
     if params[:id] == "131" then
-      @ans = Drill.where(id: 1).includes(:reviews)
-      @id =params[:id]
+      count_good(1)
     elsif params[:id] == "132" then
-      @ans = Drill.where(id: 2).includes(:reviews) 
-      @id =params[:id]
+      count_good(2)
     elsif params[:id] == "133" then
-      @ans = Drill.where(id: 3).includes(:reviews)
-      @id =params[:id]
+      count_good(3)
     elsif params[:id] == "141" then
-      ans = Drill.where(id: 4).includes(:reviews)
-      @id =params[:id]
+      count_good(4)
     elsif params[:id] == "142" then
-      ans = Drill.where(id: 5).includes(:reviews)
-      @id =params[:id]
+      count_good(5)
     elsif params[:id] == "211" then
-      ans = Drill.where(id: 6).includes(:reviews)
-      @id =params[:id]
+      count_good(6)
     elsif params[:id] == "212" then
-      ans = Drill.where(id: 7).includes(:reviews)
-      @id =params[:id]
+      count_good(7)
     elsif params[:id] == "213" then
-      @ans = Drill.where(id: 8).includes(:reviews) 
-      @id =params[:id]
+      count_good(8)
     elsif params[:id] == "214" then
-      @ans = Drill.where(id: 9).includes(:reviews)
-      @id =params[:id]
+      count_good(9)
     elsif params[:id] == "215" then
-      @ans = Drill.where(id: 10).includes(:reviews)
-      @id =params[:id]
+      count_good(10)
     elsif params[:id] == "216" then
-      @ans = Drill.where(id: 11).includes(:reviews)
-      @id =params[:id]
+      count_good(11)
     elsif params[:id] == "221" then
-      @ans = Drill.where(id: 12).includes(:reviews)
-      @id =params[:id]
+      count_good(12)
     elsif params[:id] == "222" then
-      @ans = Drill.where(id: 13).includes(:reviews)
-      @id =params[:id]
+      count_good(13)
     elsif params[:id] == "223" then
-      @ans = Drill.where(id: 14).includes(:reviews)
-      @id =params[:id]
+      count_good(14)
     elsif params[:id] == "226" then
-      @ans = Drill.where(id: 15).includes(:reviews)
-      @id =params[:id]
+      count_good(15)
     elsif params[:id] == "227" then
-      @ans = Drill.where(id: 16).includes(:reviews)
-      @id =params[:id]
+      count_good(16)
     elsif params[:id] == "232" then
-      @ans = Drill.where(id: 17).includes(:reviews)
-      @id =params[:id]
+      count_good(17) 
     elsif params[:id] == "233" then
-      @ans = Drill.where(id: 18).includes(:reviews) 
-      @id =params[:id]
+      count_good(18)
     end  
     puts "%%%%%%%%%%"
-    puts @ans
-    puts @id
+    puts params[:id]
     puts "%%%%%%%%%%"
     
   end
   
-  def get_score(id,year,jirei)
-    ans = Drill.where(id: year).where(jirei: jirei).includes(:reviews)   
+  def count_good(id)
+    ans = Drill.where(id: id).includes(:reviews)   
     @id = id
-    score = 0
-    judge = "C"
+    good = 0
+    bad  = 0
     ans.each do |f| 
-      if f.reviews.average(:score).nil?
-        score = 0
-        judge = "未"
-        ans.where(id: f.id).update( score: score, judge: judge )
+      if (f.good + f.good2 + f.good3 + f.good4).nil?
+        good = 0
+        bad  = 0
+        ans.where(id: f.id).update( good: good, bad: bad )
       else    
-        score =  f.reviews.average(:score).round(0)
-        if(score >= 60)
-          judge = "A"
-        elsif (score >= 50)
-          judge = "B"
-        elsif (score >= 40)
-          judge = "C"
-        else
-          judge = "D"    
+        good =(f.good + f.good2 + f.good3 + f.good4)
+        bad =(f.bad + f.bad2 + f.bad3 + f.bad4)
       end
-      ans.where(id: f.id).update( score: score, judge: judge )
+      ans.where(id: f.id).update( good: good, bad: bad )
       puts "###########"
-      puts score
-      puts judge
+      puts good
+      puts bad
       puts "###########"
      end        
     end
-    
-    @answers = Drill.where(id: year).where(jirei: jirei).order(score: "desc")  
-      
+    @answers = Drill.where(id: id).order(good: "desc")  
   end
 
   def show
@@ -106,8 +76,4 @@ class GoodsController < ApplicationController
   
   end
      
-    
-    
-    
-    
-end
+
