@@ -46,26 +46,32 @@ class GoodsController < ApplicationController
   
   def count_good(id)
     ans = Drill.where(id: id).includes(:reviews)   
+    puts "### ans ######"
+    puts ans
+    puts "###########"    
+    
     @id = id
     good = 0
     bad  = 0
     ans.each do |f| 
-      if (f.good + f.good2 + f.good3 + f.good4).nil?
+      good = f.reviews.good + f.reviews.good2 + f.reviews.good3 + f.reviews.good4  
+      if good.nil?
         good = 0
         bad  = 0
         ans.where(id: f.id).update( good: good, bad: bad )
       else    
-        good =(f.good + f.good2 + f.good3 + f.good4)
-        bad =(f.bad + f.bad2 + f.bad3 + f.bad4)
+        good =(f.reviews.good + f.reviews.good2 + f.reviews.good3 + f.reviews.good4)  
+        bad =(f.reviews.bad + f.reviews.bad2 + f.reviews.bad3 + f.bad.good4)
       end
       ans.where(id: f.id).update( good: good, bad: bad )
       puts "###########"
       puts good
       puts bad
+      puts @id
       puts "###########"
      end        
     end
-    @answers = Drill.where(id: id).order(good: "desc")  
+      
   end
 
   def show

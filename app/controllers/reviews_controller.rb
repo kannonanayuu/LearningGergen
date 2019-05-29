@@ -108,7 +108,7 @@ class ReviewsController < ApplicationController
   
   private
   def review_params
-    params.require(:review).permit(:id, :drill_id, :user_id, :strt, :s, :w, :o, :t, :j1, :j2, :j3, :j4, :good, :bad )
+    params.require(:review).permit(:id, :drill_id, :user_id, :strt, :s, :w, :o, :t, :j1, :j2, :j3, :j4, :good, :bad , :good2, :bad2, :good3, :bad3, :good4, :bad4, :good5, :bad5, :good6, :bad6, :good7, :bad7, :good8, :bad8, :good9, :bad9 )
   end
 
   
