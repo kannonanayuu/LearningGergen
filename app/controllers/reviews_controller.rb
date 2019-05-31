@@ -5,58 +5,58 @@ class ReviewsController < ApplicationController
 
   def index
     if params[:id] == "131" then
-      @answers = Drill.where(id: 1).where.not(user_id: current_user.id).includes(:reviews)
+      @answers = Drill.where(jirei: 131).where.not(user_id: current_user.id).includes(:reviews)
       @id = params[:id]
     elsif params[:id] == "132" then
-      @answers = Drill.where(id: 2).where.not(user_id: current_user.id).includes(:reviews)
+      @answers = Drill.where(jirei: 132).where.not(user_id: current_user.id).includes(:reviews)
       @id = params[:id]      
     elsif params[:id] == "133" then
-      @answers = Drill.where(id: 3).where.not(user_id: current_user.id).includes(:reviews)
+      @answers = Drill.where(jirei: 133).where.not(user_id: current_user.id).includes(:reviews)
       @id = params[:id]      
     elsif params[:id] == "141" then
-      @answers = Drill.where(id: 4).where.not(user_id: current_user.id).includes(:reviews)
+      @answers = Drill.where(jirei: 141).where.not(user_id: current_user.id).includes(:reviews)
       @id = params[:id]      
     elsif params[:id] == "142" then
-      @answers = Drill.where(id: 5).where.not(user_id: current_user.id).includes(:reviews)
+      @answers = Drill.where(jirei: 142).where.not(user_id: current_user.id).includes(:reviews)
       @id = params[:id]      
     elsif params[:id] == "211" then
-      @answers = Drill.where(id: 6).where.not(user_id: current_user.id).includes(:reviews)
+      @answers = Drill.where(jirei: 211).where.not(user_id: current_user.id).includes(:reviews)
       @id = params[:id]      
     elsif params[:id] == "212" then
-      @answers = Drill.where(id: 7).where.not(user_id: current_user.id).includes(:reviews)
+      @answers = Drill.where(jirei: 212).where.not(user_id: current_user.id).includes(:reviews)
       @id = params[:id]      
     elsif params[:id] == "213" then
-      @answers = Drill.where.not(id: 8).where.not(user_id: current_user.id).includes(:reviews)
+      @answers = Drill.where(jirei: 213).where.not(user_id: current_user.id).includes(:reviews)
       @id = params[:id]      
     elsif params[:id] == "214" then
-      @answers = Drill.where(id: 9).where.not(user_id: current_user.id).includes(:reviews)
+      @answers = Drill.where(jirei: 214).where.not(user_id: current_user.id).includes(:reviews)
       @id = params[:id]      
     elsif params[:id] == "215" then
-      @answers = Drill.where(id: 10).where.not(user_id: current_user.id).includes(:reviews)
+      @answers = Drill.where(jirei: 215).where.not(user_id: current_user.id).includes(:reviews)
       @id = params[:id]      
     elsif params[:id] == "216" then
-      @answers = Drill.where(id: 11).where.not(user_id: current_user.id).includes(:reviews)
+      @answers = Drill.where(jirei: 216).where.not(user_id: current_user.id).includes(:reviews)
       @id = params[:id]      
     elsif params[:id] == "221" then
-      @answers = Drill.where(id: 12).where.not(user_id: current_user.id).includes(:reviews)
+      @answers = Drill.where(jirei: 221).where.not(user_id: current_user.id).includes(:reviews)
       @id = params[:id]      
     elsif params[:id] == "222" then
-      @answers = Drill.where(id: 13).where.not(user_id: current_user.id).includes(:reviews)
+      @answers = Drill.where(jirei: 222).where.not(user_id: current_user.id).includes(:reviews)
       @id = params[:id]      
     elsif params[:id] == "223" then
-      @answers = Drill.where(id: 14).where.not(user_id: current_user.id).includes(:reviews)
+      @answers = Drill.where(jirei: 223).where.not(user_id: current_user.id).includes(:reviews)
       @id = params[:id]      
     elsif params[:id] == "226" then
-      @answers = Drill.where(id: 15).where.not(user_id: current_user.id).includes(:reviews)
+      @answers = Drill.where(jirei: 226).where.not(user_id: current_user.id).includes(:reviews)
       @id = params[:id]      
     elsif params[:id] == "227" then
-      @answers = Drill.where(id: 16).where.not(user_id: current_user.id).includes(:reviews)
+      @answers = Drill.where(jirei: 227).where.not(user_id: current_user.id).includes(:reviews)
       @id = params[:id]      
     elsif params[:id] == "232" then
-      @answers = Drill.where(id: 17).where.not(user_id: current_user.id).includes(:reviews)
+      @answers = Drill.where(jirei: 232).where.not(user_id: current_user.id).includes(:reviews)
       @id = params[:id]      
     elsif params[:id] == "233" then
-      @answers = Drill.where(id: 18).where.not(user_id: current_user.id).includes(:reviews)
+      @answers = Drill.where(jirei: 233).where.not(user_id: current_user.id).includes(:reviews)
       @id = params[:id]      
     end
     
