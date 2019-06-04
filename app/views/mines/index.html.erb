@@ -1,6 +1,14 @@
 <h1 class="my_page_title"><%= @usr+"さんのページ" %></h1>
 <br><br><br>
 
+<h3 class="menu_heda">プロフィール</h3>
+  <br>
+  <% if @profiles.present? %>
+　<% else %>
+      <p>プロフィールは登録されていません。</p>
+      <br>
+  <% end %>  
+  
 <h3 class="menu_heda">過去問</h3>
   <br>
   <% if @answers.present? %>
