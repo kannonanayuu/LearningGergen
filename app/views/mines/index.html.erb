@@ -4,7 +4,55 @@
 <h3 class="menu_heda">プロフィール</h3>
   <br>
   <% if @profiles.present? %>
-　<% else %>
+　　    <% if @profiles.capa == 1  %>
+          <p>中小企業診断士</p>
+        <% else  %>
+          <p>２次受験成績</p>
+          <% if @profiles.expe == 1 %>
+             <% if f.most1 == 3  %>
+               <p>  事例１成績：A</p>
+             <% elsif@profiles.most1 == 2  %>
+               <p>  事例１成績：B</p>
+             <% elsif @profiles.most1 == 1  %>
+               <p>  事例１成績：C</p>
+             <% elsif @profiles.most1 == 0  %>
+               <p>  事例１成績：D</p>
+             <% end %>
+
+             <% if @profiles.most2 == 3  %>
+               <p>  事例２成績：A</p>
+             <% elsif @profiles.most2 == 2  %>
+               <p>  事例２成績：B</p>
+             <% elsif @profiles.most2 == 1  %>
+               <p>  事例２成績：C</p>
+             <% elsif @profiles.most2 == 0  %>
+               <p>  事例２成績：D</p>
+             <% end %>
+
+             <% if @profiles.most3 == 3  %>
+               <p>  事例３成績：A</p>
+             <% elsif @profiles.most3 == 2  %>
+               <p>  事例３成績：B</p>
+             <% elsif @profiles.most3 == 1  %>
+               <p>  事例３成績：C</p>
+             <% elsif @profiles.most3 == 0  %>
+               <p>  事例３成績：D</p>
+             <% end %>
+
+             <% if @profiles.most4 == 3  %>
+               <p>  事例４成績：A</p>
+             <% elsif @profiles.most4 == 2  %>
+               <p>  事例４成績：B</p>
+             <% elsif @profiles.most4 == 1  %>
+               <p>  事例４成績：C</p>
+             <% elsif @profiles.most4 == 0  %>
+               <p>  事例４成績：D</p>
+             <% end %>
+          <% else  %>
+            <p>２次受験経験なし</p>
+          <% end %>
+      　<% end %>
+  　<% else %>
       <p>プロフィールは登録されていません。</p>
       <br>
   <% end %>  
