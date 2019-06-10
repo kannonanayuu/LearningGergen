@@ -351,7 +351,17 @@ u2.foo1 li a {
  border-bottom: double 5px #FFC778;
 }
 
+.indent1{
+  text-indent: 1em;
+}
 
+.indent2{
+  text-indent: 2em;
+}
+
+.indent3{
+  text-indent: 3em;
+}
 
 
 table {
