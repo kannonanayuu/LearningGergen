@@ -1,7 +1,7 @@
-<section　class="blog"　>
+<section>
   <div >
-  <section class = "blog-text">
-    <h2 class="blog-headline" >プロフィール</h2>
+  <section >
+    <h2 class="blog-headline" >プロフィール登録</h2>
     <br>
     <p>  プロフィールを登録すると評価結果から情報を閲覧できます。<br>
     </p>
@@ -23,10 +23,10 @@
 　    <h3 class="menu_heda">事例1最高結果</h3>
 　　  <br>  
   　   <label>
-　　　  <label><%= f.radio_button :most1, 3 %> A</label>
-　　　  <label><%= f.radio_button :most1, 2 %> B</label>　　
-　　　  <label><%= f.radio_button :most1, 1 %> C</label>　　　
-　　　  <label><%= f.radio_button :most1, 0 %> D</label>　　　
+　　　  <label><%= f.radio_button :most1,3 %> A</label>
+　　　  <label><%= f.radio_button :most1,2 %> B</label>　　
+　　<label><%= f.radio_button :most1,1 %>　C</label>　　　
+　<label><%= f.radio_button :most1,0 %>　D</label>　　　
 　　  </label> 
       <br>      
 　    <h3 class="menu_heda">事例2最高結果</h3>
@@ -34,30 +34,29 @@
   　   <label>
 　　　  <label><%= f.radio_button :most2, 3 %> A</label>
 　　　  <label><%= f.radio_button :most2, 2 %> B</label>　　　
-　　　  <label><%= f.radio_button :most2, 1 %> C</label>　　　
-　　　  <label><%= f.radio_button :most2, 0 %> D</label>　　　
-　　  </label> 
+　<label><%= f.radio_button :most2, 1 %> C</label>　　　
+　　<label><%= f.radio_button :most2, 0 %> D</label>　　　
+　　</label> 
       <br>        
 　    <h3 class="menu_heda">事例3最高結果</h3>
 　　  <br>  
-  　   <label>
+  　<label>
 　　　  <label><%= f.radio_button :most3, 3 %> A</label>
 　　　  <label><%= f.radio_button :most3, 2 %> B</label>　　　
-　　　  <label><%= f.radio_button :most3, 1 %> C</label>　　　
-　　　  <label><%= f.radio_button :most3, 0 %> D</label>　　　
-　　  </label> 
+　<label><%= f.radio_button :most3, 1 %> C</label>　　　
+　　<label><%= f.radio_button :most3, 0 %> D</label>　　　
+　　 </label> 
       <br>        
 　    <h3 class="menu_heda">事例4最高結果</h3>
 　　  <br>  
-  　   <label>
+  　<label>
 　　　  <label><%= f.radio_button :most4, 3 %> A</label>
 　　　  <label><%= f.radio_button :most4, 2 %> B</label>　　　
-　　　  <label><%= f.radio_button :most4, 1 %> C</label>　　　
-　　　  <label><%= f.radio_button :most4, 0 %> D</label>　　　
-　　  </label> 
-      <br>        
+　<label><%= f.radio_button :most4, 1 %> C</label>　　　
+　　<label><%= f.radio_button :most4, 0 %> D</label>　　　
+　　</label> 
+    <br>        
       <%= f.submit '登録', include_hidden: false %>
     <% end %>  
   </div>
 </section>
-

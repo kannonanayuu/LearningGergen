@@ -1,9 +1,10 @@
- <section class = "blog">
+
 <h1 class="my_page_title"><%= @usr+"さんのページ" %></h1>
 <br><br><br>
-
+ <section class = "blog">
+ <h2 class="blog-headline">マイページメニュー</h2>
+ <br>
 <h3 class="menu_heda">プロフィール</h3>
-  <br>
   <% if @profiles.present? %>
 　　    <% if @profiles.capa == 1  %>
           <p　class="indent1">中小企業診断士</p>
@@ -53,7 +54,7 @@
           <% end %>
       　<% end %>
   　<% else %>
-      <p>プロフィールは登録されていません。</p>
+      <p class="indent1">プロフィールは登録されていません。</p>
       <br>
   <% end %>  
   
