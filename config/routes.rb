@@ -73,6 +73,8 @@ Rails.application.routes.draw do
   get 'root/top' => 'root#top', as: 'root_top'
   get 'root/policy' => 'root#policy', as: 'root_policy'
   get 'root/useage' => 'root#useage', as: 'root_useage'  
+  get 'root/event' => 'root#event', as: 'root_event'
+  get 'root/what' => 'root#what', as: 'root_what'
  
 end
 

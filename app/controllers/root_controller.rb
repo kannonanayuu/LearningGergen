@@ -13,5 +13,12 @@ class RootController < ApplicationController
       
   end  
   
+  def event
+      
+  end   
+  
+  def what
+      
+  end
   
 end
