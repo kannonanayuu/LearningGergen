@@ -366,7 +366,7 @@ u2.foo1 li a {
 
 table {
   text-align: center;
-  width:600px
+  width:540px
 }
 
 
@@ -374,7 +374,7 @@ table th {/*table内のthに対して*/
 }
 
 table td {/*table内のtdに対して*/
-  width:120px
+  width:90px
 }
 
 
