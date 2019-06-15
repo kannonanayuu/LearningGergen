@@ -156,19 +156,13 @@
   <h2 class="blog-headline">平成１８年　事例４解答一覧</h2>
   <%= render 'comments/list' %>      
 <% end %>
-
-
-</section>    
-   <div class = "sidebar">
-     <section class="popular">
-        <h2 class="sidebar-headline">サイトメニュー</h2>
-        <div class="sidebar-contents">
-          <p class="popular-text">　<%= link_to '掲示板', titles_path %></p>            
-          <p class="popular-text">　<%= link_to '評価一覧', titles_path %></p> 
-          <p class="popular-text">　<%= link_to '新規投稿', titles_path %></p>           
-         </div>
-      </section>
-   </div>
-
-
-
+<div class = "sidebar">
+  <section class="popular">
+    <h2 class="sidebar-headline">サイトメニュー</h2>
+    <div class="sidebar-contents">
+      <p class="popular-text">　<%= link_to '過去問', answers_index_path %></p>         
+      <p class="popular-text">　<%= link_to '事例分析', drills_path %></p>              
+      <p class="popular-text">　<%= link_to '掲示板', titles_path %></p>            
+    </div>
+  </section>
+</div>

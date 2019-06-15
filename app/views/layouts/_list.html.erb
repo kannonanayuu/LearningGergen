@@ -8,6 +8,9 @@
           <%= link_to "プロフィール", profiles_path, method: :get %>
        </li>
        <li class="nav-list-item"><%= link_to "マイページ",mines_path, method: :get %></li>
+       <li class="nav-list-item">
+          <%= link_to "トップ", root_top_path, method: :get %>
+       </li>       
      <ul> 
   </nav>
 <% else %>
@@ -17,7 +20,11 @@
          <%= link_to "新規登録", new_user_registration_path %>  
        </li>
        <li class="nav-list-item"><%= link_to "ログイン",new_user_session_path %></li>
-     <ul> 
+     
+     <li class="nav-list-item">
+        <%= link_to "トップ", root_top_path, method: :get %>
+     </li> 
+    <ul>  
   </nav>
 <% end %>
     
