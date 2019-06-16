@@ -5,6 +5,9 @@ class CommentsController < ApplicationController
   @@cc = ""
 
   def index
+    puts "###### comments index #######"
+    puts params[:id]
+    puts "#############################"  
     if params[:id] == "301" then
       @answers = Answer.where.not(user_id: current_user.id).where(year: 30).where(jirei: 1).includes(:comments)
       @id = params[:id]
@@ -180,15 +183,26 @@ class CommentsController < ApplicationController
   end
 
   def show
+    puts "###### comments show #######"
+    puts params[:answer_id]
+    puts "############################"  
     @comments = Comment.where(answer_id: params[:answer_id]).last
   
   end
 
   def edit
+    puts "###### comments edit #######"
+    puts params[:answer_id]
+    puts "############################"    
+      
     @comments = Comment.where(answer_id: params[:answer_id]).last
   end
 
   def update
+    puts "###### comments update #######"
+    puts params[:answer_id]
+    puts "############################"        
+      
     comment = Comment.where(answer_id: params[:answer_id]).last  
     comment.update(comment_params)
     redirect_to top_path
@@ -800,6 +814,9 @@ class CommentsController < ApplicationController
   end
   
   def new
+    puts "###### comments new #######"
+    puts params[:id]
+    puts "###########################"
     @answer = Answer.find(params[:id])
     @@aid = @answer.id
     @comment = Comment.new

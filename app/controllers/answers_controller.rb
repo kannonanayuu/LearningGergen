@@ -3,11 +3,17 @@ class AnswersController < ApplicationController
  @@select =0
  
   def index
-
+    puts "###### answers index ######"
+    puts params[:id]
+    puts "###########################"
       
   end
 
   def create
+    puts "###### answers create ######"
+    puts answer_params
+    puts "###########################"      
+
     # ストロングパラメーターを使用
     ans = Answer.new(answer_params)
     ans.user_id = current_user.id
@@ -179,23 +185,36 @@ class AnswersController < ApplicationController
   end
   
   def show
-     @answer = Answer.find(params[:id])
+    puts "###### answers show ######"
+    puts answer_params
+    puts "###########################"         
+    @answer = Answer.find(params[:id])
      
   end
 
   def edit
+    puts "###### answers edit ######"
+    puts params[:id]
+    puts "###########################"         
     @answer = Answer.find(params[:id])  
+
   end
 
   def new
+    puts "###### answers new ######"
+    puts params[:id]
+    puts @id
+    puts "###########################"          
      @answer = Answer.new
      @id = params[:id]
      @@select = @id
-     puts "NNNNNNNNNNN"
-     puts @id
   end
 
   def destroy
+    puts "###### answers destroy ####"
+    puts params[:id]
+    puts @id
+    puts "###########################"          
     ans = Answer.find(params[:id])
     ans.destroy
     redirect_to  answers_index_path
@@ -203,6 +222,10 @@ class AnswersController < ApplicationController
   end
 
   def update
+    puts "###### answers update #####"
+    puts params[:id]
+    puts @id
+    puts "###########################"          
     answer = Answer.find(params[:id])
     answer.update(answer_params)
     redirect_to answers_index_path
