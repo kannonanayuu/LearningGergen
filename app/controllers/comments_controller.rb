@@ -3,7 +3,7 @@ class CommentsController < ApplicationController
   @@aid =0
   @@aa =""
   @@cc = ""
-
+  @@det = 0
   def index
     puts "###### comments index #######"
     puts params[:id]
@@ -211,33 +211,47 @@ class CommentsController < ApplicationController
 
 
   def create
-     # ストロングパラメーターを使用
+    puts "###### comments create #######"
+    puts comment_params
+    puts "############################"        
     jdg = Comment.new(comment_params)
     jdg.user_id = current_user.id
     jdg.answer_id = @@aid
     ans = Answer.find(@@aid)
     sum = 0
+    @@det = 0
     if(ans.year == 30)then
         if(ans.jirei == 1)
-          if((jdg.judge1 != nil) and  (jdg.judge2 != nil) and  (jdg.judge3 != nil) and (jdg.judge4 != nil) and  (jdg.judge5 != nil))then
+          puts "###### year30 jirei1 #######"
+          puts comment_params
+          puts "############################"                
+        if((jdg.judge1 != nil) and  (jdg.judge2 != nil) and  (jdg.judge3 != nil) and (jdg.judge4 != nil) and  (jdg.judge5 != nil))then
             sum = (jdg.judge1 * 20)/10    
             sum = sum + (jdg.judge2 * 20)/10
             sum = sum + (jdg.judge3 * 20)/10
             sum = sum + (jdg.judge4 * 20)/10
             sum = sum + (jdg.judge5 * 20)/10
             jdg.score = sum
+            @@det = 1
           end    
         end
         if(ans.jirei == 2)
+          puts "###### year30 jirei2 #######"
+          puts comment_params
+          puts "############################"                
           if((jdg.judge1 != nil) and  (jdg.judge2 != nil) and  (jdg.judge3 != nil) and (jdg.judge4 != nil) )then
             sum = (jdg.judge1 * 25)/10    
             sum = sum + (jdg.judge2 * 25)/10
             sum = sum + (jdg.judge3 * 25)/10
             sum = sum + (jdg.judge4 * 25)/10
             jdg.score = sum
+            @@det = 1            
           end    
         end
         if(ans.jirei == 3)
+          puts "###### year30 jirei3 #######"
+          puts comment_params
+          puts "############################"                
           if((jdg.judge1 != nil) and  (jdg.judge2 != nil) and  (jdg.judge3 != nil) and (jdg.judge4 != nil) and  (jdg.judge5 != nil))then
             sum = (jdg.judge1 * 20)/10    
             sum = sum + (jdg.judge2 * 20)/10
@@ -245,9 +259,13 @@ class CommentsController < ApplicationController
             sum = sum + (jdg.judge4 * 20)/10
             sum = sum + (jdg.judge5 * 20)/10
             jdg.score = sum
+            @@det = 1            
           end    
         end
         if(ans.jirei == 4)
+          puts "###### year30 jirei4 #######"
+          puts comment_params
+          puts "############################"                
           if((jdg.judge1 != nil) and  (jdg.judge2 != nil) and  (jdg.judge3 != nil) and (jdg.judge4 != nil) and  (jdg.judge5 != nil) and (jdg.judger6 != nil) and (jdg.judge7 != nil) and  (jdg.judge8 != nil))then
             sum = (jdg.judge1 * 20)/10    
             sum = sum + (jdg.judge2 * 12)/10
@@ -258,6 +276,7 @@ class CommentsController < ApplicationController
             sum = sum + (jdg.judge7 * 15)/10
             sum = sum + (jdg.judge8 * 15)/10
             jdg.score = sum
+            @@det = 1            
           end    
         end
     end
@@ -270,6 +289,7 @@ class CommentsController < ApplicationController
             sum = sum + (jdg.judge4 * 20)/10
             sum = sum + (jdg.judge5 * 20)/10
             jdg.score = sum
+            @@det = 1            
           end    
         end
         if(ans.jirei == 2)
@@ -279,6 +299,7 @@ class CommentsController < ApplicationController
             sum = sum + (jdg.judge3 * 30)/10
             sum = sum + (jdg.judge4 * 20)/10
             jdg.score = sum
+            @@det = 1            
           end    
         end
         if(ans.jirei == 3)
@@ -288,6 +309,7 @@ class CommentsController < ApplicationController
             sum = sum + (jdg.judge3 * 20)/10
             sum = sum + (jdg.judge4 * 30)/10
             jdg.score = sum
+            @@det = 1            
           end    
         end
         if(ans.jirei == 4)
@@ -303,6 +325,7 @@ class CommentsController < ApplicationController
             sum = sum + (jdg.judge9 * 10)/10
             sum = sum + (jdg.judge10 * 10)/10
             jdg.score = sum
+            @@det = 1            
           end    
         end
     end
@@ -315,6 +338,7 @@ class CommentsController < ApplicationController
             sum = sum + (jdg.judge4 * 20)/10
             sum = sum + (jdg.judge5 * 20)/10
             jdg.score = sum
+            @@det = 1            
           end    
         end
         if(ans.jirei == 2)
@@ -325,6 +349,7 @@ class CommentsController < ApplicationController
             sum = sum + (jdg.judge4 * 20)/10
             sum = sum + (jdg.judge5 * 30)/10
             jdg.score = sum
+            @@det = 1
           end    
         end
         if(ans.jirei == 3)
@@ -334,6 +359,7 @@ class CommentsController < ApplicationController
             sum = sum + (jdg.judge3 * 20)/10
             sum = sum + (jdg.judge4 * 30)/10
             jdg.score = sum
+            @@det = 1 
           end    
         end
         if(ans.jirei == 4)
@@ -346,6 +372,7 @@ class CommentsController < ApplicationController
             sum = sum + (jdg.judge6 * 15)/10
             sum = sum + (jdg.judge7 * 10)/10
             jdg.score = sum
+            @@det = 1            
           end    
         end
     end
@@ -358,6 +385,7 @@ class CommentsController < ApplicationController
             sum = sum + (jdg.judge4 * 20)/10
             sum = sum + (jdg.judge5 * 20)/10
             jdg.score = sum
+            @@det = 1            
           end    
         end
         if(ans.jirei == 2)
@@ -369,6 +397,7 @@ class CommentsController < ApplicationController
             sum = sum + (jdg.judge5 * 20)/10
             sum = sum + (jdg.judge6 * 20)/10
             jdg.score = sum
+            @@det = 1            
           end    
         end
         if(ans.jirei == 3)
@@ -380,6 +409,7 @@ class CommentsController < ApplicationController
             sum = sum + (jdg.judge5 * 20)/10
             sum = sum + (jdg.judge6 * 20)/10
             jdg.score = sum
+            @@det = 1            
           end    
         end
         if(ans.jirei == 4)
@@ -395,6 +425,7 @@ class CommentsController < ApplicationController
             sum = sum + (jdg.judge9 * 6)/10
             sum = sum + (jdg.judge10 * 6)/10
             jdg.score = sum
+            @@det = 1            
           end    
         end
     end
@@ -407,6 +438,7 @@ class CommentsController < ApplicationController
             sum = sum + (jdg.judge4 * 20)/10
             sum = sum + (jdg.judge5 * 20)/10
             jdg.score = sum
+            @@det = 1            
           end    
         end
         if(ans.jirei == 2)
@@ -417,6 +449,7 @@ class CommentsController < ApplicationController
             sum = sum + (jdg.judge4 * 15)/10
             sum = sum + (jdg.judge5 * 20)/10
             jdg.score = sum
+            @@det = 1            
           end    
         end
         if(ans.jirei == 3)
@@ -427,6 +460,7 @@ class CommentsController < ApplicationController
             sum = sum + (jdg.judge4 * 20)/10
             sum = sum + (jdg.judge5 * 30)/10
             jdg.score = sum
+            @@det = 1            
           end    
         end
         if(ans.jirei == 4)
@@ -439,6 +473,7 @@ class CommentsController < ApplicationController
             sum = sum + (jdg.judge6 * 10)/10
             sum = sum + (jdg.judge7 * 16)/10
             jdg.score = sum
+            @@det = 1            
           end    
         end
     end
@@ -452,6 +487,7 @@ class CommentsController < ApplicationController
             sum = sum + (jdg.judge5 * 15)/10
             sum = sum + (jdg.judge6 * 15)/10
             jdg.score = sum
+            @@det = 1            
           end    
         end
         if(ans.jirei == 2)
@@ -463,6 +499,7 @@ class CommentsController < ApplicationController
             sum = sum + (jdg.judge5 * 15)/10
             sum = sum + (jdg.judge6 * 15)/10
             jdg.score = sum
+            @@det = 1            
           end    
         end
         if(ans.jirei == 3)
@@ -473,6 +510,7 @@ class CommentsController < ApplicationController
             sum = sum + (jdg.judge4 * 20)/10
             sum = sum + (jdg.judge5 * 30)/10
             jdg.score = sum
+            @@det = 1            
           end    
         end
         if(ans.jirei == 4)
@@ -483,6 +521,7 @@ class CommentsController < ApplicationController
             sum = sum + (jdg.judge4 * 15)/10
             sum = sum + (jdg.judge5 * 30)/10
             jdg.score = sum
+            @@det = 1            
           end    
         end
     end
@@ -495,6 +534,7 @@ class CommentsController < ApplicationController
             sum = sum + (jdg.judge4 * 20)/10
             sum = sum + (jdg.judge5 * 20)/10
             jdg.score = sum
+            @@det = 1            
           end    
         end
         if(ans.jirei == 2)
@@ -506,6 +546,7 @@ class CommentsController < ApplicationController
             sum = sum + (jdg.judge5 * 15)/10
             sum = sum + (jdg.judge6 * 30)/10
             jdg.score = sum
+            @@det = 1            
           end    
         end
         if(ans.jirei == 3)
@@ -516,6 +557,7 @@ class CommentsController < ApplicationController
             sum = sum + (jdg.judge4 * 20)/10
             sum = sum + (jdg.judge5 * 30)/10
             jdg.score = sum
+            @@det = 1            
           end    
         end
         if(ans.jirei == 4)
@@ -528,6 +570,7 @@ class CommentsController < ApplicationController
             sum = sum + (jdg.judge6 * 15)/10
             sum = sum + (jdg.judge7 * 15)/10
             jdg.score = sum
+            @@det = 1            
           end    
         end
     end
@@ -540,6 +583,7 @@ class CommentsController < ApplicationController
             sum = sum + (jdg.judge4 * 20)/10
             sum = sum + (jdg.judge5 * 20)/10
             jdg.score = sum
+            @@det = 1            
           end    
         end
         if(ans.jirei == 2)
@@ -551,6 +595,7 @@ class CommentsController < ApplicationController
             sum = sum + (jdg.judge5 * 10)/10
             sum = sum + (jdg.judge6 * 20)/10
             jdg.score = sum
+            @@det = 1            
           end    
         end
         if(ans.jirei == 3)
@@ -561,6 +606,7 @@ class CommentsController < ApplicationController
             sum = sum + (jdg.judge4 * 20)/10
             sum = sum + (jdg.judge5 * 20)/10
             jdg.score = sum
+            @@det = 1            
           end    
         end
         if(ans.jirei == 4)
@@ -571,6 +617,7 @@ class CommentsController < ApplicationController
             sum = sum + (jdg.judge4 * 25)/10
             sum = sum + (jdg.judge5 * 25)/10
             jdg.score = sum
+            @@det = 1            
           end    
         end
     end
@@ -584,6 +631,7 @@ class CommentsController < ApplicationController
             sum = sum + (jdg.judge5 * 20)/10
             sum = sum + (jdg.judge6 * 20)/10
             jdg.score = sum
+            @@det = 1            
           end    
         end
         if(ans.jirei == 2)
@@ -594,6 +642,7 @@ class CommentsController < ApplicationController
             sum = sum + (jdg.judge4 * 10)/10
             sum = sum + (jdg.judge5 * 30)/10
             jdg.score = sum
+            @@det = 1            
           end    
         end
         if(ans.jirei == 3)
@@ -604,6 +653,7 @@ class CommentsController < ApplicationController
             sum = sum + (jdg.judge4 * 20)/10
             sum = sum + (jdg.judge5 * 20)/10
             jdg.score = sum
+            @@det = 1
           end    
         end
         if(ans.jirei == 4)
@@ -615,6 +665,7 @@ class CommentsController < ApplicationController
             sum = sum + (jdg.judge5 * 10)/10
             sum = sum + (jdg.judge6 * 15)/10
             jdg.score = sum
+            @@det = 1            
           end    
         end
     end
@@ -627,6 +678,7 @@ class CommentsController < ApplicationController
             sum = sum + (jdg.judge4 * 20)/10
             sum = sum + (jdg.judge5 * 20)/10
             jdg.score = sum
+            @@det = 1            
           end    
         end
         if(ans.jirei == 2)
@@ -637,6 +689,7 @@ class CommentsController < ApplicationController
             sum = sum + (jdg.judge4 * 20)/10
             sum = sum + (jdg.judge5 * 30)/10
             jdg.score = sum
+            @@det = 1            
           end    
         end
         if(ans.jirei == 3)
@@ -648,6 +701,7 @@ class CommentsController < ApplicationController
             sum = sum + (jdg.judge5 * 20)/10
             sum = sum + (jdg.judge6 * 10)/10
             jdg.score = sum
+            @@det = 1            
           end    
         end
         if(ans.jirei == 4)
@@ -660,6 +714,7 @@ class CommentsController < ApplicationController
             sum = sum + (jdg.judge6 * 10)/10
             sum = sum + (jdg.judge7 * 10)/10
             jdg.score = sum
+            @@det = 1            
           end    
         end
     end
@@ -672,6 +727,7 @@ class CommentsController < ApplicationController
             sum = sum + (jdg.judge4 * 20)/10
             sum = sum + (jdg.judge5 * 20)/10
             jdg.score = sum
+            @@det = 1            
           end    
         end
         if(ans.jirei == 2)
@@ -683,6 +739,7 @@ class CommentsController < ApplicationController
             sum = sum + (jdg.judge5 * 10)/10
             sum = sum + (jdg.judge6 * 30)/10
             jdg.score = sum
+            @@det = 1            
           end    
         end
         if(ans.jirei == 3)
@@ -693,6 +750,7 @@ class CommentsController < ApplicationController
             sum = sum + (jdg.judge4 * 25)/10
             sum = sum + (jdg.judge5 * 25)/10
             jdg.score = sum
+            @@det = 1            
           end    
         end
         if(ans.jirei == 4)
@@ -706,6 +764,7 @@ class CommentsController < ApplicationController
             sum = sum + (jdg.judge7 * 10)/10
             sum = sum + (jdg.judge8 * 10)/10
             jdg.score = sum
+            @@det = 1            
           end    
         end
     end
@@ -720,6 +779,7 @@ class CommentsController < ApplicationController
             sum = sum + (jdg.judge6 * 15)/10
             sum = sum + (jdg.judge7 * 15)/10
             jdg.score = sum
+            @@det = 1            
           end    
         end
         if(ans.jirei == 2)
@@ -732,6 +792,7 @@ class CommentsController < ApplicationController
             sum = sum + (jdg.judge6 * 10)/10
             sum = sum + (jdg.judge7 * 10)/10
             jdg.score = sum
+            @@det = 1            
           end    
         end
         if(ans.jirei == 3)
@@ -742,6 +803,7 @@ class CommentsController < ApplicationController
             sum = sum + (jdg.judge4 * 20)/10
             sum = sum + (jdg.judge5 * 20)/10
             jdg.score = sum
+            @@det = 1            
           end    
         end
         if(ans.jirei == 4)
@@ -754,6 +816,7 @@ class CommentsController < ApplicationController
             sum = sum + (jdg.judge6 * 15)/10
             sum = sum + (jdg.judge7 * 10)/10
             jdg.score = sum
+            @@det = 1            
           end    
         end
     end
@@ -767,6 +830,7 @@ class CommentsController < ApplicationController
             sum = sum + (jdg.judge5 * 15)/10
             sum = sum + (jdg.judge6 * 10)/10
             jdg.score = sum
+            @@det = 1            
           end    
         end
         if(ans.jirei == 2)
@@ -777,6 +841,7 @@ class CommentsController < ApplicationController
             sum = sum + (jdg.judge4 * 15)/10
             sum = sum + (jdg.judge5 * 20)/10
             jdg.score = sum
+            @@det = 1            
           end    
         end
         if(ans.jirei == 3)
@@ -787,6 +852,7 @@ class CommentsController < ApplicationController
             sum = sum + (jdg.judge4 * 20)/10
             sum = sum + (jdg.judge5 * 20)/10
             jdg.score = sum
+            @@det = 1            
           end    
         end
         if(ans.jirei == 4)
@@ -800,14 +866,21 @@ class CommentsController < ApplicationController
             sum = sum + (jdg.judge7 * 5)/10
             sum = sum + (jdg.judge8 * 10)/10
             jdg.score = sum
+            @@det = 1            
           end    
         end
     end
  
-    if((jdg.judge1 != nil) and  (jdg.judge2 != nil) and  (jdg.judge3 != nil) and  (jdg.judge4 != nil) and  (jdg.judge5 != nil))then
+    if @@det == 1 then
+      puts "###### comments create save #######"
+      puts @@det
+      puts "###################################"        
       jdg.save
       redirect_to  answer_comments_path(jdg.answer_id)
     else
+      puts "###### comments create No save #######"
+      puts @@det
+      puts "######################################"            
       redirect_to  top_path  
     end
     
