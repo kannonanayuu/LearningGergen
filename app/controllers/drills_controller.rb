@@ -1,6 +1,7 @@
 class DrillsController < ApplicationController
  
   def index
+    puts "==== drills index ===="    
     @drills = Drill.all  
       
   end
@@ -10,6 +11,7 @@ class DrillsController < ApplicationController
   end
 
   def update
+    puts "==== drills update ===="  
     dll = Drill.find(params[:id])
     dll.update(drill_params)
     redirect_to drills_path  
@@ -17,12 +19,14 @@ class DrillsController < ApplicationController
 
 
   def show
+     puts "==== drills show ===="   
      @dll = Drill.find(params[:id])  
       
       
   end
 
   def new
+    puts "==== drills new ===="    
     @drills = Drill.new
     @id = params[:id]
     @@select = @id  
@@ -31,7 +35,7 @@ class DrillsController < ApplicationController
   end
   
   def create
-    # ストロングパラメーターを使用
+    puts "==== drills create ===="    
     dll = Drill.new(drill_params)
     dll.user_id = current_user.id
     

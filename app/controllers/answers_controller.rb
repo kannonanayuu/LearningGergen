@@ -186,7 +186,7 @@ class AnswersController < ApplicationController
   
   def show
     puts "###### answers show ######"
-    puts answer_params
+    puts params[:id]
     puts "###########################"         
     @answer = Answer.find(params[:id])
      
@@ -203,9 +203,15 @@ class AnswersController < ApplicationController
   def new
     puts "###### answers new ######"
     puts params[:id]
+    puts params[:year]
+    puts params[:jirei]
     puts @id
     puts "###########################"          
      @answer = Answer.new
+     if params[:id] == 301 then
+       @answer.year = 30
+       @ansewr.jirei = 1
+     end  
      @id = params[:id]
      @@select = @id
   end
@@ -233,7 +239,7 @@ class AnswersController < ApplicationController
   
    private
    def answer_params
-       params.require(:answer).permit(:id, :year, :jirei, :ans1, :ans2, :ans3, :ans4, :ans5, :ans6, :ans7, :ans8, :ans9, :ans10 )
+       params.require(:answer).permit(:id, :year, :jirei, :user_id, :ans1, :ans2, :ans3, :ans4, :ans5, :ans6, :ans7, :ans8, :ans9, :ans10, :score, :judge )
    end
   
   

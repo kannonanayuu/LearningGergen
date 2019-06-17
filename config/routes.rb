@@ -43,7 +43,7 @@ Rails.application.routes.draw do
   get 'answers/index'
   get 'answers/new'
   get 'answers/edit'
-  get 'answers/show'
+  
   
   devise_for :users
   

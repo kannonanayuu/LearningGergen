@@ -1,10 +1,11 @@
 <% if @answer.year == 30 %>
   <% if @answer.jirei == 1 %>
+      <% id = @answer.id %>
       <h2>平成３０年　事例１【解答を編集する】</h2>
       <br>
       <br>
-      <%= form_for(@answer) do |f| %>
-        <h4>第1問（配点20点）<h4>
+      <%= form_for @answer,:url => {:action => :update}  do |f| %>
+      <h4>第1問（配点20点）<h4>
           <%= f.text_area :ans1, :size=>"115x10"%>
         <br>
       

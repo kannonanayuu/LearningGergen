@@ -2,7 +2,7 @@
   <% if @comments.answer.jirei == 1 %>
     <h2><%= @comments.user.name %>さんの評価結果を編集する</h2>
     <br>
-    <%= form_for(@comments) do |f| %>
+    <%= form_for(@comments),:url => {:action => :update} do |f| %>
       <h4>第1問（配点20点）<h4>
       <p class="answer"> <%= @comments.answer.ans1 %></p>
       <br>
